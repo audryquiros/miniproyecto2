@@ -1,25 +1,5 @@
-# Políticas
+# Políticas de RR. HH. — Nuvexa
 
-Coloca aquí los documentos de políticas que se almacenarán en Google Drive y serán ingeridos por el RAG.
+Estos son los 10 documentos base para la ingesta RAG. La fuente operativa para el proyecto es Google Drive; esta copia local permite validar la ingesta antes de sincronizar desde Drive.
 
-Documentos previstos para esta parte:
-
-1. Vacaciones y feriados
-2. Permisos y licencias
-3. Incapacidades
-4. Jornada, asistencia y teletrabajo
-5. Política salarial y pagos
-6. Catálogo de beneficios
-7. Onboarding y salida
-8. Evaluación del desempeño
-9. Código de conducta y denuncias
-10. Aviso de privacidad
-
-Cada documento debe conservar como mínimo:
-
-- Título
-- Versión
-- Fecha de vigencia
-- Responsable
-- Secciones claras
-- Fuente/referencia cuando corresponda
+Formatos incluidos: TXT para pruebas locales y RAG. Para la entrega final se deben conservar también las copias en PDF, Google Docs y XLSX requeridas por el enunciado.

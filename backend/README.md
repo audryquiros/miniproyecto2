@@ -4,12 +4,12 @@ Backend Express para la Parte 1.
 
 ## Base de datos
 
-Se utiliza **MySQL 8.4**.
+La base de datos MySQL y sus migraciones son responsabilidad del bloque de BD/backend general. Este módulo RAG **no crea tablas ni ejecuta migraciones**.
+
+El contrato requerido para integrar las tablas del RAG está en `RAG_DB_CONTRACT.md`.
 
 ```bash
-docker compose up -d mysql
 npm install
-npm run migrate
 npm run dev
 ```
 
@@ -34,7 +34,7 @@ npm run dev
 - RAG.
 - Recuperación.
 - Integración futura con Google Drive.
-- Integración futura con embeddings y LLM.
+- Embeddings semánticos con OpenAI y generación de respuestas con Groq, configurables mediante variables de entorno.
 
 No contiene todavía los agentes que corresponden a la otra parte del proyecto.
 

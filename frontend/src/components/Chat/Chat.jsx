@@ -10,8 +10,8 @@ export default function Chat() {
     {
       role: "assistant",
       content:
-        "Hola. Soy el asistente de políticas de Nuvexa. Puedes preguntarme sobre vacaciones, permisos, teletrabajo, beneficios y otras políticas de RR. HH."
-    }
+        "Hola. Soy el asistente de políticas de Nuvexa. Puedes preguntarme sobre vacaciones, permisos, teletrabajo, beneficios y otras políticas de RR. HH.",
+    },
   ]);
 
   async function handleSubmit(event) {
@@ -20,28 +20,28 @@ export default function Chat() {
     const value = message.trim();
     if (!value || loading) return;
 
-    setMessages(prev => [...prev, { role: "user", content: value }]);
+    setMessages((prev) => [...prev, { role: "user", content: value }]);
     setMessage("");
     setLoading(true);
 
     try {
       const result = await sendMessage(value);
 
-      setMessages(prev => [
+      setMessages((prev) => [
         ...prev,
         {
           role: "assistant",
           content: result.answer,
-          citations: result.citations
-        }
+          citations: result.citations,
+        },
       ]);
     } catch (error) {
-      setMessages(prev => [
+      setMessages((prev) => [
         ...prev,
         {
           role: "assistant",
-          content: `Ocurrió un error: ${error.message}`
-        }
+          content: `Ocurrió un error: ${error.message}`,
+        },
       ]);
     } finally {
       setLoading(false);
@@ -55,7 +55,7 @@ export default function Chat() {
           <h1>Asistente de RR. HH.</h1>
           <p>Consulta las políticas internas de Nuvexa.</p>
         </div>
-        <span className="status">● En línea</span>
+        <span className="status">Sesión activa</span>
       </div>
 
       <div className="messages">
@@ -73,8 +73,10 @@ export default function Chat() {
       <form className="composer" onSubmit={handleSubmit}>
         <input
           value={message}
-          onChange={event => setMessage(event.target.value)}
+          onChange={(event) => setMessage(event.target.value)}
           placeholder="Escribe tu pregunta..."
+          aria-label="Tu consulta de recursos humanos"
+          maxLength={2000}
           disabled={loading}
         />
         <button type="submit" disabled={loading || !message.trim()}>

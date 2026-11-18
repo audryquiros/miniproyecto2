@@ -1,56 +1,23 @@
 # Backend Nuvexa
 
-Backend Express para la Parte 1.
+Conserva la ingesta, embeddings, recuperación y agente de políticas originales. Añade autenticación, datos propios, reportes y programación. La guía completa está en ../README.md.
 
-## Base de datos
+## Comandos
 
-La base de datos MySQL y sus migraciones son responsabilidad del bloque de BD/backend general. Este módulo RAG **no crea tablas ni ejecuta migraciones**.
+- npm run db:create: crea solo la base dedicada si no existe.
+- npm run migrate: aplica esquema RAG y personal de forma reejecutable.
+- npm run seed: crea 250 personas ficticias; rechaza bases ya pobladas.
+- npm run ingest:local: indexa las diez políticas locales, solo en modo demo.
+- npm run report: publica el reporte de hoy, sin sobrescribirlo.
+- npm run dev / npm start: inicia HTTP y scheduler si se habilita.
+- npm test / npm run test:integration / npm run evaluate.
 
-El contrato requerido para integrar las tablas del RAG está en `RAG_DB_CONTRACT.md`.
+## API
 
-```bash
-npm install
-npm run dev
-```
+Públicos: GET /api/health y POST /api/auth/login.
+Con sesión: GET /api/auth/me, POST /api/auth/logout, GET /api/personnel/me, POST /api/chat, GET /api/policies/:id (demo).
+Solo RRHH: GET /api/reports, GET /api/reports/:date, POST /api/reports/generate, POST /api/ingestion/drive/sync.
 
-## Endpoints
+POST /api/chat acepta message (máximo 2000 caracteres) y conversationId opcional. La identidad y rol vienen de la sesión, nunca del cuerpo. Todos los POST privados requieren X-CSRF-Token, entregado al iniciar sesión o en /auth/me. El navegador usa cookies HttpOnly y no almacena contraseñas ni tokens de sesión en localStorage.
 
-### Health
-`GET /api/health`
-
-### Chat
-`POST /api/chat`
-
-```json
-{
-  "message": "¿Cuántos días de vacaciones establece la política?"
-}
-```
-
-## Responsabilidades
-
-- Orquestación.
-- Agente de políticas.
-- RAG.
-- Recuperación.
-- Integración futura con Google Drive.
-- Embeddings semánticos con OpenAI y generación de respuestas con Groq, configurables mediante variables de entorno.
-
-No contiene todavía los agentes que corresponden a la otra parte del proyecto.
-
-
-## Google Drive
-
-El servicio usa una Service Account y `drive.readonly`.
-
-Endpoint de sincronización:
-
-`POST /api/ingestion/drive/sync`
-
-La carpeta indicada por `GOOGLE_DRIVE_FOLDER_ID` debe estar compartida con la Service Account.
-
-Formatos soportados en esta base:
-- Google Docs
-- DOCX
-- PDF
-- TXT
+El seed y las pruebas usan exclusivamente personal ficticio. En producción usa HTTPS, un usuario MySQL con privilegios limitados sobre la base dedicada y un proceso supervisado. Los límites de login son por proceso; un despliegue con varias réplicas debe compartir ese contador.

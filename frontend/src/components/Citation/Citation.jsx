@@ -1,7 +1,10 @@
 export default function Citation({ citation }) {
   return (
     <div className="citation">
-      <strong>{citation.document}</strong>
+      <strong>
+        {citation.sourceId ? `Fuente ${citation.sourceId} · ` : ""}
+        {citation.document}
+      </strong>
       <span>
         {citation.section} · versión {citation.version}
       </span>

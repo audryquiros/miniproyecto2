@@ -3,16 +3,36 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "dev": "node --watch src/app.js",
-    "start": "node src/app.js"
+    "dev": "node --watch src/server.js",
+    "start": "node src/server.js",
+    "migrate": "node scripts/migrate.js",
+    "db:create": "node scripts/create-database.js",
+    "seed": "node scripts/seed.js",
+    "ingest:local": "node scripts/ingest-local.js",
+    "search:prepare": "node scripts/prepare-search.js",
+    "sync:drive": "node scripts/sync-drive.js",
+    "verify:real": "node scripts/verify-real.js",
+    "test": "node --test test/core.test.js test/parser.test.js",
+    "test:integration": "node scripts/test-integration.js",
+    "evaluate": "node scripts/evaluate.js",
+    "report": "node scripts/report.js"
   },
   "dependencies": {
+    "@huggingface/transformers": "^3.8.1",
+    "@lancedb/lancedb": "^0.41.0",
     "cors": "^2.8.5",
     "dotenv": "^17.2.3",
     "express": "^5.1.0",
-    "mysql2": "^3.14.4",
     "googleapis": "^144.0.0",
     "mammoth": "^1.9.0",
-    "pdf-parse": "^1.1.1"
+    "mysql2": "^3.14.4",
+    "pdf-parse": "^1.1.1",
+    "read-excel-file": "^9.3.17"
+  },
+  "overrides": {
+    "sharp": "^0.35.5"
+  },
+  "devDependencies": {
+    "prettier": "^3.10.1"
   }
 }

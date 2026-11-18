@@ -1,37 +1,65 @@
-const OPENAI_EMBEDDINGS_URL = "https://api.openai.com/v1/embeddings";
+import { createHash } from "node:crypto";
+import { fileURLToPath } from "node:url";
+
+let extractorPromise;
+async function localEmbedding(text) {
+  if (!extractorPromise) {
+    extractorPromise = (async () => {
+      const { pipeline, env } = await import("@huggingface/transformers");
+      env.cacheDir = fileURLToPath(new URL("../../../.cache/models/", import.meta.url));
+      return pipeline("feature-extraction",
+        process.env.EMBEDDING_MODEL || "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+        { dtype: "q8", device: "cpu" });
+    })().catch((error) => { extractorPromise = undefined; throw error; });
+  }
+  const extractor = await extractorPromise;
+  const output = await extractor(text, { pooling: "mean", normalize: true });
+  const vector = Array.from(output.data);
+  if (vector.length !== Number(process.env.EMBEDDING_DIMENSION || 384) ||
+      vector.some((value) => !Number.isFinite(value)))
+    throw new Error("El modelo local produjo un vector incompatible con el índice.");
+  return vector;
+}
+const stopWords = new Set(
+  "que cual cuales cuanto cuanta cuantos cuantas como puedo puede pueden debo debe dias dia tengo tiene tienen corresponden corresponde por para los las del una uno unos unas con hay son mis sus tus nuestro nuestra empresa nuvexa este esta estos estas ano anos sobre desde cada cuando quien donde dar hace hacer queda quedan disponible disponibles trabajar semana semanas recibo solicito solicitar quiero saber todos todas".split(
+    " ",
+  ),
+);
+export function mockTerms(text) {
+  const normal = text
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .replace(/(?:trabajar|trabajo) desde casa/g, "teletrabajo");
+  return (normal.match(/[a-z]{3,}/g) || [])
+    .filter((word) => !stopWords.has(word))
+    .map((word) =>
+      word === "vacaciones"
+        ? "vacacion"
+        : word.length > 5 && word.endsWith("s")
+          ? word.slice(0, -1)
+          : word,
+    );
+}
+export function mockEmbedding(
+  text,
+  dimension = Number(process.env.EMBEDDING_DIMENSION || 1536),
+) {
+  const vector = Array(dimension).fill(0);
+  for (const word of mockTerms(text)) {
+    const hash = createHash("sha256").update(word).digest();
+    vector[hash.readUInt32BE(0) % dimension] += 1;
+  }
+  return vector;
+}
 
 export async function createEmbedding(text) {
-  const provider = process.env.EMBEDDING_PROVIDER || "openai";
+  const provider = process.env.EMBEDDING_PROVIDER || "local";
 
-  if (provider === "openai") {
-    const apiKey = process.env.OPENAI_API_KEY;
-    if (!apiKey) {
-      throw new Error("OPENAI_API_KEY no está configurada para embeddings.");
-    }
-
-    const response = await fetch(OPENAI_EMBEDDINGS_URL, {
-      method: "POST",
-      headers: {
-        Authorization: `Bearer ${apiKey}`,
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify({
-        model: process.env.EMBEDDING_MODEL || "text-embedding-3-small",
-        input: text,
-        dimensions: Number(process.env.EMBEDDING_DIMENSION || 1536)
-      })
-    });
-
-    const data = await response.json();
-    if (!response.ok) {
-      throw new Error(`Error de embeddings: ${data?.error?.message || response.statusText}`);
-    }
-
-    return data.data[0].embedding;
-  }
+  if (provider === "local") return localEmbedding(text);
 
   if (provider === "mock") {
-    return Array(Number(process.env.EMBEDDING_DIMENSION || 1536)).fill(0);
+    return mockEmbedding(text);
   }
 
   throw new Error(`Proveedor de embeddings no implementado: ${provider}`);

@@ -2,3 +2,10 @@ node_modules/
 .env
 *.log
 .DS_Store
+dist/
+coverage/
+.cache/
+evaluation/results*.json
+outputs/nuvexa-build/
+outputs/nuvexa/*_revision.png
+outputs/nuvexa/*.inspect.ndjson

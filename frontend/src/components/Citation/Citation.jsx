@@ -1,13 +1,11 @@
 export default function Citation({ citation }) {
+  const sections = citation.sections?.length
+    ? citation.sections.join(" · ")
+    : citation.section || "Documento completo";
   return (
     <div className="citation">
-      <strong>
-        {citation.sourceId ? `Fuente ${citation.sourceId} · ` : ""}
-        {citation.document}
-      </strong>
-      <span>
-        {citation.section} · versión {citation.version}
-      </span>
+      <strong>{citation.document}</strong>
+      <span>{sections} · versión {citation.version || "vigente"}</span>
       {citation.url && (
         <a href={citation.url} target="_blank" rel="noreferrer">
           Ver fuente

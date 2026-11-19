@@ -101,13 +101,21 @@ export function validateEvidence(result, context) {
       excerpts.push({ sourceId: item.sourceId, quote });
   }
   if (!excerpts.length) return null;
+  const allowedIds = new Set(excerpts.map((e) => e.sourceId));
+  const answer = typeof result.answer === "string" ? result.answer.trim() : "";
+  const citedIds = [...new Set(
+    [...answer.matchAll(/\[Fuente\s+(\d+)\]/g)].map((m) => Number(m[1])),
+  )];
+  const validAnswer =
+    answer.length >= 10 &&
+    citedIds.length > 0 &&
+    citedIds.every((id) => allowedIds.has(id));
+  const fallback = excerpts
+    .map((e) => `${e.quote} [Fuente ${e.sourceId}]`)
+    .join("\n\n");
   return {
-    // Solo se muestran pasajes comprobados, nunca prosa inventada con una cita válida.
-    answer:
-      excerpts.map((e) => `${e.quote} [Fuente ${e.sourceId}]`).join("\n\n") +
-      (result.needsClarification === true
-        ? "\n\nLos documentos no detallan toda la información solicitada. Consulta a RRHH para aclarar esa parte."
-        : ""),
+    // La prosa natural solo se acepta si sus citas apuntan a evidencia previamente validada.
+    answer: validAnswer ? answer : fallback,
     sourceIds: [...new Set(excerpts.map((e) => e.sourceId))],
     sufficient: true,
     needsClarification: result.needsClarification === true,

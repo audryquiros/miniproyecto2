@@ -1,57 +1,89 @@
 NUVEXA SOLUTIONS
-Versión: 1.1
-Vigencia: 2026-11-19
-Responsable: Equipo de Recursos Humanos de Nuvexa (empresa ficticia)
-Ámbito: proyecto académico; la aplicación a casos reales requiere revisión del régimen correspondiente.
+POLÍTICA INTERNA DE RECURSOS HUMANOS
 
-Manual de onboarding y procedimiento de salida
+Versión: 2.0
+Fecha de vigencia: 19 de noviembre de 2026
+Responsable: Dirección de Recursos Humanos
+Ámbito: Personas colaboradoras de Nuvexa Solutions con relación laboral en Costa Rica
+Naturaleza: Política interna empresarial; no sustituye la legislación costarricense ni asesoría jurídica.
 
+REGLA GENERAL DE INTERPRETACIÓN
+Cuando una disposición de esta política otorgue un beneficio superior al mínimo legal, se aplicará el beneficio interno. Cuando exista contradicción entre una regla interna y una norma laboral imperativa, prevalecerá la norma legal. Las referencias legales se incluyen para facilitar el RAG y la trazabilidad documental y deberán revisarse cuando cambie la legislación.
 
+1. OBJETIVO
+Establecer un proceso consistente para ingreso, integración, período inicial, renuncia, despido, liquidación y salida de Nuvexa.
 
-1. Onboarding
+2. INGRESO
+Antes del inicio, RRHH verificará la documentación necesaria, contrato, puesto, salario, jornada, beneficios y datos para planilla.
+Solo se solicitarán datos necesarios para la relación laboral y obligaciones legales.
 
-Toda persona contratada recibirá credenciales, equipo cuando corresponda, inducción, políticas internas y capacitación inicial.
+3. PRIMER DÍA
+RRHH coordinará:
+- bienvenida;
+- credenciales;
+- equipo;
+- políticas;
+- seguridad de la información;
+- canales de soporte;
+- presentación al equipo;
+- información sobre jornada, vacaciones y beneficios.
 
-2. Primer día
+4. PRIMEROS 90 DÍAS
+La jefatura establecerá objetivos claros y realizará al menos dos revisiones de seguimiento.
+El período de seguimiento interno no debe confundirse con una afirmación automática sobre un "período de prueba" legal. RRHH debe revisar contrato y legislación aplicable.
 
-RRHH verificará documentación, asignará accesos y coordinará una sesión de bienvenida.
+5. IGUALDAD Y NO DISCRIMINACIÓN
+Contratación, compensación, ascensos, evaluación y terminación deben basarse en criterios objetivos y respetar las normas de igualdad y no discriminación.
 
-3. Primeros 90 días
+6. RENUNCIA
+La persona colaboradora deberá comunicar su renuncia por escrito.
+En contratos indefinidos, el preaviso se determina según antigüedad:
+- más de 3 meses y hasta 6 meses: una semana;
+- más de 6 meses y hasta 1 año: quince días;
+- más de 1 año: un mes.
+Antes de tres meses, el régimen de preaviso se encuentra sujeto a las reglas del período de prueba y al tipo de contrato.
+RRHH verificará la situación concreta antes de confirmar una fecha.
 
-La jefatura establecerá objetivos y realizará al menos dos revisiones de seguimiento.
+7. DESPIDO
+Todo despido será gestionado por RRHH y la jefatura, con revisión legal cuando corresponda.
+Debe verificarse causa, modalidad contractual, fueros especiales, posibles situaciones de discriminación y documentación.
+En despidos con responsabilidad patronal o sin justa causa, se calcularán las prestaciones que correspondan.
 
-4. Periodo de prueba
+8. LIQUIDACIÓN
+La liquidación puede incluir, según el caso:
+- salario pendiente;
+- vacaciones pendientes/proporcionales;
+- aguinaldo proporcional;
+- preaviso;
+- cesantía.
+La cesantía no es "un mes por año" de forma automática. Se calcula según antigüedad, base salarial y límites legales del Código de Trabajo.
+No se deben calcular prestaciones definitivas sin conocer causa de terminación, tipo de contrato, antigüedad y salario relevante.
 
-Para relaciones por tiempo indefinido se distinguirá el umbral de tres meses relacionado con preaviso y cesantía del plazo de inducción interna. No se entenderá que los primeros 90 días eliminan derechos, salario, seguridad social ni protecciones especiales. RRHH revisará el contrato y cualquier excepción; el sistema no resolverá automáticamente la legalidad de un despido. Fuente: Código de Trabajo, artículos 28 y 29, y consultas laborales del MTSS.
+9. CARTA O CERTIFICACIÓN DE TERMINACIÓN
+Cuando corresponda, Nuvexa entregará la documentación de conclusión de la relación laboral conforme a la legislación.
 
-5. Renuncia
+10. DEVOLUCIÓN DE ACTIVOS
+La persona deberá devolver equipos, credenciales, documentos, llaves, dispositivos y cualquier activo de Nuvexa.
+TI deberá revocar accesos al finalizar la relación o cuando RRHH indique.
 
-La persona colaboradora comunicará su renuncia por escrito. En contratos por tiempo indefinido, el artículo 28 establece una semana desde tres hasta seis meses de servicio; quince días para más de seis meses y hasta un año; un mes después de un año. RRHH debe verificar la antigüedad y las condiciones del caso antes de aplicar el plazo. Fuente: https://www.mtss.go.cr/elministerio/estructura/direccion-asuntos-juridicos/criterios_juridicos/documetos/DAJ-AER-OFP-758-2023.pdf
+11. ENTREVISTA DE SALIDA
+RRHH ofrecerá una entrevista de salida voluntaria para identificar causas de rotación y oportunidades de mejora.
+Las respuestas se tratarán con confidencialidad y se utilizarán de manera agregada cuando sea posible.
 
-6. Despido
+12. RESPONSABILIDADES
+RRHH: documentación y coordinación.
+Jefatura: transición y transferencia de conocimiento.
+TI: accesos y activos.
+Finanzas: liquidación.
+Colaborador: devolución y transferencia.
 
-Los procesos de terminación deberán ser gestionados por RRHH y la jefatura con revisión legal cuando corresponda.
+13. PREGUNTAS FRECUENTES
+¿Cuánto preaviso debo dar? Depende de antigüedad y tipo de contrato.
+¿Siempre me pagan cesantía? No; depende de la causa y modalidad de terminación.
+¿Se pagan vacaciones y aguinaldo proporcionales? Cuando corresponda, sí.
+¿Me pueden descontar automáticamente el preaviso no trabajado de la liquidación? No debe asumirse; RRHH debe aplicar el procedimiento legal correspondiente.
 
-7. Liquidación
-
-RRHH calculará las prestaciones que correspondan, incluyendo vacaciones y aguinaldo proporcionales y, cuando proceda, preaviso y cesantía.
-
-8. Devolución
-
-Al finalizar la relación, deberán devolverse equipos, credenciales, documentos y activos.
-
-9. Entrevista de salida
-
-RRHH ofrecerá una entrevista de salida para identificar causas y oportunidades de mejora.
-
-10. Preguntas frecuentes
-
-¿Cuánto preaviso debo dar? Depende de la antigüedad. ¿Qué pasa con mis vacaciones? Se liquidarán los derechos que correspondan. ¿Debo devolver el equipo? Sí.
-
-Referencias y fuentes
-
-Ministerio de Trabajo y Seguridad Social – Marco Legal: https://www.mtss.go.cr/elministerio/marco-legal/marco-legal.html
-
-Código de Trabajo de Costa Rica – MTSS: https://www.mtss.go.cr/elministerio/marco-legal/documentos/codigo_trabajo_cr.pdf
-
-Preaviso y cesantía – MTSS: https://www.mtss.go.cr/temas-laborales/
+FUENTES
+- MTSS, preaviso y cesantía: https://www.mtss.go.cr/temas-laborales/
+- Código de Trabajo, arts. 28–30 y 81–83: https://www.mtss.go.cr/elministerio/marco-legal/documentos/codigo_trabajo_cr.pdf
+- MTSS, marco legal: https://www.mtss.go.cr/elministerio/marco-legal/marco-legal.html

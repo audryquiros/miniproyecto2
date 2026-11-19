@@ -11,6 +11,12 @@ Requisitos: Node.js 22.12 o superior (probado con 24.13), npm y MySQL 8.0/8.4 in
 3. Para demostración: EMBEDDING_PROVIDER=mock y LLM_PROVIDER=mock. SCHEDULER_ENABLED=true activa el reporte diario; el proceso debe permanecer ejecutándose.
 4. Ejecuta en backend, en orden: npm run db:create; npm run migrate; npm run seed; npm run ingest:local; npm run report; npm run dev.
 5. En otra terminal, dentro de frontend: npm install; npm run dev.
+
+### Control de asistencia
+
+La migración `005_attendance` crea los registros de entrada/salida, alertas para RRHH y el historial de medidas disciplinarias. La jornada administrativa de referencia utiliza 8 horas efectivas como mínimo operativo configurable mediante `WORKDAY_MIN_HOURS`. El sistema genera una alerta al registrar una salida insuficiente y el scheduler revisa a las 18:00 (Costa Rica) las marcaciones faltantes. RRHH debe revisar la incidencia antes de registrar cualquier medida; no existe sanción automática.
+
+El colaborador usa **Asistencia** para registrar entrada/salida e historial. RRHH usa **Incidencias** para revisar alertas, marcarlas como revisadas y registrar una medida disciplinaria con motivo y observaciones.
 6. Abre http://127.0.0.1:5173. Vite envía /api al backend mediante proxy. No mezcles localhost con 127.0.0.1 entre pestañas al probar las cookies.
 
 Cuentas ficticias: rrhh@nuvexa.test (rol RRHH), colaborador@nuvexa.test (rol colaborador). Ambas usan el valor de SEED_PASSWORD de backend/.env. No hay contraseñas en los archivos versionados. El seed se niega a sobrescribir una base con colaboradores.
@@ -33,7 +39,7 @@ El índice conserva nombre, sección, versión, vigencia y enlace. Sincroniza al
 
 ## Programación e historial
 
-SCHEDULER_ENABLED=true ejecuta sincronización desde las 06:00 y reporte desde las 07:00 de America/Costa_Rica, con revisión cada minuto y recuperación de la ejecución pendiente al arrancar. El reporte de una fecha es inmutable. El dashboard solo lee reportes publicados; el botón de generación llama al analista. Un proceso detenido no puede ejecutar tareas: usa un servicio del sistema o un scheduler externo en despliegue.
+SCHEDULER_ENABLED=true ejecuta sincronización desde las 06:00 y reporte desde las 07:00 de America/Costa_Rica, con revisión cada minuto y recuperación de la ejecución pendiente al arrancar. El reporte de una fecha es inmutable. El control de asistencia registra entrada/salida, calcula horas efectivas y genera alertas de jornada insuficiente, salida faltante o ausencia de marcación para RRHH. Las alertas se revisan manualmente y no generan sanciones automáticas. El dashboard solo lee reportes publicados; el botón de generación llama al analista. Un proceso detenido no puede ejecutar tareas: usa un servicio del sistema o un scheduler externo en despliegue.
 
 Los saldos y estados de solicitudes son instantáneas actuales. La tendencia usa movimientos con fechas; no se reconstruyen artificialmente reportes históricos completos con estados actuales.
 
@@ -52,10 +58,10 @@ La evaluación escribe evaluation/results.json con respuestas y latencias reales
 - backend/src/config, controllers, middleware, routes: configuración HTTP, sesión y permisos.
 - backend/src/services/agents: orquestador, políticas y datos.
 - backend/src/services/drive, rag, embeddings: base de tu compañera ampliada.
-- backend/src/services/personnel, reports, scheduler: nuevos módulos de personal y analítica.
+- backend/src/services/personnel, attendance, reports, scheduler: módulos de personal, asistencia y analítica.
 - backend/migrations y scripts: esquema, datos ficticios, evaluación y herramientas de arranque.
 - backend/prompts: instrucciones versionadas del orquestador y políticas.
-- frontend/src/pages/Chat, Profile, Dashboard: vistas del portal.
+- frontend/src/pages/Chat, Profile, Attendance, HRAttendance, Dashboard: vistas del portal.
 - docs/politicas: documentos originales conservados.
 - docs/entrega: investigación, informe técnico, arquitectura, guía de demo y evidencia.
 - outputs/nuvexa: entregables documentales de esta sesión.
@@ -76,7 +82,7 @@ Drive y Groq se configuran exclusivamente mediante backend/.env. La evaluación 
 
 ## Entrega para revisión conjunta
 
-Consultar docs/entrega/ENTREGA_COMPANERA.md para instalación, cambios y publicación de las políticas 1.1. Las respuestas parciales no cuentan como resueltas. Reporte y Drive se programan independientemente. El resumen asocia cifras y etiquetas SQL y añade una recomendación de Groq. La cola del chat se separa de la ingesta y utiliza caché de embeddings; la cuota de Voyage sigue condicionando la disponibilidad.
+Consultar docs/entrega/ENTREGA_COMPANERA.md para instalación, cambios y publicación de las políticas 2.0 y del control de asistencia. Las respuestas parciales no cuentan como resueltas. Reporte y Drive se programan independientemente. El resumen asocia cifras y etiquetas SQL y añade una recomendación de Groq. La cola del chat se separa de la ingesta y utiliza caché de embeddings; la cuota de Voyage sigue condicionando la disponibilidad.
 
 - [Guía para la compañera](docs/entrega/ENTREGA_COMPANERA.md)
 - [Video de cinco minutos](outputs/nuvexa/Demo_Nuvexa_5min.webm)

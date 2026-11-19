@@ -1,47 +1,63 @@
 NUVEXA SOLUTIONS
-Versión: 1.1
-Vigencia: 2026-11-19
-Responsable: Equipo de Recursos Humanos de Nuvexa (empresa ficticia)
-Ámbito: proyecto académico; la aplicación a casos reales requiere revisión del régimen correspondiente.
+POLÍTICA INTERNA DE RECURSOS HUMANOS
 
-Catálogo de beneficios
+Versión: 2.0
+Fecha de vigencia: 19 de noviembre de 2026
+Responsable: Dirección de Recursos Humanos
+Ámbito: Personas colaboradoras de Nuvexa Solutions con relación laboral en Costa Rica
+Naturaleza: Política interna empresarial; no sustituye la legislación costarricense ni asesoría jurídica.
 
+REGLA GENERAL DE INTERPRETACIÓN
+Cuando una disposición de esta política otorgue un beneficio superior al mínimo legal, se aplicará el beneficio interno. Cuando exista contradicción entre una regla interna y una norma laboral imperativa, prevalecerá la norma legal. Las referencias legales se incluyen para facilitar el RAG y la trazabilidad documental y deberán revisarse cuando cambie la legislación.
 
+1. OBJETIVO
+Describir beneficios voluntarios de Nuvexa y diferenciarlos claramente de derechos laborales mínimos.
 
-1. Objetivo
+2. PRINCIPIO
+Un beneficio interno no puede utilizarse para sustituir salario, vacaciones, licencias, seguridad social u otros derechos mínimos.
+Los beneficios sujetos a póliza, presupuesto o disponibilidad se rigen por sus condiciones específicas.
 
-Describir los beneficios adicionales que Nuvexa ofrece a su personal y distinguirlos de los derechos laborales mínimos.
+3. SEGURO MÉDICO COLECTIVO
+Nuvexa ofrece un seguro médico colectivo como beneficio adicional, sujeto a la póliza vigente, elegibilidad, red de proveedores, exclusiones, copagos y demás condiciones de la aseguradora.
+La existencia del beneficio no significa que Nuvexa asuma todas las prestaciones médicas ni que sustituya la cobertura legal de seguridad social.
 
-2. Seguro médico
+4. CAPACITACIÓN
+Cada colaborador tendrá un presupuesto anual de hasta ₡150.000, sujeto a aprobación, disponibilidad y relación razonable con el desarrollo profesional o necesidades de Nuvexa.
+El presupuesto no constituye un monto salarial ni es automáticamente acumulable.
+RRHH deberá documentar solicitudes, aprobaciones y gastos.
 
-Nuvexa ofrece un seguro médico colectivo sujeto a las condiciones de la póliza y a la elegibilidad definida por RRHH.
+5. AHORRO Y ASOCIACIÓN
+Nuvexa facilitará el acceso a programas voluntarios de ahorro o asociación cuando existan convenios vigentes. La participación será voluntaria salvo que una disposición legal aplicable indique otra cosa.
+Las condiciones del programa serán las establecidas por la entidad administradora.
 
-3. Capacitación
+6. BIENESTAR
+Nuvexa podrá ofrecer actividades de salud ocupacional, bienestar, acompañamiento profesional, talleres y campañas preventivas.
+La disponibilidad puede variar según el programa anual.
 
-Cada colaborador tendrá un presupuesto anual de capacitación de hasta ₡150.000, sujeto a disponibilidad y aprobación.
+7. TELETRABAJO
+El acceso al teletrabajo es un beneficio/modalidad organizativa para puestos elegibles y se rige por la política de jornada y teletrabajo.
 
-4. Asociación y ahorro
+8. DESCUENTOS Y CONVENIOS
+Podrán existir convenios con comercios o proveedores. Los descuentos estarán sujetos a disponibilidad y condiciones del tercero.
+Nuvexa no garantiza productos o servicios de proveedores externos salvo obligación contractual expresa.
 
-La empresa facilitará el acceso a programas voluntarios de ahorro o asociación cuando existan convenios vigentes.
+9. CAMBIOS
+Nuvexa podrá modificar beneficios voluntarios hacia el futuro, comunicando las nuevas condiciones y respetando derechos adquiridos y mínimos legales.
+Cuando un beneficio esté incorporado al contrato individual o exista una condición jurídica que limite su modificación, RRHH deberá revisar el caso.
 
-5. Bienestar
+10. RESPONSABILIDADES
+RRHH: administrar elegibilidad y comunicar condiciones.
+Colaborador: utilizar beneficios conforme a reglas.
+Finanzas: procesar los pagos o reembolsos aprobados.
+Proveedores: cumplir sus propias condiciones.
 
-Se ofrecerán actividades de salud ocupacional, bienestar y acompañamiento profesional según el programa anual.
+11. PREGUNTAS FRECUENTES
+¿El seguro sustituye a la CCSS? No.
+¿Tengo automáticamente ₡150.000 en efectivo? No; es un presupuesto de capacitación sujeto a aprobación.
+¿Puedo acumularlo? No salvo que un programa aprobado lo permita.
+¿Los beneficios voluntarios son derechos legales? No necesariamente.
 
-6. Trabajo flexible
-
-Los puestos elegibles podrán acceder a teletrabajo conforme al reglamento correspondiente.
-
-7. Cambios
-
-Los beneficios voluntarios pueden modificarse o sustituirse comunicando previamente las condiciones aplicables, sin afectar derechos adquiridos o mínimos legales.
-
-8. Preguntas frecuentes
-
-¿El seguro es obligatorio? No, se rige por las condiciones de la póliza. ¿Tengo presupuesto de capacitación? Sí, hasta ₡150.000 anuales sujeto a aprobación.
-
-Referencias y fuentes
-
-Ministerio de Trabajo y Seguridad Social – Marco Legal: https://www.mtss.go.cr/elministerio/marco-legal/marco-legal.html
-
-Código de Trabajo de Costa Rica – MTSS: https://www.mtss.go.cr/elministerio/marco-legal/documentos/codigo_trabajo_cr.pdf
+FUENTES
+- MTSS, marco legal: https://www.mtss.go.cr/elministerio/marco-legal/marco-legal.html
+- Código de Trabajo: https://www.mtss.go.cr/elministerio/marco-legal/documentos/codigo_trabajo_cr.pdf
+- Documentación contractual/póliza aplicable: administrar internamente por RRHH.

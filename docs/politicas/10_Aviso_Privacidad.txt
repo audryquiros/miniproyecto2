@@ -1,55 +1,104 @@
 NUVEXA SOLUTIONS
-Versión: 1.1
-Vigencia: 2026-11-19
-Responsable: Equipo de Recursos Humanos de Nuvexa (empresa ficticia)
-Ámbito: proyecto académico; la aplicación a casos reales requiere revisión del régimen correspondiente.
+POLÍTICA INTERNA DE RECURSOS HUMANOS
 
-Aviso de privacidad para colaboradores
+Versión: 2.0
+Fecha de vigencia: 19 de noviembre de 2026
+Responsable: Dirección de Recursos Humanos
+Ámbito: Personas colaboradoras de Nuvexa Solutions con relación laboral en Costa Rica
+Naturaleza: Política interna empresarial; no sustituye la legislación costarricense ni asesoría jurídica.
 
+REGLA GENERAL DE INTERPRETACIÓN
+Cuando una disposición de esta política otorgue un beneficio superior al mínimo legal, se aplicará el beneficio interno. Cuando exista contradicción entre una regla interna y una norma laboral imperativa, prevalecerá la norma legal. Las referencias legales se incluyen para facilitar el RAG y la trazabilidad documental y deberán revisarse cuando cambie la legislación.
 
+1. RESPONSABLE
+Nuvexa Solutions es responsable del tratamiento de los datos personales que administra en el marco de la relación laboral y de los servicios internos.
 
-1. Responsable
+2. FINALIDAD
+Los datos se utilizarán para:
+- contratación y administración laboral;
+- planilla y obligaciones de seguridad social;
+- asistencia y jornada;
+- vacaciones, permisos e incapacidades;
+- beneficios;
+- evaluación y desarrollo;
+- seguridad física y lógica;
+- acceso a sistemas;
+- cumplimiento de obligaciones legales;
+- atención de solicitudes;
+- operación del portal y chatbot de RRHH.
 
-Nuvexa Solutions es responsable del tratamiento de los datos personales que administra en el marco de la relación laboral.
+3. CATEGORÍAS
+Podrán tratarse datos de identificación, contacto, contrato, puesto, jornada, salario, asistencia, vacaciones, permisos, beneficios, evaluaciones y registros de uso del sistema.
+Los datos de salud, biométricos y otros datos sensibles tendrán controles reforzados y solo se tratarán cuando exista una base legal y finalidad legítima.
 
-2. Datos tratados
+4. PRINCIPIOS
+Nuvexa aplicará minimización, finalidad, calidad, seguridad, confidencialidad y acceso restringido.
+No se recopilarán datos por simple conveniencia si no son necesarios para la finalidad informada.
 
-Podrán tratarse datos de identificación, contacto, información contractual, asistencia, remuneración, beneficios, desempeño y otros necesarios para la relación laboral. Los datos médicos o especialmente protegidos tendrán controles reforzados.
+5. BASE Y AUTORIZACIÓN
+El tratamiento se realizará conforme a las bases permitidas por la Ley 8968 y normativa aplicable. La relación laboral y el cumplimiento de obligaciones legales pueden justificar determinados tratamientos; otros tratamientos requerirán consentimiento o una base jurídica específica.
+RRHH no debe asumir que "tener un contrato" autoriza cualquier tratamiento.
 
-3. Finalidades
+6. CHATBOT Y RAG
+El chatbot de Nuvexa se diseñará para:
+- usar datos personales solo cuando la consulta y rol lo permitan;
+- evitar enviar datos innecesarios al LLM;
+- no revelar datos de otro colaborador;
+- registrar consultas y agentes con acceso controlado;
+- aplicar escalamiento cuando la confianza sea baja.
+Las preguntas de políticas deben resolverse principalmente con documentos corporativos; las preguntas personales deben usar únicamente el agente autorizado.
 
-Gestión laboral, planilla, seguridad, cumplimiento legal, administración de beneficios, acceso a sistemas, prevención de riesgos y gestión de recursos humanos.
+7. DATOS SENSIBLES
+Los diagnósticos, información de salud y otros datos sensibles no deben mostrarse a compañeros, jefaturas sin necesidad funcional ni usuarios no autorizados.
+El agente no debe inferir diagnósticos o condiciones médicas.
 
-4. Minimización
+8. ACCESO
+El acceso se asignará por rol y necesidad:
+- Colaborador: sus propios datos y políticas generales.
+- RRHH: datos necesarios para sus funciones y reportes autorizados.
+- Administradores técnicos: acceso técnico limitado y auditado.
+Ningún rol debe consultar información privada de otro colaborador salvo autorización y fundamento funcional/legal.
 
-Nuvexa procurará recolectar únicamente los datos necesarios para las finalidades informadas.
+9. PROVEEDORES Y TERCEROS
+Cuando proveedores procesen datos por cuenta de Nuvexa, RRHH/Legal deberá revisar condiciones contractuales, finalidad, seguridad, acceso y transferencias.
+No se enviarán datos reales a servicios de IA o terceros cuando no sea necesario.
 
-5. Acceso
+10. DERECHOS
+La persona titular podrá ejercer los derechos reconocidos por la Ley 8968, incluyendo acceso, rectificación y las solicitudes que correspondan.
+Las solicitudes deberán dirigirse al canal de Privacidad/RRHH.
+Nuvexa responderá dentro de los plazos legales aplicables y podrá solicitar información razonable para verificar identidad.
 
-El acceso se limitará según el rol y la necesidad funcional. No se permitirá que un colaborador consulte datos privados de otro sin autorización.
+11. SEGURIDAD
+Nuvexa utilizará controles de acceso, autenticación, contraseñas seguras, registros, respaldo, cifrado cuando corresponda, gestión de privilegios y medidas de prevención de incidentes.
+Las credenciales y claves de servicio no deben almacenarse en el repositorio.
 
-6. Conservación
+12. CONSERVACIÓN
+Los datos se conservarán durante el tiempo necesario para la finalidad y obligaciones legales aplicables. Nuvexa no establecerá un único plazo universal para todos los datos.
+RRHH definirá períodos de conservación por categoría, considerando obligaciones laborales, fiscales, de seguridad social, auditoría y defensa de derechos.
 
-Los datos se conservarán durante el tiempo necesario para cumplir las finalidades y obligaciones legales aplicables.
+13. INCIDENTES
+Toda persona que detecte acceso indebido, pérdida, divulgación o uso no autorizado deberá reportarlo inmediatamente al canal de Seguridad/Privacidad.
+El equipo responsable evaluará alcance, riesgo, contención, evidencia y obligaciones de comunicación.
 
-7. Derechos
+14. REGISTROS DEL CHAT
+Los logs del chatbot podrán incluir pregunta, intención, agente, fragmentos utilizados, latencia y escalamiento. Deben evitar almacenar datos personales innecesarios y respetar controles de acceso.
+Los datos de analítica deberán anonimizarse o agregarse cuando sea posible.
 
-La persona titular podrá ejercer los derechos que correspondan conforme a la Ley 8968 y la normativa aplicable.
+15. RESPONSABILIDADES
+Colaborador: proteger sus credenciales y usar el sistema correctamente.
+RRHH: definir finalidades y accesos.
+TI/Seguridad: controles técnicos.
+Legal/Privacidad: evaluar bases, contratos y cumplimiento.
+Proveedores: procesar conforme a contrato y normativa.
 
-8. Seguridad
+16. PREGUNTAS FRECUENTES
+¿Puede un colaborador ver el salario de otro? No.
+¿Puedo pedir mis datos? Sí, mediante el canal de privacidad.
+¿Se puede enviar cualquier dato al LLM? No.
+¿Los datos médicos son iguales a los datos de contacto? No; requieren controles reforzados.
+¿Hay un tiempo único para guardar todos los datos? No; depende de finalidad y obligaciones aplicables.
 
-Nuvexa aplicará controles de acceso, autenticación, respaldo, monitoreo y medidas de protección acordes con el riesgo.
-
-9. Incidentes
-
-Los incidentes relacionados con datos personales deberán reportarse inmediatamente al canal de Seguridad/Privacidad.
-
-10. Preguntas frecuentes
-
-¿Quién puede ver mi salario? Solo quienes necesiten acceder por su función y los roles autorizados. ¿Puedo solicitar información sobre mis datos? Sí, conforme al procedimiento aplicable. ¿Se pueden compartir mis datos libremente? No.
-
-Referencias y fuentes
-
-Ley 8968 – Sistema Costarricense de Información Jurídica: https://pgrweb.go.cr/scij/Busqueda/Normativa/Normas/nrm_norma.aspx?nValor1=1&nValor2=70975
-
-Marco Legal – MTSS: https://www.mtss.go.cr/elministerio/marco-legal/marco-legal.html
+FUENTES
+- Ley 8968, protección de datos personales: https://www.pgrweb.go.cr/scij/Busqueda/Normativa/Normas/nrm_norma.aspx?nValor1=1&nValor2=70975
+- PGR, criterios sobre Ley 8968: https://www.pgrweb.go.cr/
+- MTSS, marco legal: https://www.mtss.go.cr/elministerio/marco-legal/marco-legal.html

@@ -1,57 +1,80 @@
 NUVEXA SOLUTIONS
-Versión: 1.1
-Vigencia: 2026-11-19
-Responsable: Equipo de Recursos Humanos de Nuvexa (empresa ficticia)
-Ámbito: proyecto académico; la aplicación a casos reales requiere revisión del régimen correspondiente.
+POLÍTICA INTERNA DE RECURSOS HUMANOS
 
-Política de permisos y licencias
+Versión: 2.0
+Fecha de vigencia: 19 de noviembre de 2026
+Responsable: Dirección de Recursos Humanos
+Ámbito: Personas colaboradoras de Nuvexa Solutions con relación laboral en Costa Rica
+Naturaleza: Política interna empresarial; no sustituye la legislación costarricense ni asesoría jurídica.
 
+REGLA GENERAL DE INTERPRETACIÓN
+Cuando una disposición de esta política otorgue un beneficio superior al mínimo legal, se aplicará el beneficio interno. Cuando exista contradicción entre una regla interna y una norma laboral imperativa, prevalecerá la norma legal. Las referencias legales se incluyen para facilitar el RAG y la trazabilidad documental y deberán revisarse cuando cambie la legislación.
 
+1. OBJETIVO
+Regular permisos y licencias de Nuvexa, diferenciando derechos mínimos legales de beneficios internos.
 
-1. Objetivo
+2. TIPOS
+A. Licencias legales: maternidad, paternidad, adopción, duelo, lactancia y otras reconocidas por la legislación.
+B. Permisos internos: matrimonio, estudio, citas o situaciones personales cuando Nuvexa los haya aprobado como beneficio.
+C. Permisos sin goce: ausencias autorizadas que no constituyen un derecho automático salvo disposición legal o contractual.
 
-Definir el procedimiento para solicitar permisos y licencias, distinguiendo los derechos establecidos por ley de los beneficios adicionales de Nuvexa.
+3. SOLICITUD
+Siempre que sea posible, la persona colaboradora utilizará el portal interno. En emergencias podrá informar por los canales de su jefatura y formalizar posteriormente.
+La solicitud debe indicar motivo general, fecha, duración y respaldo cuando corresponda. RRHH no solicitará información médica o personal excesiva.
 
-2. Permisos generales
+4. MATERNIDAD Y ADOPCIÓN
+Nuvexa respetará la licencia remunerada de maternidad establecida por el Código de Trabajo y sus reformas. El régimen vigente contempla el mes anterior al parto y los tres meses posteriores, además de reglas especiales para adopción y otros supuestos previstos legalmente.
+En adopción, la duración y fecha de inicio dependerán del supuesto legal y de la documentación correspondiente. RRHH debe verificar la norma vigente al tramitar el caso.
 
-Las solicitudes deberán realizarse en el portal interno cuando sea posible. Deben incluir motivo, fecha, duración y respaldo cuando corresponda.
+5. PATERNIDAD
+Para padres biológicos, Nuvexa aplicará la licencia legal vigente: dos días por semana durante las primeras cuatro semanas desde el nacimiento, conforme al artículo 95 del Código de Trabajo actualizado.
+No debe confundirse este régimen con beneficios o permisos adicionales que Nuvexa pueda aprobar.
 
-3. Maternidad
+6. LACTANCIA
+Nuvexa garantizará las medidas legales vigentes para la lactancia. La empresa mantendrá un espacio adecuado, privado e higiénico para amamantar, extraer y almacenar leche, dentro de las condiciones legales aplicables.
+Los tiempos y permisos de lactancia se gestionarán conforme al Código de Trabajo y las reformas vigentes, sin imponer requisitos internos que reduzcan el derecho.
 
-Nuvexa respetará la licencia de maternidad y las protecciones laborales establecidas por el Código de Trabajo y la normativa aplicable. La referencia del MTSS describe cuatro meses: uno antes del parto y tres posteriores, sujeto a la normativa vigente.
+7. DUELO
+Nuvexa aplicará como mínimo la Ley 10589:
+- Primer grado de consanguinidad o afinidad: tres días hábiles remunerados.
+- Segundo y tercer grado de consanguinidad o afinidad: un día hábil remunerado.
+- La ley contiene reglas específicas para convivencia en unión de hecho y adopción.
+Nuvexa podrá otorgar beneficios superiores mediante aprobación formal, pero nunca inferiores al mínimo legal.
 
-4. Paternidad
+8. MATRIMONIO
+Como beneficio interno, Nuvexa otorgará tres días hábiles con goce de salario por matrimonio, previa comunicación razonable y respaldo cuando sea necesario para el registro administrativo.
+Este beneficio es interno y no debe presentarse como un derecho general impuesto por el Código de Trabajo.
 
-En el supuesto de paternidad del artículo 95 inciso b), corresponden dos días por semana durante las primeras cuatro semanas desde el nacimiento. La nota constitucional incorporada por SINALEVI extiende este beneficio a la madre no gestante que ejerza comaternidad en una familia homoparental. RRHH verificará los supuestos y respaldos del caso. Fuente: artículo 95 vigente, https://www.pgrweb.go.cr/DOCS/NORMAS/1/VIGENTE/L/1940-1949/1940-1944/1943/1F6D/180E63.HTML
+9. ESTUDIO
+Nuvexa podrá conceder permisos de estudio, especialmente cuando exista relación con el puesto o un programa de desarrollo aprobado. La autorización depende de operación, calendario y disponibilidad.
+Cuando exista un derecho legal específico, se aplicará la norma correspondiente.
 
-5. Duelo
+10. CITAS MÉDICAS Y OTRAS GESTIONES
+Las citas médicas se gestionarán procurando no afectar la operación. RRHH podrá solicitar constancia de asistencia, limitada al dato necesario.
+Las citas o diligencias que tengan protección legal se tratarán conforme a la norma aplicable.
 
-Como beneficio interno, Nuvexa otorgará hasta 5 días hábiles con goce de salario por fallecimiento de cónyuge/conviviente, padre, madre o hijo; hasta 3 días por hermano o suegro; y 1 día por abuelo o nieto. La licencia nunca será inferior al mínimo aplicable de la Ley 10589 (artículo 69 inciso l): tres días hábiles para primer grado de consanguinidad o afinidad y un día para segundo y tercer grado, sin perjuicio de normas especiales. Fuente: https://direccionejecutiva.poder-judicial.go.cr/index.php/servicios/edictos/72-publicados-en-el-diario-oficial-la-gaceta-segun-articulos-81-y-172?download=426%3Adel-18-al-22-de-noviembre-2024-alcance-195-gaceta-227-del-03-de-diciembre-2024&start=60 Cuando la ley conceda un derecho superior, prevalecerá el derecho legal.
+11. PERMISOS SIN GOCE
+Requieren autorización previa, salvo situaciones protegidas por ley. La autorización debe indicar fecha de inicio, fecha de regreso y condiciones administrativas.
+No se utilizarán permisos sin goce para renunciar a derechos irrenunciables.
 
-6. Matrimonio
+12. RESPONSABILIDADES
+Colaborador: comunicar oportunamente y aportar solo documentación necesaria.
+Jefatura: responder solicitudes con criterios objetivos.
+RRHH: validar derechos legales, proteger privacidad y registrar la resolución.
+Planilla: aplicar los efectos salariales correspondientes.
 
-Nuvexa otorgará 3 días hábiles con goce de salario por matrimonio, previa comunicación y respaldo razonable.
+13. REGISTROS
+Los permisos y licencias se registrarán con acceso limitado. Los documentos médicos o familiares sensibles tendrán controles reforzados.
 
-7. Estudio
+14. PREGUNTAS FRECUENTES
+¿Cuántos días de duelo tengo por mi padre o madre? Como mínimo, tres días hábiles remunerados.
+¿Cuánto dura la paternidad legal? Dos días por semana durante cuatro semanas.
+¿Nuvexa da días por matrimonio? Sí, tres días hábiles como beneficio interno.
+¿Puedo pedir un permiso sin goce? Sí, si es compatible con la ley y Nuvexa lo autoriza, salvo derechos legales específicos.
+¿La empresa puede pedir mi diagnóstico médico? No como regla general; debe limitarse a la información necesaria.
 
-Podrán concederse permisos de estudio cuando exista relación con el puesto y autorización de la jefatura. Los permisos extraordinarios se evaluarán caso por caso.
-
-8. Sin goce
-
-Los permisos sin goce requieren autorización previa y no podrán utilizarse para desconocer derechos laborales irrenunciables.
-
-9. Procedimiento
-
-La persona colaboradora solicita; la jefatura revisa; RRHH valida cuando exista implicación legal; el sistema registra la decisión.
-
-10. Preguntas frecuentes
-
-¿Cómo solicito un permiso? Desde el portal. ¿El permiso de duelo requiere respaldo? Puede solicitarse comprobante cuando sea razonable. ¿Puedo pedir permiso sin goce? Sí, sujeto a autorización y normativa.
-
-Referencias y fuentes
-
-Ministerio de Trabajo y Seguridad Social – Marco Legal: https://www.mtss.go.cr/elministerio/marco-legal/marco-legal.html
-
-Código de Trabajo de Costa Rica – MTSS: https://www.mtss.go.cr/elministerio/marco-legal/documentos/codigo_trabajo_cr.pdf
-
-Asuntos laborales – MTSS: https://www.mtss.go.cr/temas-laborales/index.html
+FUENTES
+- Código de Trabajo, art. 95 y reformas: https://www.mtss.go.cr/elministerio/marco-legal/documentos/codigo_trabajo_cr.pdf
+- Ley 10589: https://www.pgrweb.go.cr/DOCS/NORMAS/1/VIGENTE/L/2020-2029/2020-2024/2024/193D8/170861.HTML
+- Ley 10895 y reformas de lactancia: https://www.pgrweb.go.cr/
+- MTSS, marco legal: https://www.mtss.go.cr/elministerio/marco-legal/marco-legal.html

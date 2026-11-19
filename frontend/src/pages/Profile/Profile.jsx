@@ -1,82 +1,24 @@
 import { useEffect, useState } from "react";
+import { Check, Edit3, KeyRound, Save, UserRound, X } from "lucide-react";
 import { api } from "../../services/api.js";
+import "./Profile.css";
+
 export default function Profile() {
-  const [data, setData] = useState(null),
-    [error, setError] = useState("");
-  useEffect(() => {
-    api("/personnel/me")
-      .then(setData)
-      .catch((e) => setError(e.message));
-  }, []);
-  return (
-    <section className="workspace">
-      <p className="eyebrow">MI ESPACIO</p>
-      <h1>Mi perfil</h1>
-      {error ? (
-        <p role="alert" className="error">
-          {error}
-        </p>
-      ) : !data ? (
-        <p role="status">Cargando tu información…</p>
-      ) : (
-        <>
-          <h2>{data.nombre}</h2>
-          <p>
-            {data.puesto} · {data.departamento}
-          </p>
-          <div className="metrics">
-            <article>
-              <span>Vacaciones disponibles</span>
-              <strong>
-                {data.saldos[0]?.dias_disponibles ?? "Sin registro"}
-              </strong>
-              <small>Días · período {data.saldos[0]?.periodo ?? "—"}</small>
-            </article>
-            <article>
-              <span>Próximo pago</span>
-              <strong className="date-value">
-                {data.proximo_pago?.fecha ?? "Sin programar"}
-              </strong>
-            </article>
-            <article>
-              <span>Próxima evaluación</span>
-              <strong className="date-value">
-                {data.proxima_evaluacion ?? "Sin programar"}
-              </strong>
-            </article>
-          </div>
-          <h2>Mis solicitudes</h2>
-          <div className="table-scroll">
-            <table>
-              <thead>
-                <tr>
-                  <th>Solicitud</th>
-                  <th>Tipo</th>
-                  <th>Desde</th>
-                  <th>Hasta</th>
-                  <th>Estado</th>
-                </tr>
-              </thead>
-              <tbody>
-                {data.solicitudes.map((r) => (
-                  <tr key={r.id}>
-                    <td>#{r.id}</td>
-                    <td>{r.tipo}</td>
-                    <td>{r.fecha_inicio}</td>
-                    <td>{r.fecha_fin}</td>
-                    <td>
-                      <span className={"badge " + r.estado}>{r.estado}</span>
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-            {!data.solicitudes.length && (
-              <p>No tienes solicitudes registradas.</p>
-            )}
-          </div>
-        </>
-      )}
-    </section>
-  );
+  const [data, setData] = useState(null), [error, setError] = useState(""), [notice, setNotice] = useState("");
+  const [editing, setEditing] = useState(false), [form, setForm] = useState({ nombre: "", email: "" });
+  const [password, setPassword] = useState(""), [showPassword, setShowPassword] = useState(false), [busy, setBusy] = useState(false);
+  async function load() { setData(await api("/personnel/me")); }
+  useEffect(() => { load().catch((e) => setError(e.message)); }, []);
+  function startEdit() { setForm({ nombre: data.nombre, email: data.email }); setEditing(true); setNotice(""); setError(""); }
+  async function saveProfile(e) { e.preventDefault(); setBusy(true); setError(""); setNotice(""); try { const result = await api("/personnel/me", { method: "PATCH", body: JSON.stringify(form) }); setData(result.profile); setEditing(false); setNotice("Tus datos fueron actualizados correctamente."); } catch (e) { setError(e.message); } finally { setBusy(false); } }
+  async function savePassword(e) { e.preventDefault(); setBusy(true); setError(""); setNotice(""); try { await api("/personnel/me/password", { method: "PATCH", body: JSON.stringify({ password }) }); setPassword(""); setNotice("Contraseña actualizada correctamente."); } catch (e) { setError(e.message); } finally { setBusy(false); } }
+  return <section className="workspace profile-page">
+    <div className="profile-hero"><div className="profile-avatar"><UserRound size={28}/></div><div><p className="eyebrow">MI ESPACIO</p><h1>Mi perfil</h1><p>Administra tu información y consulta tu actividad laboral.</p></div><button className="primary profile-edit-button" onClick={startEdit}><Edit3 size={16}/> Editar perfil</button></div>
+    {error && <p className="error" role="alert">{error}</p>}{notice && <p className="success" role="status"><Check size={17}/>{notice}</p>}
+    {data && <>
+      {editing ? <form className="profile-edit-card" onSubmit={saveProfile}><div className="card-title"><div><span className="eyebrow">INFORMACIÓN PERSONAL</span><h2>Editar datos</h2></div><button type="button" className="icon-button" onClick={() => setEditing(false)}><X size={18}/></button></div><div className="form-grid"><label>Nombre completo<input value={form.nombre} onChange={e=>setForm({...form,nombre:e.target.value})} required /></label><label>Correo de trabajo<input type="email" value={form.email} onChange={e=>setForm({...form,email:e.target.value})} required /></label></div><div className="profile-actions"><button type="button" onClick={()=>setEditing(false)}>Cancelar</button><button className="primary" disabled={busy}><Save size={16}/> Guardar cambios</button></div></form> : <div className="profile-info-grid"><article className="profile-card"><span className="eyebrow">DATOS</span><h2>{data.nombre}</h2><p>{data.email}</p><dl><div><dt>Puesto</dt><dd>{data.puesto}</dd></div><div><dt>Departamento</dt><dd>{data.departamento}</dd></div><div><dt>Ingreso</dt><dd>{data.fecha_ingreso}</dd></div></dl></article><article className="profile-card security-card"><span className="eyebrow">SEGURIDAD</span><h2><KeyRound size={20}/> Contraseña</h2><p>Actualiza tu contraseña cuando lo necesites.</p><form onSubmit={savePassword}><div className="password-row"><input type={showPassword?"text":"password"} value={password} onChange={e=>setPassword(e.target.value)} placeholder="Nueva contraseña (12+ caracteres)" minLength={12} required/><button type="button" onClick={()=>setShowPassword(!showPassword)}>{showPassword?"Ocultar":"Mostrar"}</button></div><button className="primary" disabled={busy}>Actualizar contraseña</button></form></article></div>}
+      <div className="metrics profile-metrics"><article><span>Vacaciones disponibles</span><strong>{data.saldos[0]?.dias_disponibles ?? "Sin registro"}</strong><small>Días · período {data.saldos[0]?.periodo ?? "—"}</small></article><article><span>Próximo pago</span><strong className="date-value">{data.proximo_pago?.fecha ?? "Sin programar"}</strong></article><article><span>Próxima evaluación</span><strong className="date-value">{data.proxima_evaluacion ?? "Sin programar"}</strong></article></div>
+      <h2>Mis solicitudes</h2><div className="table-scroll"><table><thead><tr><th>Solicitud</th><th>Tipo</th><th>Desde</th><th>Hasta</th><th>Estado</th></tr></thead><tbody>{data.solicitudes.map(r=><tr key={r.id}><td>#{r.id}</td><td>{r.tipo}</td><td>{r.fecha_inicio}</td><td>{r.fecha_fin}</td><td><span className={`badge ${r.estado}`}>{r.estado}</span></td></tr>)}</tbody></table>{!data.solicitudes.length&&<p>No tienes solicitudes registradas.</p>}</div>
+    </>}
+  </section>;
 }

@@ -1,51 +1,93 @@
 NUVEXA SOLUTIONS
-Versión: 1.1
-Vigencia: 2026-11-19
-Responsable: Equipo de Recursos Humanos de Nuvexa (empresa ficticia)
-Ámbito: proyecto académico; la aplicación a casos reales requiere revisión del régimen correspondiente.
+POLÍTICA INTERNA DE RECURSOS HUMANOS
 
-Política de evaluación del desempeño
+Versión: 2.0
+Fecha de vigencia: 19 de noviembre de 2026
+Responsable: Dirección de Recursos Humanos
+Ámbito: Personas colaboradoras de Nuvexa Solutions con relación laboral en Costa Rica
+Naturaleza: Política interna empresarial; no sustituye la legislación costarricense ni asesoría jurídica.
 
+REGLA GENERAL DE INTERPRETACIÓN
+Cuando una disposición de esta política otorgue un beneficio superior al mínimo legal, se aplicará el beneficio interno. Cuando exista contradicción entre una regla interna y una norma laboral imperativa, prevalecerá la norma legal. Las referencias legales se incluyen para facilitar el RAG y la trazabilidad documental y deberán revisarse cuando cambie la legislación.
 
+1. OBJETIVO
+Establecer un sistema transparente para evaluar resultados, competencias, colaboración y desarrollo profesional.
 
-1. Objetivo
+2. ALCANCE
+Aplica a las personas colaboradoras de Nuvexa, con adaptaciones según puesto y responsabilidad.
 
-Establecer un proceso transparente para evaluar resultados, competencias y desarrollo profesional.
+3. CICLO
+Nuvexa realizará:
+- una evaluación formal anual;
+- revisiones trimestrales de seguimiento;
+- reuniones de retroalimentación cuando exista un cambio relevante de funciones o desempeño.
 
-2. Periodicidad
+Estas frecuencias son reglas internas y no requisitos generales de la legislación privada.
 
-Se realizará una evaluación formal anual y revisiones trimestrales de seguimiento.
+4. CRITERIOS
+La evaluación considerará:
+- resultados y objetivos;
+- calidad del trabajo;
+- cumplimiento;
+- colaboración;
+- aprendizaje;
+- comunicación;
+- liderazgo cuando aplique;
+- comportamientos alineados con valores de Nuvexa.
+Los criterios deberán estar relacionados con el puesto y comunicarse previamente.
 
-3. Criterios
+5. ESCALA 1–5
+1 Insuficiente: resultados significativamente inferiores a lo esperado.
+2 En desarrollo: cumple parcialmente y requiere apoyo.
+3 Esperado: cumple de manera consistente.
+4 Destacado: supera expectativas de forma frecuente.
+5 Sobresaliente: resultados excepcionalmente superiores y sostenidos.
+La escala es interna y no constituye una clasificación legal.
 
-Resultados del puesto, calidad, colaboración, cumplimiento, aprendizaje y comportamientos alineados con los valores.
+6. EVIDENCIA
+Toda calificación deberá estar acompañada de ejemplos, resultados o hechos verificables.
+No se deben utilizar rumores, características protegidas, datos médicos irrelevantes o información ajena al puesto.
 
-4. Escala
+7. RETROALIMENTACIÓN
+La persona evaluada tendrá oportunidad de conocer la evaluación, realizar preguntas y presentar comentarios.
+Las discrepancias se documentarán y podrán ser revisadas por RRHH.
 
-Se utilizará una escala de 1 a 5: insuficiente, en desarrollo, esperado, destacado y sobresaliente.
+8. PLAN DE MEJORA
+Cuando el desempeño esté por debajo de lo esperado, Nuvexa podrá implementar un plan de mejora con:
+- objetivos;
+- métricas;
+- apoyo;
+- fechas;
+- responsables;
+- revisiones.
+Una calificación baja no implica automáticamente despido. Cualquier terminación debe analizarse bajo el régimen laboral aplicable.
 
-5. Retroalimentación
+9. ASCENSOS
+Los ascensos considerarán desempeño, competencias, disponibilidad de plaza, necesidades de negocio y criterios de igualdad.
+No se utilizarán criterios discriminatorios.
 
-Toda evaluación deberá incluir comentarios concretos y oportunidades de mejora.
+10. PRIVACIDAD
+Las evaluaciones son confidenciales. Acceso: persona evaluada, jefatura, RRHH y autorizados por necesidad funcional.
+No se utilizarán evaluaciones para revelar información privada a otros colaboradores.
 
-6. Plan de mejora
+11. REVISIÓN Y APELACIÓN INTERNA
+La persona puede solicitar revisión de una evaluación dentro de diez días hábiles de conocerla, explicando los puntos cuestionados.
+RRHH podrá solicitar evidencia adicional y emitir una respuesta documentada.
 
-Cuando el desempeño no alcance lo esperado, podrá establecerse un plan de mejora con objetivos, apoyo y fechas de revisión.
+12. RESPONSABILIDADES
+Colaborador: preparar evidencia y participar.
+Jefatura: evaluar con objetividad.
+RRHH: administrar ciclo, proteger información y revisar apelaciones.
+Dirección: aprobar promociones según presupuesto.
 
-7. Ascensos
+13. PREGUNTAS FRECUENTES
+¿La evaluación anual es obligatoria por ley? No; es una regla interna de Nuvexa.
+¿Puedo ver mi evaluación? Sí.
+¿Una evaluación baja significa despido automático? No.
+¿Puedo pedir revisión? Sí, dentro del plazo interno.
+¿Puede mi evaluación contener comentarios discriminatorios? No.
 
-Los ascensos se decidirán considerando desempeño, competencias, disponibilidad de plazas y necesidades organizacionales.
-
-8. Privacidad
-
-Las evaluaciones serán accesibles únicamente para la persona evaluada, su jefatura, RRHH y quienes estén autorizados.
-
-9. Preguntas frecuentes
-
-¿Cuándo me evalúan? Formalmente una vez al año y con seguimiento trimestral. ¿Puedo conocer mi evaluación? Sí. ¿Una evaluación baja implica despido automático? No; se analizará el contexto y el proceso aplicable.
-
-Referencias y fuentes
-
-Ministerio de Trabajo y Seguridad Social – Marco Legal: https://www.mtss.go.cr/elministerio/marco-legal/marco-legal.html
-
-Código de Trabajo de Costa Rica – MTSS: https://www.mtss.go.cr/elministerio/marco-legal/documentos/codigo_trabajo_cr.pdf
+FUENTES
+- Código de Trabajo, normas de igualdad y no discriminación: https://www.mtss.go.cr/elministerio/marco-legal/documentos/codigo_trabajo_cr.pdf
+- MTSS, marco legal: https://www.mtss.go.cr/elministerio/marco-legal/marco-legal.html
+- Ley 8968, protección de datos: https://www.pgrweb.go.cr/

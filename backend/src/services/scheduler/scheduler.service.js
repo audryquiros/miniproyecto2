@@ -2,10 +2,12 @@ import { today, TIME_ZONE } from "../../utils/dates.js";
 import { query } from "../../config/database.js";
 import { buildReport } from "../reports/report.service.js";
 import { syncPoliciesFromDrive } from "../drive/drive.ingestion.service.js";
+import { closeOpenAttendanceAlerts } from "../attendance/attendance.service.js";
 export function createScheduler({
   dbQuery = query,
   runReport = buildReport,
   runDrive = syncPoliciesFromDrive,
+  runAttendance = closeOpenAttendanceAlerts,
   now = () => new Date(),
   hasDrive = () => !!process.env.GOOGLE_DRIVE_FOLDER_ID,
 } = {}) {
@@ -42,6 +44,7 @@ export function createScheduler({
       const tasks = [];
       if (hour >= 7) tasks.push(execute("reporte", () => runReport(day), day));
       if (hour >= 6 && hasDrive()) tasks.push(execute("drive", runDrive, day));
+      if (hour >= 18) tasks.push(execute("attendance", () => runAttendance(day), day));
       await Promise.all(tasks);
     } catch (error) {
       console.error({ scheduler: "failed", code: error.code || error.name });

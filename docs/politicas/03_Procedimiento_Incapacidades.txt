@@ -1,55 +1,77 @@
 NUVEXA SOLUTIONS
-Versión: 1.1
-Vigencia: 2026-11-19
-Responsable: Equipo de Recursos Humanos de Nuvexa (empresa ficticia)
-Ámbito: proyecto académico; la aplicación a casos reales requiere revisión del régimen correspondiente.
+POLÍTICA INTERNA DE RECURSOS HUMANOS
 
-Procedimiento de incapacidades
+Versión: 2.0
+Fecha de vigencia: 19 de noviembre de 2026
+Responsable: Dirección de Recursos Humanos
+Ámbito: Personas colaboradoras de Nuvexa Solutions con relación laboral en Costa Rica
+Naturaleza: Política interna empresarial; no sustituye la legislación costarricense ni asesoría jurídica.
 
+REGLA GENERAL DE INTERPRETACIÓN
+Cuando una disposición de esta política otorgue un beneficio superior al mínimo legal, se aplicará el beneficio interno. Cuando exista contradicción entre una regla interna y una norma laboral imperativa, prevalecerá la norma legal. Las referencias legales se incluyen para facilitar el RAG y la trazabilidad documental y deberán revisarse cuando cambie la legislación.
 
+1. OBJETIVO
+Definir cómo Nuvexa recibe, registra, protege y da seguimiento a incapacidades por enfermedad común, maternidad y riesgos del trabajo.
 
-1. Objetivo
+2. PRINCIPIO CLAVE
+Una incapacidad no debe tratarse automáticamente como vacaciones, permiso sin goce o ausencia injustificada. La clasificación debe basarse en el documento emitido por la entidad competente y el régimen aplicable.
 
-Regular la comunicación, registro y seguimiento de incapacidades por enfermedad o riesgo de trabajo.
+3. COMUNICACIÓN
+La persona colaboradora debe informar a su jefatura y RRHH tan pronto como sea razonablemente posible, indicando que se encuentra incapacitada y el período de ausencia.
+No es necesario revelar el diagnóstico a la jefatura cuando no sea necesario para gestionar la ausencia.
 
-2. Comunicación
+4. DOCUMENTACIÓN
+Cuando corresponda, se entregará o registrará la incapacidad emitida por la CCSS, INS u otra entidad competente mediante el canal seguro definido por Nuvexa.
+RRHH validará fechas y tipo de documento sin recopilar datos médicos innecesarios.
 
-La persona colaboradora debe informar a su jefatura y RRHH tan pronto como sea posible, indicando el período estimado de ausencia.
+5. ENFERMEDAD COMÚN
+El pago durante una incapacidad por enfermedad común se rige por el régimen de subsidios aplicable y no debe confundirse con salario ordinario.
+Para casos individuales, RRHH/Planilla verificará la condición de aseguramiento, duración, continuidad y reglas vigentes de CCSS antes de calcular.
+Como referencia interpretativa del MTSS, en el sector privado existen reglas sobre los primeros días de incapacidad; el cálculo debe realizarse conforme al régimen vigente y no mediante una cifra fija inventada por el chatbot.
 
-3. Documento
+6. RIESGO DE TRABAJO
+Los accidentes o enfermedades relacionados con el trabajo deberán comunicarse inmediatamente a la jefatura y al canal de Seguridad y Salud Ocupacional.
+Nuvexa activará el procedimiento correspondiente con el INS y conservará la documentación necesaria.
+No se tratará un accidente laboral como enfermedad común sin revisar la clasificación.
 
-Cuando corresponda, deberá aportar la incapacidad o documento emitido por la entidad competente mediante el canal seguro definido por RRHH.
+7. MATERNIDAD
+Las licencias de maternidad se gestionarán conforme al Código de Trabajo y las reglas de la CCSS. No se registrarán como una incapacidad común.
 
-4. Enfermedad común
+8. SEGUIMIENTO
+RRHH registrará:
+- fecha de inicio;
+- fecha de finalización prevista;
+- entidad emisora;
+- tipo de régimen;
+- estado administrativo.
+El diagnóstico y demás datos sensibles tendrán acceso restringido.
 
-La gestión económica se realizará conforme al régimen aplicable de la CCSS y la legislación laboral vigente. Nuvexa no sustituirá al ente asegurador en el cálculo de subsidios legales.
+9. REINCORPORACIÓN
+La persona deberá reincorporarse en la fecha indicada, salvo prórroga o nueva incapacidad.
+Si existen restricciones o recomendaciones médicas legalmente comunicadas, RRHH coordinará las medidas laborales que correspondan.
 
-Ejemplo de cinco días: antes de calcular un importe se debe identificar si la boleta corresponde a enfermedad común o riesgo laboral, la entidad emisora, continuidad con otras incapacidades y la base de cálculo. La empresa no promete salario completo ni aplica el beneficio de duelo a una incapacidad. Si no constan los parámetros y las reglas vigentes del régimen, se deriva el cálculo a RRHH y al ente asegurador; no se inventa un porcentaje universal.
+10. CITAS Y TRÁMITES
+Las citas relacionadas con la atención médica se gestionarán con la documentación mínima necesaria. Cuando exista una protección legal específica, esta prevalecerá sobre la regla administrativa general.
 
-5. Riesgo de trabajo
+11. PRIVACIDAD
+La información médica se considera especialmente sensible. Solo accederán las personas que necesiten conocerla por sus funciones. El sistema de RAG no debe revelar diagnósticos, documentos médicos o detalles de salud a otros colaboradores.
 
-Los accidentes o enfermedades relacionadas con el trabajo deberán reportarse inmediatamente al canal de Seguridad y Salud Ocupacional para activar el procedimiento correspondiente.
+12. RESPONSABILIDADES
+Colaborador: comunicar y aportar documentación necesaria.
+Jefatura: coordinar continuidad y evitar divulgación del estado médico.
+RRHH: validar, registrar y proteger.
+Planilla: procesar subsidios y efectos salariales.
+Seguridad y Salud: gestionar riesgos laborales.
 
-6. Seguimiento
+13. PREGUNTAS FRECUENTES
+¿Quién paga una incapacidad? Depende del régimen y período; CCSS, INS y/o empleador pueden intervenir según el caso.
+¿El chatbot puede decir cuánto recibiré? Solo si cuenta con los datos y reglas necesarias; ante incertidumbre debe escalar a RRHH/Planilla.
+¿Mi jefe puede ver mi diagnóstico? No debe acceder si no es necesario para su función.
+¿Un accidente de trabajo se procesa igual que una enfermedad común? No; debe gestionarse bajo el régimen de riesgos del trabajo.
 
-RRHH registrará fechas de inicio y fin, tipo de incapacidad y estado administrativo, limitando el acceso a personal autorizado.
-
-7. Reincorporación
-
-Al finalizar la incapacidad, la persona colaboradora deberá reincorporarse según la fecha indicada. Si existen restricciones médicas, RRHH coordinará las medidas aplicables.
-
-8. Privacidad
-
-Los datos médicos se tratarán como información sensible y solo serán accesibles para quienes necesiten conocerla por sus funciones.
-
-9. Preguntas frecuentes
-
-¿Debo informar una incapacidad? Sí, tan pronto como sea posible. ¿Quién paga los días? Depende del tipo de incapacidad y régimen aplicable; el sistema no debe inventar montos. ¿Puede RRHH mostrar mi diagnóstico a otros colaboradores? No.
-
-Referencias y fuentes
-
-Ministerio de Trabajo y Seguridad Social – Marco Legal: https://www.mtss.go.cr/elministerio/marco-legal/marco-legal.html
-
-Código de Trabajo de Costa Rica – MTSS: https://www.mtss.go.cr/elministerio/marco-legal/documentos/codigo_trabajo_cr.pdf
-
-Asuntos laborales – MTSS: https://www.mtss.go.cr/temas-laborales/index.html
+FUENTES
+- Código de Trabajo: https://www.mtss.go.cr/elministerio/marco-legal/documentos/codigo_trabajo_cr.pdf
+- MTSS, asuntos laborales: https://www.mtss.go.cr/temas-laborales/
+- MTSS, criterios jurídico-laborales: https://www.mtss.go.cr/elministerio/estructura/direccion-asuntos-juridicos/Compendio%20de%20Criterios%20Juridicos%20Laborales.pdf
+- CCSS, normativa del Seguro de Salud: https://www.binasss.sa.cr/ley.pdf
+- INS, beneficios económicos de riesgos del trabajo: https://salud.grupoins.com/riesgos-del-trabajo/beneficios-economicos-rt/

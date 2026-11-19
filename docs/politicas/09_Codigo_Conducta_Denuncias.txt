@@ -1,49 +1,111 @@
 NUVEXA SOLUTIONS
-Versión: 1.1
-Vigencia: 2026-11-19
-Responsable: Equipo de Recursos Humanos de Nuvexa (empresa ficticia)
-Ámbito: proyecto académico; la aplicación a casos reales requiere revisión del régimen correspondiente.
+POLÍTICA INTERNA DE RECURSOS HUMANOS
 
-Código de conducta y protocolo de denuncias
+Versión: 2.0
+Fecha de vigencia: 19 de noviembre de 2026
+Responsable: Dirección de Recursos Humanos
+Ámbito: Personas colaboradoras de Nuvexa Solutions con relación laboral en Costa Rica
+Naturaleza: Política interna empresarial; no sustituye la legislación costarricense ni asesoría jurídica.
 
+REGLA GENERAL DE INTERPRETACIÓN
+Cuando una disposición de esta política otorgue un beneficio superior al mínimo legal, se aplicará el beneficio interno. Cuando exista contradicción entre una regla interna y una norma laboral imperativa, prevalecerá la norma legal. Las referencias legales se incluyen para facilitar el RAG y la trazabilidad documental y deberán revisarse cuando cambie la legislación.
 
+1. OBJETIVO
+Establecer principios de conducta, prevención de violencia y acoso, igualdad, integridad y mecanismos de denuncia.
 
-1. Principios
+2. PRINCIPIOS
+Nuvexa promueve:
+- respeto y dignidad;
+- igualdad y no discriminación;
+- integridad;
+- confidencialidad;
+- buena fe;
+- debido proceso;
+- protección contra represalias.
 
-Nuvexa promueve respeto, integridad, igualdad de trato, confidencialidad y cero tolerancia frente al acoso y la violencia en el trabajo.
+3. CONDUCTAS PROHIBIDAS
+Se prohíben, entre otras:
+- hostigamiento sexual;
+- acoso laboral;
+- discriminación;
+- amenazas y violencia;
+- represalias;
+- fraude y corrupción;
+- apropiación o uso indebido de información;
+- uso abusivo de recursos;
+- divulgación no autorizada de información confidencial.
 
-2. Conductas prohibidas
+4. RUTAS DIFERENCIADAS
+Hostigamiento sexual: se tramitará bajo la Ley 7476 y el procedimiento interno específico.
+Acoso laboral: se tramitará bajo el procedimiento interno y las reglas laborales aplicables, sin confundirlo con hostigamiento sexual.
+Discriminación: se revisará conforme al Código de Trabajo y la normativa especial aplicable.
+Fraude, seguridad o información: podrán involucrar Ética, RRHH, Legal y Seguridad.
 
-Se prohíben acoso laboral, acoso sexual, discriminación, amenazas, represalias, fraude, apropiación indebida de información y uso abusivo de recursos.
+5. CANALES
+Las denuncias podrán presentarse:
+- canal interno de Ética y Cumplimiento;
+- RRHH;
+- jefatura cuando no exista conflicto;
+- canal específico de hostigamiento sexual.
+Si la denuncia involucra a RRHH o a una jefatura, deberá existir una ruta alternativa para evitar conflicto de interés.
 
-3. Canal confidencial
+6. CONTENIDO
+La persona denunciante podrá indicar:
+- hechos;
+- fechas;
+- lugares;
+- personas involucradas;
+- testigos;
+- evidencia disponible.
+No necesita realizar una calificación jurídica.
 
-Las denuncias podrán presentarse mediante el canal interno de Ética y Cumplimiento o directamente ante RRHH.
+7. CONFIDENCIALIDAD
+La información se limitará a quienes deban conocerla. La confidencialidad no significa secreto absoluto: puede ser necesario compartir información con quienes investiguen, asesoren o tengan obligaciones legales.
 
-4. Contenido
+8. INVESTIGACIÓN
+RRHH/órgano competente:
+- registrará la denuncia;
+- verificará conflicto de interés;
+- designará investigador o comisión;
+- recabará evidencia;
+- escuchará a las partes;
+- documentará hallazgos;
+- emitirá conclusiones y recomendaciones.
+La investigación deberá respetar imparcialidad y derecho de defensa.
 
-La persona denunciante podrá aportar hechos, fechas, personas involucradas y evidencias disponibles. No se exige que realice una calificación jurídica.
+9. HOSTIGAMIENTO SEXUAL
+Nuvexa mantendrá una política/procedimiento específico conforme a Ley 7476 y sus reformas, incluyendo órgano investigador, confidencialidad, medidas de protección y plazos legales.
+El plazo de denuncia no debe confundirse con el plazo de investigación. La legislación vigente debe consultarse al tramitar cada caso.
+El MTSS señala que las empresas deben contar con una política comunicada al personal y una comisión investigadora para estos casos.
 
-5. Investigación
+10. ACOSO LABORAL
+Nuvexa considerará como señales de posible acoso laboral las conductas repetidas o sistemáticas que afecten la dignidad, integridad o ambiente de trabajo. No toda diferencia, crítica laboral o conflicto aislado constituye acoso.
+Las denuncias se investigarán individualmente.
 
-RRHH designará a la persona responsable de investigar, protegerá la confidencialidad y evitará conflictos de interés.
+11. NO REPRESALIAS
+Se prohíbe tomar represalias contra quien denuncie de buena fe, participe como testigo o coopere con una investigación.
+Una denuncia deliberadamente falsa y maliciosa podrá ser objeto de revisión disciplinaria, respetando el debido proceso. Una denuncia no probada no se considera automáticamente falsa.
 
-6. No represalias
+12. MEDIDAS
+Podrán aplicarse medidas preventivas, organizativas, disciplinarias o correctivas según hallazgos y proporcionalidad.
+Las medidas disciplinarias deben basarse en la legislación, contrato y reglas internas aplicables.
 
-No se permitirán represalias contra personas que denuncien de buena fe o colaboren en una investigación.
+13. RESPONSABILIDADES
+Toda persona: cumplir el código y reportar situaciones relevantes.
+Jefaturas: prevenir, actuar y no tomar represalias.
+RRHH: recibir, proteger y tramitar.
+Ética/Legal: apoyar casos complejos.
+Seguridad: intervenir en amenazas, fraude o incidentes tecnológicos.
 
-7. Medidas
+14. PREGUNTAS FRECUENTES
+¿Puedo denunciar sin pruebas? Sí; aporta los hechos conocidos y la investigación determinará la evidencia.
+¿Una denuncia no probada es una mentira? No necesariamente.
+¿Puedo denunciar a mi jefe? Sí, mediante una ruta alternativa si existe conflicto.
+¿Se puede divulgar la denuncia? Solo a quienes deban conocerla.
+¿El acoso sexual y laboral se investigan igual? No; tienen marcos y procedimientos diferentes.
 
-Según los hallazgos, podrán aplicarse medidas correctivas, disciplinarias o de prevención.
-
-8. Preguntas frecuentes
-
-¿Puedo denunciar de forma confidencial? Sí, dentro de los límites necesarios para investigar. ¿Qué pasa si no tengo pruebas? La denuncia puede presentarse con los hechos conocidos; la investigación determinará qué evidencia puede obtenerse. ¿Puedo sufrir represalias? Están prohibidas las represalias por denuncias de buena fe.
-
-Referencias y fuentes
-
-Ministerio de Trabajo y Seguridad Social – Marco Legal: https://www.mtss.go.cr/elministerio/marco-legal/marco-legal.html
-
-Código de Trabajo de Costa Rica – MTSS: https://www.mtss.go.cr/elministerio/marco-legal/documentos/codigo_trabajo_cr.pdf
-
-Marco Legal – MTSS, incluyendo Convenio 190: https://www.mtss.go.cr/elministerio/marco-legal/marco-legal.html
+FUENTES
+- Ley 7476 y reformas; MTSS, asuntos laborales: https://www.mtss.go.cr/temas-laborales/
+- MTSS, criterio sobre acoso laboral: https://www.mtss.go.cr/elministerio/estructura/direccion-asuntos-juridicos/criterios_juridicos/documetos/OFP-MTSS-DAJ-AER-065-2024.pdf
+- MTSS, reglamentos de acoso sexual: https://mtss.go.cr/elministerio/estructura/direccion-asuntos-juridicos/reglamentos-internos-trabajo.html
+- Código de Trabajo, igualdad y no discriminación: https://www.mtss.go.cr/elministerio/marco-legal/documentos/codigo_trabajo_cr.pdf

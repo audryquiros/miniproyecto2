@@ -1,51 +1,72 @@
 NUVEXA SOLUTIONS
-Versión: 1.1
-Vigencia: 2026-11-19
-Responsable: Equipo de Recursos Humanos de Nuvexa (empresa ficticia)
-Ámbito: proyecto académico; la aplicación a casos reales requiere revisión del régimen correspondiente.
+POLÍTICA INTERNA DE RECURSOS HUMANOS
 
-Política salarial y calendario de pagos
+Versión: 2.0
+Fecha de vigencia: 19 de noviembre de 2026
+Responsable: Dirección de Recursos Humanos
+Ámbito: Personas colaboradoras de Nuvexa Solutions con relación laboral en Costa Rica
+Naturaleza: Política interna empresarial; no sustituye la legislación costarricense ni asesoría jurídica.
 
+REGLA GENERAL DE INTERPRETACIÓN
+Cuando una disposición de esta política otorgue un beneficio superior al mínimo legal, se aplicará el beneficio interno. Cuando exista contradicción entre una regla interna y una norma laboral imperativa, prevalecerá la norma legal. Las referencias legales se incluyen para facilitar el RAG y la trazabilidad documental y deberán revisarse cuando cambie la legislación.
 
+1. OBJETIVO
+Definir los principios de compensación, calendario interno, comprobantes, deducciones, horas extra y aguinaldo de Nuvexa.
 
-1. Principios
+2. PRINCIPIOS SALARIALES
+Nuvexa administrará salarios considerando puesto, responsabilidad, experiencia, competencias, mercado, desempeño y presupuesto.
+La empresa respetará los salarios mínimos legales vigentes según ocupación y clasificación. No existe un salario mínimo único para todas las ocupaciones.
 
-Nuvexa aplicará criterios de puesto, responsabilidad, experiencia y desempeño para administrar salarios, respetando la legislación y los salarios mínimos vigentes.
+3. BANDAS Y EQUIDAD
+RRHH revisará periódicamente las bandas salariales. Las decisiones deberán documentarse y respetar igualdad y no discriminación.
+Una diferencia salarial debe poder explicarse por criterios objetivos relacionados con el puesto, experiencia, responsabilidad o desempeño.
 
-2. Periodicidad
+4. CALENDARIO NUVEXA
+Como regla interna, Nuvexa pagará quincenalmente el día 15 y el último día del mes. Si una fecha coincide con un día no laborable para el proceso de pago, Finanzas podrá adelantar el pago conforme al calendario anual aprobado.
+Estas fechas son una regla interna y no deben presentarse como fechas universales impuestas por la ley.
 
-El salario se pagará de forma quincenal los días 15 y último día hábil del mes, o antes cuando la fecha coincida con un día no laborable, conforme a la programación de planilla.
+5. COMPROBANTE
+Cada persona tendrá acceso a un comprobante con información salarial relevante, incluyendo salario bruto, deducciones, aportes y neto, según corresponda.
+El comprobante es confidencial.
 
-3. Comprobante
+6. DEDUCCIONES
+Solo se aplicarán deducciones permitidas por ley o autorizadas válidamente. El sistema no debe ejecutar una deducción únicamente porque una persona la solicite por chat.
+Las deducciones de pensiones alimentarias y otras órdenes legales se procesarán conforme a la autoridad competente.
 
-Cada colaborador tendrá acceso a un comprobante con salario bruto, deducciones autorizadas, aportes y salario neto.
+7. SALARIO MÍNIMO
+RRHH/Planilla debe verificar el decreto de salarios mínimos vigente y la categoría ocupacional antes de evaluar cumplimiento.
+Para 2026, la referencia debe ser el decreto vigente de salarios mínimos; no se debe usar una cifra genérica.
 
-4. Aguinaldo
+8. HORAS EXTRA
+Las horas extra autorizadas se incluirán en la planilla correspondiente. El cálculo debe respetar la jornada, salario y reglas de remuneración aplicables.
 
-El aguinaldo se pagará dentro del plazo legal. El cálculo utilizará los salarios ordinarios y extraordinarios correspondientes al período legal y se dividirá entre 12, conforme a la información oficial del MTSS.
+9. AGUINALDO
+El aguinaldo se paga dentro de los primeros veinte días de diciembre.
+Para el sector privado, se calcula sumando los salarios ordinarios y extraordinarios devengados del 1 de diciembre del año anterior al 30 de noviembre del año correspondiente y dividiendo el total entre doce.
+El aguinaldo no se calcula como un salario fijo ni como un simple promedio mensual del salario actual.
 
-5. Deducciones
+10. TERMINACIÓN
+En la liquidación pueden intervenir salario pendiente, vacaciones, aguinaldo proporcional, preaviso y cesantía, según causa de terminación, tipo de contrato y antigüedad.
+No se debe prometer una liquidación estándar.
 
-Solo se aplicarán deducciones permitidas por ley o debidamente autorizadas.
+11. CONFIDENCIALIDAD
+La información salarial individual tiene acceso restringido. El chatbot solo podrá mostrar el salario de la persona autenticada si el agente de datos y las reglas de autorización lo permiten. Nunca debe revelar el salario de otro colaborador.
 
-6. Horas extra
+12. RESPONSABILIDADES
+RRHH: bandas, política y cumplimiento.
+Finanzas/Planilla: cálculo y pago.
+Jefaturas: decisiones salariales dentro de autorizaciones.
+Colaborador: revisar comprobantes y reportar inconsistencias.
 
-Las horas extra autorizadas se incluirán en la planilla correspondiente.
+13. PREGUNTAS FRECUENTES
+¿Cuándo paga Nuvexa? El 15 y el último día del mes, según calendario interno.
+¿Cuándo vence el aguinaldo? Dentro de los primeros veinte días de diciembre.
+¿Cómo se calcula? Salarios ordinarios y extraordinarios del período legal dividido entre doce.
+¿Hay un salario mínimo para toda Nuvexa? No; depende de la ocupación y decreto vigente.
+¿El chatbot puede decirme el salario de un compañero? No.
 
-7. Revisiones
-
-RRHH y Finanzas revisarán anualmente las bandas salariales y su relación con los salarios mínimos vigentes.
-
-8. Preguntas frecuentes
-
-¿Cuándo pagan? El 15 y el último día hábil del mes. ¿Cuándo se paga el aguinaldo? Dentro de los primeros 20 días de diciembre. ¿Cómo se calcula? Suma de salarios del período legal dividido entre 12.
-
-Referencias y fuentes
-
-Ministerio de Trabajo y Seguridad Social – Marco Legal: https://www.mtss.go.cr/elministerio/marco-legal/marco-legal.html
-
-Código de Trabajo de Costa Rica – MTSS: https://www.mtss.go.cr/elministerio/marco-legal/documentos/codigo_trabajo_cr.pdf
-
-Preguntas frecuentes sobre aguinaldo – MTSS: https://www.mtss.go.cr/temas-laborales/aguinaldo/preguntas_frecuentes.pdf
-
-Asuntos laborales – MTSS: https://www.mtss.go.cr/temas-laborales/index.html
+FUENTES
+- MTSS, aguinaldo: https://www.mtss.go.cr/temas-laborales/aguinaldo/preguntas_frecuentes.pdf
+- MTSS, asuntos laborales: https://www.mtss.go.cr/temas-laborales/
+- MTSS, salarios mínimos 2026: https://www.mtss.go.cr/temas-laborales/salarios/lista_salarios_minimos_2026.pdf
+- Código de Trabajo: https://www.mtss.go.cr/elministerio/marco-legal/documentos/codigo_trabajo_cr.pdf

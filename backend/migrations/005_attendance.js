@@ -1,0 +1,47 @@
+export const statements = [
+  `CREATE TABLE IF NOT EXISTS asistencias (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    colaborador_id INT NOT NULL,
+    fecha DATE NOT NULL,
+    hora_entrada DATETIME NULL,
+    hora_salida DATETIME NULL,
+    minutos_trabajados INT NULL,
+    estado ENUM('incompleta','completa','incidencia') NOT NULL DEFAULT 'incompleta',
+    observacion VARCHAR(500) NULL,
+    creada_en TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    actualizada_en TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    UNIQUE KEY asistencia_colaborador_fecha (colaborador_id, fecha),
+    INDEX asistencia_fecha_estado (fecha, estado),
+    CONSTRAINT fk_asistencia_colaborador FOREIGN KEY (colaborador_id) REFERENCES colaboradores(id) ON DELETE CASCADE
+  )`,
+  `CREATE TABLE IF NOT EXISTS alertas_asistencia (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    asistencia_id INT NOT NULL,
+    colaborador_id INT NOT NULL,
+    tipo ENUM('horas_insuficientes','sin_salida','sin_marcacion') NOT NULL,
+    mensaje VARCHAR(500) NOT NULL,
+    estado ENUM('pendiente','revisada','cerrada') NOT NULL DEFAULT 'pendiente',
+    creada_en TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    revisada_por INT NULL,
+    revisada_en DATETIME NULL,
+    INDEX alertas_estado_fecha (estado, creada_en),
+    CONSTRAINT fk_alerta_asistencia FOREIGN KEY (asistencia_id) REFERENCES asistencias(id) ON DELETE CASCADE,
+    CONSTRAINT fk_alerta_colaborador FOREIGN KEY (colaborador_id) REFERENCES colaboradores(id) ON DELETE CASCADE,
+    CONSTRAINT fk_alerta_revisor FOREIGN KEY (revisada_por) REFERENCES colaboradores(id) ON DELETE SET NULL
+  )`,
+  `CREATE TABLE IF NOT EXISTS sanciones_asistencia (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    alerta_id INT NOT NULL,
+    colaborador_id INT NOT NULL,
+    aplicada_por INT NOT NULL,
+    tipo ENUM('advertencia','amonestacion_escrita','plan_correctivo','suspension','otra') NOT NULL,
+    motivo TEXT NOT NULL,
+    observaciones TEXT NULL,
+    estado ENUM('registrada','anulada') NOT NULL DEFAULT 'registrada',
+    creada_en TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    INDEX sanciones_colaborador_fecha (colaborador_id, creada_en),
+    CONSTRAINT fk_sancion_alerta FOREIGN KEY (alerta_id) REFERENCES alertas_asistencia(id),
+    CONSTRAINT fk_sancion_colaborador FOREIGN KEY (colaborador_id) REFERENCES colaboradores(id),
+    CONSTRAINT fk_sancion_aplicada_por FOREIGN KEY (aplicada_por) REFERENCES colaboradores(id)
+  )`,
+];

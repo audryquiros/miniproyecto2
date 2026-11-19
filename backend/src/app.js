@@ -9,6 +9,8 @@ import personnelRoutes from "./routes/personnel.routes.js";
 import reportsRoutes from "./routes/reports.routes.js";
 import { authenticate, requireHR } from "./middleware/auth.middleware.js";
 import policiesRoutes from "./routes/policies.routes.js";
+import attendanceRoutes from "./routes/attendance.routes.js";
+import requestsRoutes from "./routes/requests.routes.js";
 
 dotenv.config();
 
@@ -39,7 +41,9 @@ app.get("/api/health", (_req, res) => {
 app.use("/api/auth", authRoutes);
 app.use("/api/policies", authenticate, policiesRoutes);
 app.use("/api/personnel", authenticate, personnelRoutes);
+app.use("/api/attendance", authenticate, attendanceRoutes);
 app.use("/api/reports", authenticate, requireHR, reportsRoutes);
+app.use("/api/requests", authenticate, requireHR, requestsRoutes);
 app.use("/api/chat", authenticate, chatRoutes);
 app.use("/api/ingestion", authenticate, requireHR, ingestionRoutes);
 

@@ -1,51 +1,99 @@
 NUVEXA SOLUTIONS
-Versión: 1.1
-Vigencia: 2026-11-19
-Responsable: Equipo de Recursos Humanos de Nuvexa (empresa ficticia)
-Ámbito: proyecto académico; la aplicación a casos reales requiere revisión del régimen correspondiente.
+POLÍTICA INTERNA DE RECURSOS HUMANOS
 
-Reglamento de jornada, asistencia y teletrabajo
+Versión: 2.0
+Fecha de vigencia: 19 de noviembre de 2026
+Responsable: Dirección de Recursos Humanos
+Ámbito: Personas colaboradoras de Nuvexa Solutions con relación laboral en Costa Rica
+Naturaleza: Política interna empresarial; no sustituye la legislación costarricense ni asesoría jurídica.
 
+REGLA GENERAL DE INTERPRETACIÓN
+Cuando una disposición de esta política otorgue un beneficio superior al mínimo legal, se aplicará el beneficio interno. Cuando exista contradicción entre una regla interna y una norma laboral imperativa, prevalecerá la norma legal. Las referencias legales se incluyen para facilitar el RAG y la trazabilidad documental y deberán revisarse cuando cambie la legislación.
 
+1. OBJETIVO
+Regular jornada, horario, asistencia, horas extra, teletrabajo, desconexión y responsabilidades de Nuvexa.
 
-1. Jornada
+2. JORNADA DE REFERENCIA NUVEXA
+Para puestos administrativos elegibles, Nuvexa utilizará como horario de referencia de lunes a viernes de 8:00 a.m. a 5:00 p.m., con el descanso correspondiente.
+La jornada efectiva dependerá del contrato y de la naturaleza del puesto. No se debe asumir que todas las personas tienen exactamente el mismo régimen.
 
-La jornada se establecerá en el contrato y deberá respetar los límites legales aplicables. Para puestos administrativos de Nuvexa se utilizará como referencia una jornada de 8:00 a.m. a 5:00 p.m., lunes a viernes, con el descanso correspondiente.
+3. LÍMITES LEGALES
+La jornada ordinaria debe respetar los límites legales según sea diurna, nocturna, mixta o un régimen especial.
+La jornada ordinaria sumada a extraordinaria no deberá exceder los límites legales aplicables. La jornada extraordinaria es excepcional y no debe utilizarse como sustituto permanente de planificación.
 
-2. Asistencia
+4. DESCANSOS
+Nuvexa respetará los descansos mínimos establecidos por la legislación. El descanso para alimentación y el descanso semanal se aplicarán según el régimen de jornada y modalidad contractual.
 
-La entrada, salida y pausas se registrarán en el sistema corporativo. Los errores de marcación deben reportarse a la jefatura.
+5. REGISTRO DE ASISTENCIA
+Las entradas, salidas, pausas y horas extra que deban registrarse se documentarán mediante el sistema corporativo.
+Si existe un error de marcación, la persona debe reportarlo a la jefatura para corrección.
 
-3. Horas extra
+6. HORAS EXTRA
+Las horas extra requieren autorización previa salvo emergencias justificadas.
+La remuneración se realizará conforme a la legislación vigente y la modalidad salarial aplicable. Como referencia general del MTSS, la hora extraordinaria se remunera a tiempo y medio; el tratamiento de horas extra en feriados puede ser diferente.
+El sistema no deberá calcular horas extra sin conocer jornada, salario, día trabajado y clasificación correspondiente.
 
-Las horas extraordinarias requieren autorización previa salvo emergencias justificadas. Se remunerarán conforme a la legislación vigente; no se utilizarán horas extra como mecanismo permanente para extender la jornada.
+7. TELETRABAJO
+El teletrabajo es voluntario y debe acordarse entre Nuvexa y la persona colaboradora conforme a la Ley 9738 y sus reformas.
+Nuvexa podrá autorizar hasta tres días de teletrabajo por semana para puestos elegibles. Los tres días son un beneficio/regla interna, no un mínimo legal.
+La autorización podrá depender de puesto, seguridad, desempeño, necesidades operativas y disponibilidad de herramientas.
 
-4. Teletrabajo
+8. ACUERDO Y CAMBIOS
+El teletrabajo deberá constar en el contrato, adenda, acuerdo o mecanismo formal definido por Nuvexa.
+Los cambios de modalidad deben respetar el procedimiento interno y la legislación. No se deberán realizar cambios que lesionen derechos laborales.
 
-El teletrabajo será voluntario y se establecerá mediante acuerdo entre las partes, conforme a la Ley 9738. Nuvexa podrá autorizar hasta 3 días de teletrabajo por semana para puestos elegibles.
+9. DESCONEXIÓN
+Fuera de la jornada acordada, Nuvexa respetará el derecho a la desconexión laboral, salvo las excepciones legales y situaciones que por la naturaleza del puesto o emergencia estén justificadas.
+La expectativa de disponibilidad permanente no forma parte del teletrabajo ordinario.
 
-5. Requisitos
+10. EQUIPO Y SEGURIDAD
+Nuvexa definirá qué equipo, software, conectividad y soporte proporciona.
+La persona teletrabajadora debe proteger credenciales, evitar compartir dispositivos corporativos y reportar incidentes.
+El lugar de trabajo debe cumplir condiciones razonables de seguridad y confidencialidad.
 
-La persona teletrabajadora deberá contar con conexión adecuada, espacio razonablemente seguro y disponibilidad durante la jornada acordada.
+11. EVALUACIÓN
+El teletrabajo se evaluará por resultados, objetivos, calidad, cumplimiento y disponibilidad durante la jornada acordada, no por vigilancia invasiva.
 
-6. Seguridad
+12. TELETRABAJO DESDE EL EXTRANJERO
+Trabajar desde otro país requiere autorización previa y revisión de RRHH, porque puede generar efectos laborales, migratorios, tributarios, de seguridad social y de cobertura. El chatbot no debe autorizar automáticamente trabajo internacional.
 
-Los dispositivos y accesos utilizados en teletrabajo deberán cumplir las políticas de seguridad de Nuvexa.
+13. RESPONSABILIDADES
+Colaborador: cumplir jornada, registrar asistencia, proteger información y mantener disponibilidad durante el horario.
+Jefatura: planificar y autorizar horas extra/teletrabajo de manera objetiva.
+RRHH: mantener acuerdos y actualizar la política.
+TI/Seguridad: asegurar controles tecnológicos.
 
-7. Evaluación
+14. PREGUNTAS FRECUENTES
+¿Puedo teletrabajar tres días? Si el puesto es elegible y Nuvexa lo autoriza.
+¿Es obligatorio? No.
+¿Puedo trabajar desde otro país? Solo con autorización y revisión previa.
+¿Tengo que responder mensajes fuera de horario? No como regla general, salvo excepciones justificadas.
+¿Las horas extra son automáticas si trabajé más? Deben gestionarse conforme a autorización y ley.
 
-El teletrabajo se evaluará por objetivos y resultados, sin eliminar las obligaciones de jornada y disponibilidad pactadas.
+15. CONTROL DE ASISTENCIA E INCIDENCIAS
+La persona colaboradora deberá registrar su hora de entrada y su hora de salida en el sistema corporativo. Para la jornada administrativa de referencia de Nuvexa, el sistema utilizará ocho horas efectivas como mínimo operativo de referencia, sin perjuicio del régimen contractual o legal que corresponda a cada puesto.
 
-8. Preguntas frecuentes
+Cuando el registro diario muestre menos horas que el mínimo de referencia, una salida no registrada o ausencia de marcaciones, el sistema generará una incidencia para revisión de Recursos Humanos. La incidencia deberá indicar la fecha, las horas registradas y el tiempo contabilizado cuando exista información suficiente.
 
-¿Cuántos días puedo teletrabajar? Hasta 3 por semana si el puesto es elegible y existe autorización. ¿Es obligatorio teletrabajar? No. ¿Puedo cambiar los días? Sí, con aprobación previa.
+Una incidencia no constituye automáticamente una sanción. Antes de aplicar una medida, Recursos Humanos deberá revisar la justificación presentada, permisos o incapacidades existentes, errores de marcación, modalidad de trabajo, jornada contractual y cualquier otra circunstancia relevante.
 
-Referencias y fuentes
+16. MEDIDAS DISCIPLINARIAS
+Cuando corresponda una medida por incumplimiento de jornada o asistencia, Recursos Humanos deberá documentar el motivo, la evidencia revisada, la persona responsable de la decisión y la medida adoptada. Las medidas deberán ajustarse a la legislación laboral costarricense, al contrato, al reglamento o normativa interna aplicable y al principio de proporcionalidad.
 
-Ministerio de Trabajo y Seguridad Social – Marco Legal: https://www.mtss.go.cr/elministerio/marco-legal/marco-legal.html
+El sistema permitirá registrar medidas como advertencia, amonestación escrita, plan correctivo, suspensión u otra medida definida por Nuvexa. La aplicación dentro del sistema constituye un registro administrativo y no sustituye la revisión jurídica requerida para casos que puedan implicar derechos laborales o consecuencias disciplinarias relevantes.
 
-Código de Trabajo de Costa Rica – MTSS: https://www.mtss.go.cr/elministerio/marco-legal/documentos/codigo_trabajo_cr.pdf
+17. RESPONSABILIDADES ADICIONALES
+Colaborador: registrar correctamente entrada y salida y reportar errores o situaciones justificadas.
+Jefatura: revisar y justificar correcciones de marcación cuando corresponda.
+RRHH: revisar incidencias, solicitar evidencia, resolverlas y documentar cualquier medida adoptada.
 
-Ley 9738 – Teletrabajo: https://www.mtss.go.cr/elministerio/marco-legal/documentos/9738.pdf
+18. PREGUNTAS FRECUENTES
+¿Qué pasa si trabajo menos de ocho horas? El sistema puede generar una incidencia cuando el registro de la jornada de referencia sea inferior al mínimo operativo configurado. RRHH debe revisar el caso antes de tomar una medida.
+¿La alerta significa que ya tengo una sanción? No. La alerta inicia una revisión administrativa.
+¿Puedo corregir una marcación? Debes reportar el error a tu jefatura para que sea revisado y documentado.
+¿La regla de ocho horas aplica a todas las personas? No necesariamente. Es el mínimo operativo de referencia para la jornada administrativa de Nuvexa; el régimen contractual o legal específico puede ser distinto.
 
-Criterios jurídico-laborales – MTSS: https://www.mtss.go.cr/elministerio/estructura/direccion-asuntos-juridicos/Compendio%20de%20Criterios%20Juridicos%20Laborales.pdf
+FUENTES
+- Ley 9738: https://www.mtss.go.cr/elministerio/marco-legal/documentos/9738.pdf
+- MTSS, jornada laboral: https://www.mtss.go.cr/temas-laborales/
+- MTSS, marco legal: https://www.mtss.go.cr/elministerio/marco-legal/marco-legal.html

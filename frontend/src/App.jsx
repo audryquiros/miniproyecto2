@@ -1,28 +1,37 @@
 import { useEffect, useState } from "react";
 import { api, login, logout, resetConversation } from "./services/api.js";
 import Sidebar from "./components/Sidebar/Sidebar.jsx";
-import Chat from "./components/Chat/Chat.jsx";
 import Dashboard from "./pages/Dashboard/Dashboard.jsx";
 import Profile from "./pages/Profile/Profile.jsx";
+import Attendance from "./pages/Attendance/Attendance.jsx";
+import HRAttendance from "./pages/HRAttendance/HRAttendance.jsx";
+import RequestsReview from "./pages/RequestsReview/RequestsReview.jsx";
+import ChatBubble from "./components/ChatBubble/ChatBubble.jsx";
 import "./pages/Chat/ChatPage.css";
 import "./portal.css";
 export default function App() {
   const [user, setUser] = useState(null),
     [loading, setLoading] = useState(true),
-    [page, setPage] = useState("chat"),
+    [page, setPage] = useState("dashboard"),
     [error, setError] = useState("");
   useEffect(() => {
     api("/auth/me")
       .then((data) => setUser(data.user))
       .catch(() => {})
       .finally(() => setLoading(false));
+
+    const navigateFromDashboard = (event) => setPage(event.detail);
     const expired = () => {
       setUser(null);
       resetConversation();
-      setPage("chat");
+      setPage("dashboard");
     };
+    window.addEventListener("navigate-page", navigateFromDashboard);
     window.addEventListener("session-expired", expired);
-    return () => window.removeEventListener("session-expired", expired);
+    return () => {
+      window.removeEventListener("navigate-page", navigateFromDashboard);
+      window.removeEventListener("session-expired", expired);
+    };
   }, []);
   async function signIn(event) {
     event.preventDefault();
@@ -32,6 +41,7 @@ export default function App() {
     try {
       const data = await login(form.get("email"), form.get("password"));
       setUser(data.user);
+      setPage(data.user.rol === "RRHH" ? "dashboard" : "attendance");
     } catch (e) {
       setError(e.message);
     } finally {
@@ -42,7 +52,7 @@ export default function App() {
     try {
       await logout();
       setUser(null);
-      setPage("chat");
+      setPage("dashboard");
     } catch (e) {
       setError(e.message);
     }
@@ -116,13 +126,20 @@ export default function App() {
             {error}
           </p>
         )}
-        {page === "chat" ? (
-          <Chat />
-        ) : page === "profile" ? (
+        {page === "profile" ? (
           <Profile />
+        ) : page === "attendance" ? (
+          <Attendance />
+        ) : page === "hr-attendance" && user.rol === "RRHH" ? (
+          <HRAttendance />
+        ) : page === "requests-review" && user.rol === "RRHH" ? (
+          <RequestsReview />
         ) : user.rol === "RRHH" ? (
           <Dashboard demoMode={user.demoMode} />
-        ) : null}
+        ) : (
+          <Attendance />
+        )}
+        <ChatBubble />
       </div>
     </main>
   );

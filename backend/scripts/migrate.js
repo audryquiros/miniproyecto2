@@ -68,6 +68,23 @@ try {
       ["004_embedding_signature"],
     );
   }
+  if (!versions.has("005_attendance")) {
+    const { statements: attendanceStatements } = await import("../migrations/005_attendance.js");
+    for (const sql of attendanceStatements) await connection.query(sql);
+    await connection.execute(
+      "INSERT INTO schema_migrations(version) VALUES (?)",
+      ["005_attendance"],
+    );
+  }
+  if (!versions.has("006_hr_controls")) {
+    const { statements: hrControlStatements } = await import("../migrations/006_hr_controls.js");
+    for (const sql of hrControlStatements) {
+      try { await connection.query(sql); } catch (error) {
+        if (!/Duplicate column|Duplicate key name|already exists/i.test(error.message)) throw error;
+      }
+    }
+    await connection.execute("INSERT INTO schema_migrations(version) VALUES (?)", ["006_hr_controls"]);
+  }
 } finally {
   connection.release();
   await pool.end();

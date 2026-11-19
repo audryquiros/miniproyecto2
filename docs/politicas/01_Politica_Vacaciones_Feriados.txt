@@ -1,61 +1,72 @@
 NUVEXA SOLUTIONS
-Versión: 1.1
-Vigencia: 2026-11-19
-Responsable: Equipo de Recursos Humanos de Nuvexa (empresa ficticia)
-Ámbito: proyecto académico; la aplicación a casos reales requiere revisión del régimen correspondiente.
+POLÍTICA INTERNA DE RECURSOS HUMANOS
 
-Política de vacaciones y feriados
+Versión: 2.0
+Fecha de vigencia: 19 de noviembre de 2026
+Responsable: Dirección de Recursos Humanos
+Ámbito: Personas colaboradoras de Nuvexa Solutions con relación laboral en Costa Rica
+Naturaleza: Política interna empresarial; no sustituye la legislación costarricense ni asesoría jurídica.
 
+REGLA GENERAL DE INTERPRETACIÓN
+Cuando una disposición de esta política otorgue un beneficio superior al mínimo legal, se aplicará el beneficio interno. Cuando exista contradicción entre una regla interna y una norma laboral imperativa, prevalecerá la norma legal. Las referencias legales se incluyen para facilitar el RAG y la trazabilidad documental y deberán revisarse cuando cambie la legislación.
 
+1. OBJETIVO
+Establecer las reglas para la adquisición, solicitud, aprobación, disfrute, registro y liquidación de vacaciones, así como el tratamiento de los feriados aplicables a Nuvexa.
 
-1. Objetivo
+2. ALCANCE
+Aplica a las personas colaboradoras contratadas por Nuvexa en Costa Rica, salvo regímenes especiales que legalmente resulten aplicables.
 
-Establecer las reglas internas para solicitar, aprobar, registrar y disfrutar vacaciones y feriados, garantizando como mínimo los derechos laborales aplicables en Costa Rica.
+3. PRINCIPIOS
+- El derecho a vacaciones es irrenunciable en los términos establecidos por la legislación.
+- Nuvexa mantendrá registros de saldos, solicitudes, aprobaciones y disfrutes.
+- La planificación buscará equilibrar el descanso efectivo de la persona colaboradora con la continuidad operativa.
+- Ninguna regla interna podrá utilizarse para reducir el mínimo legal.
 
-2. Alcance
+4. ADQUISICIÓN Y SALDO
+La legislación costarricense establece actualmente un mínimo de tres semanas de vacaciones remuneradas por cada cuarenta y nueve semanas de labores continuas. En Nuvexa, cuya jornada ordinaria de referencia es de lunes a viernes, este mínimo se administrará como quince días hábiles de vacaciones por período completo, salvo que un régimen legal o contractual aplicable determine una condición más favorable.
+El sistema mostrará el saldo disponible, los movimientos y el período al que corresponden. No se deberá interpretar un saldo de sistema como renuncia a derechos que legalmente correspondan.
 
-Aplica a todas las personas colaboradoras de Nuvexa Solutions con relación laboral vigente en Costa Rica.
+5. SOLICITUD
+La solicitud ordinaria se realizará mediante el portal interno con al menos diez días naturales de anticipación, salvo emergencias, necesidades operativas justificadas o acuerdos distintos aprobados por la jefatura.
+La solicitud debe indicar fecha de inicio, fecha de regreso y cantidad de días solicitados.
+La jefatura verificará continuidad operativa y RRHH podrá intervenir cuando exista una situación legal, discrepancia de saldo o riesgo de afectación de derechos.
 
-3. Vacaciones
+6. APROBACIÓN Y DISFRUTE
+La aprobación debe quedar registrada. La persona colaboradora no debe iniciar vacaciones sin confirmación, excepto cuando exista una instrucción o situación legal que indique lo contrario.
+Nuvexa procurará programar el disfrute dentro de los plazos legales y evitar acumulaciones indebidas.
+El disfrute debe corresponder a descanso real. Las vacaciones no se sustituyen libremente por dinero durante la relación laboral.
 
-La legislación costarricense establece como mínimo dos semanas de vacaciones remuneradas por cada cincuenta semanas de labores continuas al servicio de la misma persona empleadora. Nuvexa otorgará 15 días hábiles de vacaciones por cada período anual completo, como beneficio interno superior al mínimo legal. La condición interna no podrá interpretarse para reducir derechos legales.
+7. FRACCIONAMIENTO Y ACUMULACIÓN
+El fraccionamiento y la acumulación se permitirán únicamente dentro de los supuestos y límites de la legislación vigente y deberán quedar documentados.
+La regla interna no autoriza acumular indefinidamente vacaciones. Si la situación concreta requiere interpretación jurídica, RRHH debe escalarla.
 
-4. Solicitud
+8. TERMINACIÓN DE LA RELACIÓN
+Al finalizar la relación laboral, Nuvexa liquidará las vacaciones pendientes que legalmente correspondan. Si la persona no completó el período requerido para adquirir el disfrute completo, se aplicará la proporción legal correspondiente a la terminación.
 
-La persona colaboradora solicitará vacaciones mediante el portal interno con al menos 10 días naturales de anticipación, salvo situaciones excepcionales justificadas. La solicitud deberá indicar fecha de inicio, fecha de regreso y cantidad de días.
+9. FERIADOS
+Nuvexa reconocerá los feriados nacionales aplicables a Costa Rica. La clasificación de pago obligatorio o no obligatorio se realizará conforme al Código de Trabajo y la normativa vigente.
+Para 2026, el calendario oficial del MTSS contempla doce fechas feriadas: 1 de enero; 2 y 3 de abril; 11 de abril; 1 de mayo; 25 de julio; 2 de agosto; 15 de agosto; 31 de agosto; 15 de setiembre; 1 de diciembre y 25 de diciembre.
+El calendario de 2026 no debe reutilizarse automáticamente para años posteriores: RRHH deberá publicar el calendario actualizado.
+Cuando una persona trabaje un feriado, la remuneración se determinará según la modalidad salarial, el tipo de feriado, la jornada y las reglas legales aplicables. No se debe prometer un cálculo único sin conocer esas variables.
 
-5. Aprobación
+10. RESPONSABILIDADES
+Persona colaboradora: solicitar, revisar saldo y respetar las fechas aprobadas.
+Jefatura: planificar, responder solicitudes y evitar afectaciones operativas indebidas.
+RRHH: mantener registros, interpretar la política, actualizar calendarios y escalar casos legales.
+Finanzas/Planilla: procesar los pagos y liquidaciones correspondientes.
 
-La jefatura revisará la continuidad operativa y responderá en un máximo de 3 días hábiles. Recursos Humanos podrá intervenir cuando exista conflicto entre solicitudes o dudas sobre el saldo.
+11. REGISTROS
+Se conservarán solicitudes, aprobaciones, movimientos de saldo, disfrutes y liquidaciones con controles de acceso.
 
-6. Fraccionamiento y acumulación
+12. PREGUNTAS FRECUENTES
+¿Nuvexa da 15 días hábiles? Sí, como forma de administrar tres semanas de vacaciones en su jornada ordinaria de lunes a viernes, sin reducir el mínimo legal.
+¿Puedo acumular indefinidamente? No.
+¿Puedo vender mis vacaciones cuando quiera? No; la compensación durante la relación laboral solo procede en los supuestos legalmente permitidos.
+¿Los feriados de 2026 son iguales en 2027? No necesariamente; RRHH debe actualizar el calendario.
+¿Se pagan todos los feriados igual? No. Depende de la clasificación legal y modalidad salarial.
 
-Las vacaciones podrán fraccionarse conforme a la legislación aplicable y a las necesidades operativas. La acumulación se permitirá únicamente cuando la ley lo permita y deberá quedar documentada. El sistema deberá conservar el historial de saldos y movimientos.
-
-7. Feriados
-
-Nuvexa reconocerá los feriados nacionales conforme al Código de Trabajo y las disposiciones vigentes del MTSS. Los feriados de pago obligatorio y no obligatorio se tratarán conforme a la modalidad salarial y a la normativa vigente.
-
-Calendario académico 2026 (fuente: MTSS, CARTA-MTSS-DAJ-AER-1076-2025): 1 de enero; 2 y 3 de abril; 11 de abril; 1 de mayo; 25 de julio; 2, 15 y 31 de agosto; 15 de septiembre; 1 y 25 de diciembre. Para una consulta posterior al 19 de noviembre de 2026, quedan 1 de diciembre y 25 de diciembre. Para otro año se debe cargar el calendario oficial correspondiente; no se reutilizan estas fechas automáticamente.
-
-8. Registro
-
-Toda aprobación deberá quedar registrada digitalmente. La persona colaboradora podrá consultar su saldo y el historial de vacaciones.
-
-9. Responsabilidades
-
-Colaborador: solicitar y verificar sus datos. Jefatura: revisar y aprobar. RRHH: mantener registros y resolver dudas.
-
-10. Preguntas frecuentes
-
-¿Cuántos días tengo? 15 días hábiles por año completo según la política interna, sin perjuicio del mínimo legal. ¿Con cuánto tiempo debo solicitar? 10 días naturales. ¿Puedo acumular? Solo cuando la legislación y las condiciones aplicables lo permitan y quede documentado. ¿Qué pasa al terminar la relación laboral? Se liquidarán los derechos que correspondan conforme a la legislación.
-
-Referencias y fuentes
-
-Ministerio de Trabajo y Seguridad Social – Marco Legal: https://www.mtss.go.cr/elministerio/marco-legal/marco-legal.html
-
-Código de Trabajo de Costa Rica – MTSS: https://www.mtss.go.cr/elministerio/marco-legal/documentos/codigo_trabajo_cr.pdf
-
-Criterio general sobre vacaciones – MTSS: https://www.mtss.go.cr/elministerio/estructura/direccion-asuntos-juridicos/criterios_juridicos/documetos/DAJ-AER-OFP-645-2023.pdf
-
-Calendario de feriados 2026 – MTSS: https://www.mtss.go.cr/temas-laborales/feriados/feriados_calendario_2026.pdf
+FUENTES PRINCIPALES
+- Código de Trabajo, arts. 11, 153–161: https://www.mtss.go.cr/elministerio/marco-legal/documentos/Codigo_Trabajo_RPL.pdf
+- Ley 10589, licencia por duelo: https://www.pgrweb.go.cr/DOCS/NORMAS/1/VIGENTE/L/2020-2029/2020-2024/2024/193D8/170861.HTML
+- MTSS, aplicación de feriados 2026: https://www.mtss.go.cr/temas-laborales/feriados/feriados_calendario_2026.pdf
+- MTSS, asuntos laborales: https://www.mtss.go.cr/temas-laborales/

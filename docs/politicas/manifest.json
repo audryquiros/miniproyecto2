@@ -1,0 +1,82 @@
+[
+  {
+    "archivo": "01_Politica_Vacaciones_Feriados.txt",
+    "version": "1.1",
+    "vigencia": "2026-11-19",
+    "responsable": "Equipo RRHH Nuvexa (ficticio)",
+    "sha256": "cd9f623caeb7c4563fbd3361b6637100cb4b71dad19a6a4b32bf4ae69086f173",
+    "publicacion_drive": "pendiente de publicación por el equipo"
+  },
+  {
+    "archivo": "02_Politica_Permisos_Licencias.txt",
+    "version": "1.1",
+    "vigencia": "2026-11-19",
+    "responsable": "Equipo RRHH Nuvexa (ficticio)",
+    "sha256": "ea8c2f9442d9641e36aaaef2a42fbbb1a7ed1b3f7c9ae88eeac65c73b9db297a",
+    "publicacion_drive": "pendiente de publicación por el equipo"
+  },
+  {
+    "archivo": "03_Procedimiento_Incapacidades.txt",
+    "version": "1.1",
+    "vigencia": "2026-11-19",
+    "responsable": "Equipo RRHH Nuvexa (ficticio)",
+    "sha256": "4caed6a2ce19b03d64e01b6060a11c7d4c64dcd93bff190ac50bc615d78128c6",
+    "publicacion_drive": "pendiente de publicación por el equipo"
+  },
+  {
+    "archivo": "04_Jornada_Asistencia_Teletrabajo.txt",
+    "version": "1.1",
+    "vigencia": "2026-11-19",
+    "responsable": "Equipo RRHH Nuvexa (ficticio)",
+    "sha256": "56aac3d496de2403fe682ba9948f58f75619f7952ff71cbdf2fb87c9198bea1f",
+    "publicacion_drive": "pendiente de publicación por el equipo"
+  },
+  {
+    "archivo": "05_Politica_Salarial_Pagos.txt",
+    "version": "1.1",
+    "vigencia": "2026-11-19",
+    "responsable": "Equipo RRHH Nuvexa (ficticio)",
+    "sha256": "8522f2f96dac7c2cf802cc6e824dd8a8c738b909f2a8d68f90c71ee39426a85b",
+    "publicacion_drive": "pendiente de publicación por el equipo"
+  },
+  {
+    "archivo": "06_Catalogo_Beneficios.txt",
+    "version": "1.1",
+    "vigencia": "2026-11-19",
+    "responsable": "Equipo RRHH Nuvexa (ficticio)",
+    "sha256": "7971dbeb6e91aeb8a6fcdecea5635bd9e74a445a8df008f6d01517aa8b817461",
+    "publicacion_drive": "pendiente de publicación por el equipo"
+  },
+  {
+    "archivo": "07_Onboarding_Salida.txt",
+    "version": "1.1",
+    "vigencia": "2026-11-19",
+    "responsable": "Equipo RRHH Nuvexa (ficticio)",
+    "sha256": "adf26e8589e6f9ca814321042783ddc935832e9acedad6f6537976918918981f",
+    "publicacion_drive": "pendiente de publicación por el equipo"
+  },
+  {
+    "archivo": "08_Evaluacion_Desempeno.txt",
+    "version": "1.1",
+    "vigencia": "2026-11-19",
+    "responsable": "Equipo RRHH Nuvexa (ficticio)",
+    "sha256": "d8e00b73150c5e28ab2841801ed1fa8b9650fb9a61b0c7f67879d1edd16279d9",
+    "publicacion_drive": "pendiente de publicación por el equipo"
+  },
+  {
+    "archivo": "09_Codigo_Conducta_Denuncias.txt",
+    "version": "1.1",
+    "vigencia": "2026-11-19",
+    "responsable": "Equipo RRHH Nuvexa (ficticio)",
+    "sha256": "3e09349cfed92d4cedd71348788842d5c7f5b82777ae41fcaa8f44de42e9ab30",
+    "publicacion_drive": "pendiente de publicación por el equipo"
+  },
+  {
+    "archivo": "10_Aviso_Privacidad.txt",
+    "version": "1.1",
+    "vigencia": "2026-11-19",
+    "responsable": "Equipo RRHH Nuvexa (ficticio)",
+    "sha256": "905389a829afa01baac13eef1833e2408db2af523df3c8031b48b9c1528eab01",
+    "publicacion_drive": "pendiente de publicación por el equipo"
+  }
+]

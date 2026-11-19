@@ -1,4 +1,8 @@
 NUVEXA SOLUTIONS
+Versión: 1.1
+Vigencia: 2026-11-19
+Responsable: Equipo de Recursos Humanos de Nuvexa (empresa ficticia)
+Ámbito: proyecto académico; la aplicación a casos reales requiere revisión del régimen correspondiente.
 
 Política de permisos y licencias
 
@@ -18,11 +22,11 @@ Nuvexa respetará la licencia de maternidad y las protecciones laborales estable
 
 4. Paternidad
 
-Nuvexa aplicará la licencia de paternidad establecida por la legislación costarricense vigente y mantendrá el procedimiento actualizado ante cambios normativos.
+En el supuesto de paternidad del artículo 95 inciso b), corresponden dos días por semana durante las primeras cuatro semanas desde el nacimiento. La nota constitucional incorporada por SINALEVI extiende este beneficio a la madre no gestante que ejerza comaternidad en una familia homoparental. RRHH verificará los supuestos y respaldos del caso. Fuente: artículo 95 vigente, https://www.pgrweb.go.cr/DOCS/NORMAS/1/VIGENTE/L/1940-1949/1940-1944/1943/1F6D/180E63.HTML
 
 5. Duelo
 
-Como beneficio interno, Nuvexa otorgará hasta 5 días hábiles con goce de salario por fallecimiento de cónyuge/conviviente, padre, madre o hijo; hasta 3 días por hermano; y 1 día por abuelo, nieto o suegro. Cuando la ley conceda un derecho superior, prevalecerá el derecho legal.
+Como beneficio interno, Nuvexa otorgará hasta 5 días hábiles con goce de salario por fallecimiento de cónyuge/conviviente, padre, madre o hijo; hasta 3 días por hermano o suegro; y 1 día por abuelo o nieto. La licencia nunca será inferior al mínimo aplicable de la Ley 10589 (artículo 69 inciso l): tres días hábiles para primer grado de consanguinidad o afinidad y un día para segundo y tercer grado, sin perjuicio de normas especiales. Fuente: https://direccionejecutiva.poder-judicial.go.cr/index.php/servicios/edictos/72-publicados-en-el-diario-oficial-la-gaceta-segun-articulos-81-y-172?download=426%3Adel-18-al-22-de-noviembre-2024-alcance-195-gaceta-227-del-03-de-diciembre-2024&start=60 Cuando la ley conceda un derecho superior, prevalecerá el derecho legal.
 
 6. Matrimonio
 

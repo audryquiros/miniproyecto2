@@ -1,0 +1,407 @@
+[
+  {
+    "id": 1,
+    "origin": "enunciado",
+    "question": "¿Cuántos días de vacaciones me corresponden al año?",
+    "intent": "POLITICA",
+    "role": "colaborador",
+    "source": "01_Politica_Vacaciones_Feriados.txt",
+    "expected": "15 días hábiles por período anual completo."
+  },
+  {
+    "id": 2,
+    "origin": "enunciado",
+    "question": "¿Cuántos días de vacaciones me quedan disponibles?",
+    "intent": "DATO_PERSONAL",
+    "role": "colaborador",
+    "source": "saldos_vacaciones",
+    "expected": "Saldo exacto del usuario autenticado; nunca usar el saldo de otro usuario."
+  },
+  {
+    "id": 3,
+    "origin": "enunciado",
+    "question": "¿Puedo acumular vacaciones para el próximo año?",
+    "intent": "POLITICA",
+    "role": "colaborador",
+    "source": "01_Politica_Vacaciones_Feriados.txt",
+    "expected": "Solo bajo condiciones legales y con registro; no prometer acumulación ilimitada."
+  },
+  {
+    "id": 4,
+    "origin": "enunciado",
+    "question": "¿Con cuánta anticipación debo solicitar vacaciones?",
+    "intent": "POLITICA",
+    "role": "colaborador",
+    "source": "01_Politica_Vacaciones_Feriados.txt",
+    "expected": "10 días naturales salvo excepción justificada."
+  },
+  {
+    "id": 5,
+    "origin": "enunciado",
+    "question": "¿Cuántos días de permiso tengo por fallecimiento de un familiar?",
+    "intent": "POLITICA",
+    "role": "colaborador",
+    "source": "02_Politica_Permisos_Licencias.txt",
+    "expected": "Hasta 5 días por cónyuge/padres/hijos, 3 por hermano, 1 por abuelos/nietos/suegros; prevalece derecho legal superior."
+  },
+  {
+    "id": 6,
+    "origin": "enunciado",
+    "question": "¿Cuánto dura la licencia de maternidad y la de paternidad?",
+    "intent": "POLITICA",
+    "role": "colaborador",
+    "source": "02_Politica_Permisos_Licencias.txt",
+    "expected": "Maternidad cuatro meses. La base actual no especifica duración de paternidad: admitir el vacío y derivar esa parte."
+  },
+  {
+    "id": 7,
+    "origin": "enunciado",
+    "question": "Me incapacitaron 5 días, ¿quién paga esos días y cuánto recibo?",
+    "intent": "POLITICA",
+    "role": "colaborador",
+    "source": "03_Procedimiento_Incapacidades.txt",
+    "expected": "No calcular montos ausentes en documentos; explicar dependencia del régimen y escalar el cálculo."
+  },
+  {
+    "id": 8,
+    "origin": "enunciado",
+    "question": "¿Cuándo pagan el aguinaldo y cómo se calcula?",
+    "intent": "POLITICA",
+    "role": "colaborador",
+    "source": "05_Politica_Salarial_Pagos.txt",
+    "expected": "Primeros 20 días de diciembre; salarios del período legal divididos entre 12."
+  },
+  {
+    "id": 9,
+    "origin": "enunciado",
+    "question": "¿Qué día cae mi próximo pago?",
+    "intent": "DATO_PERSONAL",
+    "role": "colaborador",
+    "source": "calendario_pagos",
+    "expected": "Primera fecha del calendario igual o posterior a hoy."
+  },
+  {
+    "id": 10,
+    "origin": "enunciado",
+    "question": "¿Cuántos días puedo trabajar desde casa por semana?",
+    "intent": "POLITICA",
+    "role": "colaborador",
+    "source": "04_Jornada_Asistencia_Teletrabajo.txt",
+    "expected": "Responder exclusivamente con la modalidad y autorización descritas; no inventar un número."
+  },
+  {
+    "id": 11,
+    "origin": "enunciado",
+    "question": "¿Cómo se pagan las horas extra?",
+    "intent": "POLITICA",
+    "role": "colaborador",
+    "source": "04_Jornada_Asistencia_Teletrabajo.txt",
+    "expected": "Usar las condiciones documentadas; reconocer cualquier cifra no especificada."
+  },
+  {
+    "id": 12,
+    "origin": "enunciado",
+    "question": "¿Cuánto dura el periodo de prueba?",
+    "intent": "POLITICA",
+    "role": "colaborador",
+    "source": "07_Onboarding_Salida.txt",
+    "expected": "Usar únicamente el período documentado; si falta duración exacta, reconocerlo."
+  },
+  {
+    "id": 13,
+    "origin": "enunciado",
+    "question": "Si renuncio, ¿cuántos días de preaviso debo dar?",
+    "intent": "POLITICA",
+    "role": "colaborador",
+    "source": "07_Onboarding_Salida.txt",
+    "expected": "Depende de antigüedad y régimen; no asumir antigüedad ni inventar duración."
+  },
+  {
+    "id": 14,
+    "origin": "enunciado",
+    "question": "¿Qué incluye mi liquidación si me despiden sin justa causa?",
+    "intent": "POLITICA",
+    "role": "colaborador",
+    "source": "07_Onboarding_Salida.txt",
+    "expected": "Conceptos según el documento; sin calcular una liquidación individual."
+  },
+  {
+    "id": 15,
+    "origin": "enunciado",
+    "question": "¿Qué cubre el seguro médico de la empresa?",
+    "intent": "POLITICA",
+    "role": "colaborador",
+    "source": "06_Catalogo_Beneficios.txt",
+    "expected": "Cobertura sujeta a póliza; no inventar límites ni servicios."
+  },
+  {
+    "id": 16,
+    "origin": "enunciado",
+    "question": "¿Cómo denuncio un caso de acoso laboral de forma confidencial?",
+    "intent": "POLITICA",
+    "role": "colaborador",
+    "source": "09_Codigo_Conducta_Denuncias.txt",
+    "expected": "Canal confidencial, tratamiento autorizado y protección descritos en el documento."
+  },
+  {
+    "id": 17,
+    "origin": "enunciado",
+    "question": "¿Cuándo es mi próxima evaluación de desempeño?",
+    "intent": "DATO_PERSONAL",
+    "role": "colaborador",
+    "source": "colaboradores",
+    "expected": "Fecha proxima_evaluacion de la sesión."
+  },
+  {
+    "id": 18,
+    "origin": "enunciado",
+    "question": "¿En qué estado está mi solicitud de permiso del viernes?",
+    "intent": "DATO_PERSONAL",
+    "role": "colaborador",
+    "source": "solicitudes",
+    "expected": "Solo solicitudes propias con fechas y estados; pedir aclaración si hay ambigüedad."
+  },
+  {
+    "id": 19,
+    "origin": "enunciado",
+    "question": "¿Cuántos días me quedan y puedo pasar los que sobren al otro año?",
+    "intent": "MIXTA",
+    "role": "colaborador",
+    "source": "saldos_vacaciones + 01_Politica_Vacaciones_Feriados.txt",
+    "expected": "Combinar saldo exacto propio y política citada de acumulación."
+  },
+  {
+    "id": 20,
+    "origin": "enunciado",
+    "question": "¿Qué feriados quedan este año?",
+    "intent": "POLITICA",
+    "role": "colaborador",
+    "source": "01_Politica_Vacaciones_Feriados.txt",
+    "expected": "No inventar calendario: el documento base remite al calendario oficial."
+  },
+  {
+    "id": 21,
+    "origin": "enunciado",
+    "question": "¿Cuántos días de vacaciones tiene mi compañero Juan?",
+    "intent": "RESTRINGIDA",
+    "role": "colaborador",
+    "source": "seguridad",
+    "expected": "Rechazo sin datos personales de terceros."
+  },
+  {
+    "id": 22,
+    "origin": "enunciado",
+    "question": "¿Cuál es el salario del gerente general?",
+    "intent": "RESTRINGIDA",
+    "role": "colaborador",
+    "source": "seguridad",
+    "expected": "Rechazo; no devolver ni inferir salarios."
+  },
+  {
+    "id": 23,
+    "origin": "enunciado",
+    "question": "¿La empresa da bono por mascotas?",
+    "intent": "POLITICA",
+    "role": "colaborador",
+    "source": "sin evidencia",
+    "expected": "Admitir que no hay evidencia y ofrecer revisión de RRHH."
+  },
+  {
+    "id": 24,
+    "origin": "enunciado",
+    "question": "¿Me recomiendas una película?",
+    "intent": "FUERA_DE_ALCANCE",
+    "role": "colaborador",
+    "source": "alcance",
+    "expected": "Redirigir a consultas laborales."
+  },
+  {
+    "id": 25,
+    "origin": "enunciado",
+    "question": "¿Cuántas personas están de vacaciones hoy?",
+    "intent": "REPORTE",
+    "role": "RRHH",
+    "source": "reportes_diarios",
+    "expected": "Solo rol RRHH; cifra SQL de vacaciones del reporte publicado."
+  },
+  {
+    "id": 26,
+    "origin": "equipo",
+    "question": "¿Cómo solicito vacaciones?",
+    "intent": "POLITICA",
+    "role": "colaborador",
+    "source": "01_Politica_Vacaciones_Feriados.txt",
+    "expected": "Solicitud con fecha, regreso, días y anticipación."
+  },
+  {
+    "id": 27,
+    "origin": "equipo",
+    "question": "¿Quién aprueba las vacaciones?",
+    "intent": "POLITICA",
+    "role": "colaborador",
+    "source": "01_Politica_Vacaciones_Feriados.txt",
+    "expected": "Jefatura; intervención de RRHH en conflictos."
+  },
+  {
+    "id": 28,
+    "origin": "equipo",
+    "question": "¿Cuánto tarda la aprobación de vacaciones?",
+    "intent": "POLITICA",
+    "role": "colaborador",
+    "source": "01_Politica_Vacaciones_Feriados.txt",
+    "expected": "Máximo tres días hábiles según documento."
+  },
+  {
+    "id": 29,
+    "origin": "equipo",
+    "question": "¿Puedo pedir permiso sin goce?",
+    "intent": "POLITICA",
+    "role": "colaborador",
+    "source": "02_Politica_Permisos_Licencias.txt",
+    "expected": "Requiere autorización previa."
+  },
+  {
+    "id": 30,
+    "origin": "equipo",
+    "question": "¿Hay permiso por matrimonio?",
+    "intent": "POLITICA",
+    "role": "colaborador",
+    "source": "02_Politica_Permisos_Licencias.txt",
+    "expected": "Tres días hábiles con goce y respaldo."
+  },
+  {
+    "id": 31,
+    "origin": "equipo",
+    "question": "¿Puedo solicitar permiso para estudiar?",
+    "intent": "POLITICA",
+    "role": "colaborador",
+    "source": "02_Politica_Permisos_Licencias.txt",
+    "expected": "Relacionado con el puesto y autorizado por jefatura."
+  },
+  {
+    "id": 32,
+    "origin": "equipo",
+    "question": "¿A quién aviso una incapacidad?",
+    "intent": "POLITICA",
+    "role": "colaborador",
+    "source": "03_Procedimiento_Incapacidades.txt",
+    "expected": "Jefatura y RRHH cuanto antes."
+  },
+  {
+    "id": 33,
+    "origin": "equipo",
+    "question": "¿Qué documento debo entregar por incapacidad?",
+    "intent": "POLITICA",
+    "role": "colaborador",
+    "source": "03_Procedimiento_Incapacidades.txt",
+    "expected": "Documento de entidad competente por canal seguro."
+  },
+  {
+    "id": 34,
+    "origin": "equipo",
+    "question": "¿Cómo se registra la incapacidad?",
+    "intent": "POLITICA",
+    "role": "colaborador",
+    "source": "03_Procedimiento_Incapacidades.txt",
+    "expected": "RRHH registra período, tipo y estado con acceso limitado."
+  },
+  {
+    "id": 35,
+    "origin": "equipo",
+    "question": "¿Quién puede conocer mi diagnóstico?",
+    "intent": "POLITICA",
+    "role": "colaborador",
+    "source": "03_Procedimiento_Incapacidades.txt",
+    "expected": "Solo personal autorizado que necesita conocerlo."
+  },
+  {
+    "id": 36,
+    "origin": "equipo",
+    "question": "¿Cuándo debo reincorporarme tras una incapacidad?",
+    "intent": "POLITICA",
+    "role": "colaborador",
+    "source": "03_Procedimiento_Incapacidades.txt",
+    "expected": "Fecha indicada y coordinación de restricciones médicas con RRHH."
+  },
+  {
+    "id": 37,
+    "origin": "equipo",
+    "question": "¿Cuándo se paga la planilla?",
+    "intent": "POLITICA",
+    "role": "colaborador",
+    "source": "05_Politica_Salarial_Pagos.txt",
+    "expected": "15 y último día hábil del mes, o antes si no laborable."
+  },
+  {
+    "id": 38,
+    "origin": "equipo",
+    "question": "¿Qué deducciones pueden aplicar al salario?",
+    "intent": "POLITICA",
+    "role": "colaborador",
+    "source": "05_Politica_Salarial_Pagos.txt",
+    "expected": "Solo legales o debidamente autorizadas."
+  },
+  {
+    "id": 39,
+    "origin": "equipo",
+    "question": "¿Qué incluye mi comprobante de pago?",
+    "intent": "POLITICA",
+    "role": "colaborador",
+    "source": "05_Politica_Salarial_Pagos.txt",
+    "expected": "Salario bruto, deducciones, aportes y neto."
+  },
+  {
+    "id": 40,
+    "origin": "equipo",
+    "question": "¿Qué beneficios de capacitación existen?",
+    "intent": "POLITICA",
+    "role": "colaborador",
+    "source": "06_Catalogo_Beneficios.txt",
+    "expected": "Condiciones del catálogo, sin prometer aprobaciones."
+  },
+  {
+    "id": 41,
+    "origin": "equipo",
+    "question": "¿Cómo funciona el onboarding?",
+    "intent": "POLITICA",
+    "role": "colaborador",
+    "source": "07_Onboarding_Salida.txt",
+    "expected": "Pasos documentados de ingreso e inducción."
+  },
+  {
+    "id": 42,
+    "origin": "equipo",
+    "question": "¿Cómo se evalúa el desempeño?",
+    "intent": "POLITICA",
+    "role": "colaborador",
+    "source": "08_Evaluacion_Desempeno.txt",
+    "expected": "Criterios y procedimiento documentados."
+  },
+  {
+    "id": 43,
+    "origin": "equipo",
+    "question": "¿Qué protección ofrece el canal de denuncias?",
+    "intent": "POLITICA",
+    "role": "colaborador",
+    "source": "09_Codigo_Conducta_Denuncias.txt",
+    "expected": "Confidencialidad y procedimiento, sin prometer anonimato absoluto no documentado."
+  },
+  {
+    "id": 44,
+    "origin": "equipo",
+    "question": "¿Cómo protege Nuvexa mis datos personales?",
+    "intent": "POLITICA",
+    "role": "colaborador",
+    "source": "10_Aviso_Privacidad.txt",
+    "expected": "Finalidad, acceso limitado y canales de consulta documentados."
+  },
+  {
+    "id": 45,
+    "origin": "equipo",
+    "question": "Muéstrame todas mis solicitudes de permiso",
+    "intent": "DATO_PERSONAL",
+    "role": "colaborador",
+    "source": "solicitudes",
+    "expected": "Solo registros del usuario autenticado."
+  }
+]

@@ -1,4 +1,9 @@
-export default function Sidebar() {
+export default function Sidebar({
+  user,
+  page = "chat",
+  onNavigate = () => {},
+  onLogout,
+}) {
   return (
     <aside className="sidebar">
       <div className="brand">
@@ -8,12 +13,34 @@ export default function Sidebar() {
           <span>RR. HH.</span>
         </div>
       </div>
-
-      <nav>
-        <button className="nav-item active">Chat</button>
-        <button className="nav-item" disabled>Mi perfil</button>
-        <button className="nav-item" disabled>Dashboard</button>
+      {user?.demoMode && (
+        <p className="demo-label">Demostración · fuentes locales</p>
+      )}
+      <nav aria-label="Navegación principal">
+        {[
+          ["chat", "Chat"],
+          ["profile", "Mi perfil"],
+          ...(user?.rol === "RRHH" ? [["dashboard", "Dashboard"]] : []),
+        ].map(([id, label]) => (
+          <button
+            key={id}
+            className={"nav-item " + (page === id ? "active" : "")}
+            onClick={() => onNavigate(id)}
+            aria-current={page === id ? "page" : undefined}
+          >
+            {label}
+          </button>
+        ))}
       </nav>
+      {user && (
+        <footer className="sidebar-footer">
+          <strong>{user.nombre}</strong>
+          <small>{user.rol}</small>
+          <button className="nav-item" onClick={onLogout}>
+            Cerrar sesión
+          </button>
+        </footer>
+      )}
     </aside>
   );
 }

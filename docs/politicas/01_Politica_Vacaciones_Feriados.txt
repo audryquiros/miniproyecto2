@@ -1,4 +1,8 @@
 NUVEXA SOLUTIONS
+Versión: 1.1
+Vigencia: 2026-11-19
+Responsable: Equipo de Recursos Humanos de Nuvexa (empresa ficticia)
+Ámbito: proyecto académico; la aplicación a casos reales requiere revisión del régimen correspondiente.
 
 Política de vacaciones y feriados
 
@@ -31,6 +35,8 @@ Las vacaciones podrán fraccionarse conforme a la legislación aplicable y a las
 7. Feriados
 
 Nuvexa reconocerá los feriados nacionales conforme al Código de Trabajo y las disposiciones vigentes del MTSS. Los feriados de pago obligatorio y no obligatorio se tratarán conforme a la modalidad salarial y a la normativa vigente.
+
+Calendario académico 2026 (fuente: MTSS, CARTA-MTSS-DAJ-AER-1076-2025): 1 de enero; 2 y 3 de abril; 11 de abril; 1 de mayo; 25 de julio; 2, 15 y 31 de agosto; 15 de septiembre; 1 y 25 de diciembre. Para una consulta posterior al 19 de noviembre de 2026, quedan 1 de diciembre y 25 de diciembre. Para otro año se debe cargar el calendario oficial correspondiente; no se reutilizan estas fechas automáticamente.
 
 8. Registro
 

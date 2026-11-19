@@ -1,0 +1,67 @@
+{
+  "generatedAt": "2026-11-19T16:20:26.101Z",
+  "llm": "groq",
+  "scope": "Resumen nuevo y revisión de cobertura sobre respuestas históricas; sin modificar reportes ni logs",
+  "summary": {
+    "provider": "analista-groq",
+    "text": "Hoy se registran 25 personas ausentes. Hoy se registran 60 solicitudes pendientes. Hoy se registran 274 consultas del día anterior. Hoy se registran 85.77 por ciento de consultas resueltas sin escalar."
+  },
+  "checks": [
+    {
+      "id": 5,
+      "resolved": false,
+      "expected": false,
+      "elapsedMs": 1
+    },
+    {
+      "id": 6,
+      "resolved": false,
+      "expected": false,
+      "elapsedMs": 0
+    },
+    {
+      "id": 7,
+      "resolved": false,
+      "expected": false,
+      "elapsedMs": 0
+    },
+    {
+      "id": 12,
+      "resolved": false,
+      "expected": false,
+      "elapsedMs": 0
+    },
+    {
+      "id": 13,
+      "resolved": false,
+      "expected": false,
+      "elapsedMs": 0
+    },
+    {
+      "id": 20,
+      "resolved": false,
+      "expected": false,
+      "elapsedMs": 384
+    },
+    {
+      "id": 1,
+      "resolved": true,
+      "expected": true,
+      "elapsedMs": 469
+    },
+    {
+      "id": 3,
+      "resolved": true,
+      "expected": true,
+      "elapsedMs": 1329
+    },
+    {
+      "id": 4,
+      "resolved": true,
+      "expected": true,
+      "elapsedMs": 320
+    }
+  ],
+  "historicalReportsModified": false,
+  "actualSevenAMObserved": false
+}

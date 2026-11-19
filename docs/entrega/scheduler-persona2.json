@@ -1,0 +1,22 @@
+{
+    "verifiedAt":  "2026-11-19T16:25:20.6140886Z",
+    "taskName":  "Nuvexa-RRHH-Reporte-0700",
+    "timezone":  "America/Costa_Rica",
+    "lastTaskResult":  0,
+    "nextRunCostaRica":  "2026-11-20 07:00:00",
+    "execution":  {
+                      "startedAt":  "2026-11-19T16:24:33.643Z",
+                      "timezone":  "America/Costa_Rica",
+                      "localTime":  "10:24",
+                      "date":  "2026-11-19",
+                      "trigger":  "windows-scheduler",
+                      "observedAtSeven":  false,
+                      "success":  true,
+                      "reusedExistingReport":  true,
+                      "reportDate":  "2026-11-19",
+                      "reportCreatedAt":  "2026-11-19 08:24:26",
+                      "provider":  "analista-groq"
+                  },
+    "requiresLoggedInSession":  true,
+    "actualSevenAMObserved":  false
+}

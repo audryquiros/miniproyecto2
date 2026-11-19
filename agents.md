@@ -1,49 +1,19 @@
-# Agents — Nuvexa
+# Agentes de Nuvexa
 
-## Alcance actual
+La ampliación conserva la base de políticas, RAG, Drive y chat. Solo se permite personal ficticio.
 
-Este archivo define las reglas de los agentes implementados en la Parte 1.
+## Responsabilidades
 
-### Policy Agent
-
-Responsabilidad:
-- Responder preguntas relacionadas con políticas internas de RR. HH.
-- Utilizar únicamente el contexto recuperado por RAG.
-- Mostrar citas de las fuentes utilizadas.
-- No inventar políticas.
-- Si el contexto recuperado no permite responder, indicarlo claramente.
-
-### Orchestrator Agent
-
-Responsabilidad:
-- Clasificar la intención.
-- Enviar preguntas de política al Policy Agent.
-- Dejar preparada la integración de futuros agentes.
-
-Categorías:
-
-- `POLITICA`
-- `DATO_PERSONAL`
-- `MIXTA`
-- `FUERA_DE_ALCANCE`
-- `RESTRINGIDA`
-
-En esta primera base solamente se implementa de forma funcional `POLITICA`.
-Las demás categorías quedan preparadas para integración posterior.
+- Orquestador: clasifica intención, recupera memoria por sesión/conversación y combina políticas con datos propios. Rechaza datos ajenos y secretos.
+- Políticas: usa exclusivamente fragmentos documentales; muestra las fuentes utilizadas y reconoce evidencia insuficiente. No consulta tablas de personal.
+- Datos del colaborador: consultas SQL parametrizadas de solo lectura, filtradas por el usuario autenticado. No acepta IDs arbitrarios de la pregunta.
+- Analista: cifras obtenidas de SQL; resumen limitado al JSON; escritura de reportes inmutables. Solo RRHH los consulta.
+- Ingesta: única integración con Drive; descarga de solo lectura, extracción, metadatos, embeddings y conciliación de cambios.
 
 ## Reglas
 
-1. No inventar información.
-2. No usar datos personales de empleados.
-3. Las respuestas de políticas deben tener citas cuando exista evidencia recuperada.
-4. Si la evidencia es insuficiente, solicitar revisión de RR. HH.
-5. No exponer secretos ni variables de entorno.
-6. Las credenciales de Google Drive nunca deben estar en el frontend.
+No inventar información ni usar datos personales reales. Mantener las credenciales exclusivamente en el backend, nunca en frontend o Git. Si falta evidencia, recomendar revisión de RRHH. No simular que se creó un ticket. En modo demo, identificar las fuentes locales y no presentar resultados como validación del LLM real.
 
 ## Persistencia
 
-La base de esta implementación utiliza MySQL. El acceso a datos se mantiene en servicios del backend.
-
-## Ingesta
-
-La ingesta se realiza desde Google Drive hacia MySQL. Los documentos se procesan en el backend; las credenciales de Drive no llegan al frontend.
+MySQL conserva separados lógicamente los documentos, el personal, las sesiones, los logs y los reportes. El dashboard lee reportes publicados. Los prompts del orquestador, políticas y analista se versionan en backend/prompts.

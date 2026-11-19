@@ -1,0 +1,43 @@
+{
+  "fecha": "2026-11-19T15:47:45.956Z",
+  "modo": "mock, base dedicada nueva",
+  "pasos": [
+    {
+      "paso": "npm ci backend",
+      "exitCode": 0
+    },
+    {
+      "paso": "npm ci frontend",
+      "exitCode": 0
+    },
+    {
+      "paso": "crear base dedicada",
+      "exitCode": 0
+    },
+    {
+      "paso": "migrate",
+      "exitCode": 0
+    },
+    {
+      "paso": "seed",
+      "exitCode": 0
+    },
+    {
+      "paso": "ingest-local",
+      "exitCode": 0
+    },
+    {
+      "paso": "report",
+      "exitCode": 0
+    },
+    {
+      "paso": "test-integration",
+      "exitCode": 0
+    },
+    {
+      "paso": "build frontend",
+      "exitCode": 0
+    }
+  ],
+  "resultado": "correcto"
+}

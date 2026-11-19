@@ -1,24 +1,28 @@
 # Nuvexa · Informe técnico
 
-Implementación sobre la base existente · rama feature-wayner · demostración local
+Costa Rica · Nuvexa ficticia · 250 colaboradores simulados · 19 de noviembre de 2026
 
 
 ## 1. Problema, alcance y conservación
 
-El portal combina consultas de políticas con datos estructurados y un reporte diario de RRHH. La base existente incluía React, Express, MySQL, cuenta de servicio de Drive, ingesta, embeddings, recuperación y agente de políticas. La ampliación utiliza esos módulos y mantiene los diez TXT originales. No se inicia un segundo proyecto ni se sustituye el trabajo previo.
+El portal combina consultas documentales y datos estructurados de personal. El alcance implementado incluye cinco responsabilidades de agente, autenticación, datos propios, registro del chat, reportes y dashboard de RRHH. Los 250 colaboradores son ficticios. El trabajo se mantiene en feature-wayner para revisión conjunta con Persona 1.
 
-El alcance implementado añade personal simulado, sesiones, roles, perfil, agente de datos, consultas mixtas, registros del chat, analista, programación y dashboard. La rama verificada al comenzar fue feature-wayner y el árbol no contenía cambios pendientes. Los cambios permanecen locales y no se hizo push ni despliegue.
+Esta entrega conserva los componentes de chat y la integración Drive originales. Añade control de evidencia, soporte Voyage, reportes y pruebas. Las mejoras excluidas por el usuario —nuevas reglas de seguridad, seguimientos, mensajes de espera y trazas individuales por agente— no se incorporan en esta fase.
 
-El modo elegido por el usuario es demostración: no se configuraron proveedores externos. Esto permite probar SQL, roles y flujos HTTP, pero limita las afirmaciones sobre calidad de generación, sincronización real y latencia del modelo. La interfaz y la documentación distinguen explícitamente las fuentes locales de las fuentes de Drive.
+El repositorio es la fuente reproducible. Las credenciales permanecen en backend/.env, ignorado por Git. Las evidencias versionadas describen el proveedor de cada ejecución y distinguen revisión del asistente de aprobación humana. La demostración no representa un sistema de personal real.
+
+El recorrido de aceptación comienza con una sesión de colaborador: primero se solicita una política con citas y después un saldo propio. Se comprueba una consulta mixta y un rechazo de datos ajenos. Al cambiar a RRHH se verifica el dashboard y un reporte histórico. Este recorrido separa las fuentes de verdad y ayuda a revisar responsabilidades sin depender de una captura de pantalla aislada. La entrega conserva tanto el código como las evidencias editables para que la compañera pueda repetir el procedimiento.
 
 
 ## 2. Stack y organización
 
-Express concentra acceso, controladores, middleware y rutas. React conserva el chat y añade páginas de perfil y dashboard. MySQL mantiene dos dominios lógicos: documentos con sus fragmentos, y personal con movimientos, saldos y reportes. Los servicios se separan en agentes, Drive, RAG, embeddings, personal, reportes y programación.
+La aplicación usa Node.js y Express, React con Vite y MySQL. El enunciado permite estas alternativas; la elección aprovecha el entorno MySQL del usuario. LanceDB conserva una proyección vectorial reconstruible. Los documentos de Drive y el personal se mantienen separados lógicamente.
 
-La base documental almacena embeddings como JSON y el recuperador calcula similitud coseno en Node. Se conserva este diseño por compatibilidad y escala académica, sin presentarlo como un índice vectorial especializado. Su costo crece con la cantidad de fragmentos; una evolución a pgvector o Qdrant debe evaluarse si aumenta el corpus o la concurrencia.
+Voyage AI genera embeddings mediante su API REST con voyage-3.5-lite y 1024 dimensiones. La ingesta usa input_type=document y la búsqueda input_type=query. La firma de proveedor, modelo y dimensión evita consultar vectores de otro modelo. El modelo multilingüe local y el modo mock se conservan como opciones explícitas.
 
-Vite utiliza un proxy /api hacia el backend local. Así las cookies se mantienen en el mismo origen del navegador durante desarrollo. El backend escucha en 127.0.0.1 por defecto y permite configurar HOST para despliegue. El build crea un frontend estático; en producción se requiere un reverse proxy hacia Express y HTTPS.
+La ingesta usa lotes y pausas configurables con Retry-After y reintentos limitados. El chat tiene una cola independiente y caché temporal de embeddings de preguntas, sin almacenar saldos ni respuestas personales en esa caché. Una cuenta con cuota insuficiente todavía puede limitar la disponibilidad; no se garantiza carga concurrente ilimitada.
+
+La configuración privada define proveedores y modelos, pero la instalación no los necesita para demostrar los flujos básicos: el modo mock es una opción explícita. No se comparan sus tiempos con los del servicio real. La instalación limpia se ejecutó con mock para comprobar dependencias, esquema y contratos sin consumir cuota. La evaluación real se realizó aparte con Voyage y Groq, manteniendo el mismo control de acceso y la misma API.
 
 
 ## 3. Datos, migraciones y simulación
@@ -29,6 +33,8 @@ El runner de migraciones registra versiones aplicadas y reutiliza las sentencias
 
 La carga genera 250 personas ficticias, departamentos, solicitudes e incapacidades en un período aproximado de tres meses (90 días) y movimientos de ingreso, salida y ascenso. Excluye solicitudes anteriores al ingreso y posteriores a la salida. Los pagos son simulados con ajuste de fines de semana y una limitación explícita respecto a feriados. El reporte inicial se publicó para la fecha local de trabajo.
 
+Las relaciones de personal se crean mediante migraciones y la carga usa una transacción para no dejar un seed incompleto. El estado del colaborador y sus movimientos históricos tienen propósitos distintos: el primero controla el acceso y los movimientos permiten reconstruir cifras del período. El reporte conserva metodología e instantáneas. No se generan retrospectivamente estados históricos de solicitudes a partir de su estado actual sin advertir esa limitación.
+
 
 ## 4. Autenticación, permisos y memoria
 
@@ -38,38 +44,48 @@ El rol se obtiene de MySQL en cada solicitud. Las rutas de reportes e ingesta re
 
 La memoria se recupera de las últimas cuatro interacciones de una conversación filtradas por colaborador y conversationId. El identificador de conversación no otorga acceso. En modo real, el clasificador puede reformular referencias a ese historial; los guardas de herramientas siguen limitando los datos accesibles aun si el modelo clasifica mal una pregunta.
 
+Las comprobaciones HTTP prueban solicitudes sin sesión, contraseña incorrecta, CSRF, separación de roles e identidad no manipulable por querystring. Estas pruebas verifican controles existentes, sin ampliar las reglas de clasificación excluidas por el usuario. Los secretos se suministran en variables privadas y no viajan en el frontend. La revisión para Git incluye archivos ignorados y búsqueda de claves literales en los archivos que se van a compartir.
+
 
 ## 5. Agentes, prompts y citas
 
-El orquestador clasifica política, dato personal, mixta, reporte, fuera de alcance o restringida. En modo real usa un prompt versionado y salida JSON validada; si falla, usa reglas conservadoras. El agente de datos realiza consultas SQL parametrizadas. En una consulta mixta, el orquestador solicita datos y política y presenta ambos resultados sin convertir la política en un saldo personal.
+El orquestador conserva rutas explícitas mediante reglas y utiliza el LLM para resolver expresiones ambiguas. Las herramientas personales reciben la identidad de sesión. Una consulta mixta combina el saldo SQL y la política, y solo se registra como resuelta si ambas partes lo están.
 
-El agente de políticas recupera fragmentos y pide una respuesta con identificadores de fuente. El backend valida el formato, los IDs existentes y las referencias mencionadas; devuelve únicamente las fuentes declaradas como utilizadas. Esta comprobación mejora trazabilidad, pero no demuestra por sí sola fidelidad semántica: esa propiedad necesita evaluación humana o un validador adicional.
+El agente de políticas pide al LLM pasajes e identificadores de fuente. Antes de mostrar cada pasaje se verifica que esté literalmente contenido en su fragmento. La selección incorpora secciones vecinas para conservar condiciones y excepciones. Una referencia válida no autoriza una frase inventada.
 
-El modo demo genera vectores hash de vocabulario y muestra extractos literales con sus fuentes locales. No usa un modelo semántico y no debe aprobarse como si lo usara. Si la recuperación no supera el umbral o falta respaldo, el agente reconoce la insuficiencia y ofrece revisión de RRHH. La señal de escalamiento se registra, sin simular un ticket que no existe.
+Las respuestas parciales conservan la necesidad de aclaración y no inflan el indicador de resolución. Tampoco se marca como resuelto un dato personal ausente o una solicitud ambigua. Se conserva el registro conjunto del chat; no se añadieron trazas individuales por agente, excluidas del alcance por el usuario.
+
+Un ejemplo de respuesta parcial es maternidad y paternidad cuando Drive solo detalla una duración. Puede mostrarse el pasaje respaldado y solicitar aclaración de la otra parte. Esa respuesta se conserva en la evaluación como parcial y no como una solución completa. El control literal prueba presencia del texto, pero no certifica la vigencia de una política ni la pertinencia total de su selección; por eso se conserva revisión del contenido.
 
 
 ## 6. Ingesta y sincronización
 
-La cuenta de servicio de la base original conserva scope de solo lectura. Se admiten Google Docs, PDF, DOCX, TXT, XLSX y Google Sheets. Los documentos de Google se exportan antes de extraer texto. Las hojas se leen por pestañas y se convierten a texto tabular conservando títulos de hoja.
+La integración real confirmó catorce archivos: un PDF, un Google Docs, un XLSX y once TXT. El usuario ejecutó satisfactoriamente la reindexación con Voyage. La cuenta operativa de servicio mantiene acceso de lectura; los archivos originales no se modificaron desde el backend.
 
-La sincronización consulta changes.list y conserva un token de continuidad. Además reconcilia el inventario completo de la carpeta para contemplar bajas o archivos movidos fuera de ella. Una revisión incorpora fecha de modificación, versión de archivo, proveedor, modelo y dimensión del embedding. Los archivos sin cambios no se reindexan.
+La sincronización usa changes.list, revisión de inventario y reemplazo transaccional por documento. Un documento no pierde su índice anterior hasta completar sus nuevos embeddings. La firma fuerza reindexación al cambiar el modelo. Los archivos sin cambios se conservan.
 
-Cada documento se procesa antes de reemplazar su índice: se extrae texto, se crean fragmentos con encabezados y se calculan embeddings; después se sustituye el conjunto en una transacción. Un fallo no debe dejar el documento sin sus fragmentos previos. Un bloqueo MySQL evita sincronizaciones concurrentes. No se verificó este recorrido con Drive real porque el usuario eligió no configurar credenciales externas.
+Las políticas locales incorporan versión 1.1, vigencia, responsable y un manifiesto SHA-256. Persona 1 debe publicar esas versiones en Drive para que el RAG utilice las ampliaciones. La prueba de alta, cambio y baja está preparada para una carpeta aparte con permiso editor; no se ejecutó porque el usuario confirmó que no dispone de ella.
+
+Cambiar el documento de Drive actualiza su revisión y sus embeddings; volver a sincronizar un archivo sin cambios no debería consumir otra generación. La reconciliación contempla archivos ausentes del inventario. Para probarlo de forma destructiva solo se preparó un archivo ficticio en una carpeta aislada: no se reutiliza la carpeta operativa. El equipo debe proporcionar esa carpeta y ejecutar la prueba, conservando la evidencia de cambios y bajas sin alterar políticas reales.
 
 
 ## 7. Reportes, scheduler y dashboard
 
-El analista obtiene las ocho secciones exigidas mediante SQL, usando una instantánea consistente para las cifras. Cuenta ausencias por persona, tipo y departamento, solicitudes pendientes y demora, incapacidades y días dentro del mes, movimientos y rotación, saldos de riesgo, uso del chat, temas y preguntas sin respaldo. El resumen real se solicita al LLM y se rechazan cifras ausentes del JSON permitido.
+El reporte conserva los ocho componentes del enunciado y una serie de treinta días. Las cifras salen de SQL y quedan almacenadas en reportes_diarios. La comprobación independiente reconstruye los resultados desde registros base. El dashboard consume reportes publicados, sin pedir al LLM que calcule indicadores.
 
-La rotación divide salidas entre el promedio de plantilla al inicio y cierre del período. Los días de incapacidad son la intersección inclusiva con el mes hasta la fecha. El uso del chatbot corresponde al día anterior en Costa Rica; sus timestamps se escriben en UTC. Las fórmulas y límites se conservan en el JSON del reporte.
+El resumen usa cuatro frases con etiquetas y valores vinculados en código, más una recomendación operativa escrita por Groq. Se rechazan recomendaciones con cifras o afirmaciones cuantitativas. Así se impide intercambiar números válidos entre indicadores. El modo mock se identifica como plantilla de demostración.
 
-El scheduler comprueba cada minuto la zona America/Costa_Rica. Programa Drive desde las seis y reportes desde las siete, registra la ejecución y recupera tareas pendientes al reiniciar. El proceso debe seguir activo. El dashboard, reservado a RRHH, lee reportes publicados y muestra cuatro indicadores, tendencia de treinta días, distribución de ausencias, pendientes, resumen e historial. Los reportes son inmutables por fecha.
+El scheduler trata Drive y reporte como tareas independientes, con exclusión por tarea e idempotencia por fecha. Una sincronización prolongada ya no bloquea el reporte desde las 7:00 de Costa Rica. Se comprobó ese límite horario con reloj controlado. El proceso debe estar activo; un arranque posterior recupera la tarea pendiente y no se presenta como ejecución real a las 7:00.
+
+Los indicadores incluyen ausencias por tipo y departamento, solicitudes pendientes y demora, incapacidades, movimientos y rotación, vacaciones acumuladas, uso del chat, temas y vacíos documentales. El dashboard muestra una instantánea publicada y permite elegir fechas. Una cifra de personas de vacaciones en el chat de RRHH corresponde a ese reporte y se presenta con su fecha, para no prometer que incluye modificaciones posteriores a la publicación.
 
 
 ## 8. Evaluación, evidencia y limitaciones
 
-Las pruebas de lógica verifican contraseñas, intención, chunking, metadatos, vectores demo, números del resumen, fechas y permisos. Las pruebas HTTP con MySQL verifican login, CSRF, aislamiento, trazabilidad, restricciones, comparación del reporte contra SQL, idempotencia y revocación. El build de React se ejecutó correctamente. El detalle de cada ejecución se registra en VALIDACION.md.
+El banco conserva las veinticinco preguntas del enunciado y veinte del equipo. Cada fila incluye respuesta esperada, obtenida, fuente y latencia. La hoja Excel mantiene una columna editable de revisión humana. El enrutamiento se calcula por separado del contenido. Las pausas entre preguntas no forman parte de la latencia medida.
 
-El banco incluye veinticinco preguntas del enunciado y veinte adicionales, con intención, rol, respuesta esperada y fuente. La evaluación conserva respuestas y latencias obtenidas. La ejecución demo posterior a las correcciones clasificó las cuarenta y cinco preguntas correctamente. Esa cifra representa enrutamiento y no exactitud de contenido. La hoja reserva una columna editable para revisión humana y evita presentar una aprobación mientras falte esa revisión.
+La ejecución registrada usa voyage: 45 preguntas, p90 1920 ms y enrutamiento 100.0%. Estos valores se actualizan con la ejecución final; no equivalen automáticamente a exactitud de contenido.
 
-Quedan pendientes los proveedores reales, la verificación de formatos subidos a Drive, la fidelidad y latencia del LLM, la revisión visual automatizada y la grabación de la demo. Existen avisos npm que la corrección compatible no resolvió; una actualización mayor requiere comprobar nuevamente el bloque de Drive y el frontend. Los documentos que remiten genéricamente a la ley también requieren completar evidencia antes de afirmar que el proyecto supera la evaluación final.
+La batería de lógica incluye resolución parcial, asociación de cifras, colas de Voyage y scheduler independiente. Se conservan pruebas HTTP con MySQL, compilación y revisión de interfaz. El cierre incluye un video de cinco minutos y un guion de quince minutos. Los límites pendientes —publicación de políticas 1.1, prueba aislada de Drive y aprobación del equipo— se documentan en ENTREGA_COMPANERA.md.
+
+El resultado de la evaluación no se resume únicamente en HTTP 200. Se conservaron respuestas parciales y su causa. El contenido completo se revisó con un criterio conservador por el asistente y se dejó abierto a la validación del equipo. Las ampliaciones locales mejoran la cobertura futura, pero no cambian retroactivamente la evidencia obtenida de Drive. El video de respaldo documenta esa distinción y no presenta una reproducción de respuestas como una llamada nueva al proveedor.

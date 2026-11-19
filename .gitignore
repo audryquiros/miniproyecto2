@@ -4,6 +4,7 @@ node_modules/
 .DS_Store
 dist/
 coverage/
+test-results/
 .cache/
 evaluation/results*.json
 outputs/nuvexa-build/

@@ -5,8 +5,12 @@ import {
 } from "./drive.service.js";
 import { extractText } from "./document.parser.js";
 import { prepareDocument, documentMetadata } from "../rag/ingestion.service.js";
-import { createEmbedding } from "../embeddings/embedding.service.js";
+import {
+  createEmbeddings,
+  embeddingConfig,
+} from "../embeddings/embedding.service.js";
 import { pool } from "../../config/database.js";
+import { voyageSettings } from "../embeddings/voyage.client.js";
 import { createHash } from "node:crypto";
 export async function syncPoliciesFromDrive() {
   const c = await pool.getConnection();
@@ -30,9 +34,7 @@ export async function syncPoliciesFromDrive() {
           [
             file.modifiedTime,
             file.version,
-            process.env.EMBEDDING_PROVIDER || "local",
-            process.env.EMBEDDING_MODEL || "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
-            process.env.EMBEDDING_DIMENSION || 384,
+            embeddingConfig().signature,
             "chunks-90-20-v1",
             "metadata-v2",
           ].join(":"),
@@ -67,8 +69,20 @@ export async function syncPoliciesFromDrive() {
       });
       // Generate every embedding before replacing a document, then replace atomically.
       const vectors = [];
-      for (const chunk of chunks)
-        vectors.push(await createEmbedding(chunk.chunk_text));
+      // Voyage admite lotes: evita una petición remota por cada fragmento.
+      const batchSize =
+        embeddingConfig().provider === "voyage"
+          ? voyageSettings().batchSize
+          : 32;
+      for (let offset = 0; offset < chunks.length; offset += batchSize)
+        vectors.push(
+          ...(await createEmbeddings(
+            chunks
+              .slice(offset, offset + batchSize)
+              .map((chunk) => chunk.chunk_text),
+            "document",
+          )),
+        );
       await c.beginTransaction();
       await c.execute(
         "INSERT INTO policy_documents(drive_file_id,document_name,version,effective_date,drive_url,source_revision) VALUES (?,?,?,?,?,?) ON DUPLICATE KEY UPDATE document_name=VALUES(document_name),version=VALUES(version),effective_date=VALUES(effective_date),drive_url=VALUES(drive_url),source_revision=VALUES(source_revision),updated_at=CURRENT_TIMESTAMP",
@@ -106,6 +120,10 @@ export async function syncPoliciesFromDrive() {
           ],
         );
       }
+      await c.execute(
+        "UPDATE policy_documents SET embedding_signature=? WHERE id=?",
+        [embeddingConfig().signature, doc.id],
+      );
       await c.commit();
       results.push({
         fileId: file.id,

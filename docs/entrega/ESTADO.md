@@ -1,25 +1,21 @@
-# Estado verificable de entrega
+# Estado de entrega de Nuvexa
 
-Fecha de trabajo: 18 de noviembre de 2026. Rama: feature-wayner.
+19 de noviembre de 2026. Rama feature-wayner. Personal 100 % ficticio.
 
-## Implementado y probado localmente
+## Implementado y comprobado
 
-Esquema MySQL, 250 colaboradores simulados, solicitudes y movimientos de tres meses, sesiones y roles, agente de datos, enrutamiento mixto, logs del chat, analista, reporte persistido, dashboard y fuentes locales de demostración. La compilación React y las pruebas de lógica e integración se ejecutaron. Consultar VALIDACION.md para resultados de la última ejecución.
+MySQL con 250 colaboradores, sesiones y roles, datos propios, RAG conectado a Drive, embeddings Voyage y respuestas con pasajes comprobados. Ingesta con pausas y reintentos; cola de consultas independiente y caché de vectores. Las respuestas parciales y los datos ausentes no inflan la resolución. Reporte de ocho componentes, tendencia de treinta días y dashboard protegido para RRHH.
 
-## Implementado sin validación contra servicios externos
+El resumen enlaza etiquetas y valores SQL en código y añade una recomendación de Groq. Drive y reporte se ejecutan como tareas independientes. Se verificó con reloj controlado que una sincronización iniciada antes de las 7:00 no impide iniciar el reporte a esa hora; eso no se presenta como una observación de reloj real a las 7:00.
 
-Cuenta de servicio y lector de Drive de la base existente, detección de cambios/bajas, reemplazo transaccional, XLSX/Google Sheets y programación diaria. Embeddings OpenAI, generación Groq y clasificación con LLM. No se proporcionaron credenciales por decisión del usuario; no se ejecutaron llamadas externas ni se alteró Drive.
+La instalación limpia pasó en una copia y base nuevas. Los PDF, evaluación Excel, arquitectura y guía de la compañera se actualizaron. El video de respaldo distingue SQL en vivo de dos respuestas documentales reales reproducidas para no consumir cuota. No tiene audio; usa subtítulos.
 
-## Pendientes que no se pueden presentar como completos
+## Evidencia
 
-- Conectar la carpeta real de Drive y comprobar al menos PDF, Google Docs y hoja de cálculo.
-- Ejecutar las 45 preguntas con los proveedores reales y revisar cada respuesta contra su fuente. El umbral de 80% y p90 menor a ocho segundos siguen pendientes para ese modo.
-- Completar con RRHH las políticas que remiten a la ley sin detallar cifras. Se conservan los documentos originales de la compañera.
-- Revisar contenido normativo con fuentes vigentes; la investigación documenta fuentes y vacíos, no una aprobación legal.
-- Revisión visual en navegador: el host de automatización no estuvo disponible. Build e integración HTTP no sustituyen revisión de presentación.
-- Grabar el video de cinco minutos y realizar la presentación de quince minutos.
-- Revisar los avisos npm pendientes. audit fix compatible no los corrigió y no se forzó una actualización mayor del bloque de Drive.
+33 pruebas de lógica y 8 HTTP correctas. Evaluación con Voyage: 45/45 HTTP 200, 45/45 rutas correctas, p90 de 1920 ms y 45/45 por debajo de ocho segundos, con pausas entre preguntas. Revisión del asistente: 39 respuestas completas y 6 parciales, 86,7 %. No es aprobación humana ni garantía de carga concurrente.
 
-## Conservación
+## Pendientes externos explícitos
 
-Los diez TXT originales no se reemplazan. Se reutilizan los componentes de chat/citas y los servicios RAG/Drive; se modifican únicamente para integrar acceso, metadatos, sincronización y respaldo de citas. No se cambió de rama, no se hizo push ni se publicó el portal.
+El equipo debe revisar y publicar las políticas locales 1.1 en Drive y mantener coherentes sus formatos. La cuenta operativa conserva solo lectura. El usuario confirmó que no hay carpeta aislada con permiso editor: la prueba de alta/cambio/baja se dejó preparada y no se ejecutó. La aprobación del contenido y la presentación de quince minutos corresponden al equipo.
+
+Las cuatro mejoras excluidas por el usuario no se implementaron: nuevas reglas/preguntas de seguridad, seguimientos, mensajes de espera en la interfaz y trazas individuales por agente. Consultar ENTREGA_COMPANERA.md.

@@ -9,6 +9,7 @@ flowchart TD
   O --> D[Agente de datos propios]
   O --> R[Reporte publicado: solo RRHH]
   P --> V[Recuperación: fragmentos y embeddings]
+  V --> E[Voyage: embedding de consulta y caché temporal]
   V --> VECTOR[(LanceDB local: búsqueda vectorial)]
   DOC[(MySQL: catálogo y respaldo de fragmentos)] --> VECTOR
   P --> GROQ[Groq: respuesta con fuentes]
@@ -18,6 +19,7 @@ flowchart TD
   S[Scheduler: zona Costa Rica] --> I[Agente de ingesta]
   I --> DRIVE[Google Drive: solo lectura]
   I --> DOC
+  I --> E2[Voyage: embeddings de documentos con pausas y reintentos]
   S --> A[Agente analista]
   A --> HR
   A --> LOG
@@ -27,4 +29,6 @@ flowchart TD
   AUTH --> REP
 ```
 
-Drive conserva los originales. El agente de ingesta descarga únicamente para extraer texto, metadatos y fragmentos; genera embeddings multilingües localmente con Transformers.js. MySQL mantiene el catálogo transaccional de la base existente y los datos del personal en tablas separadas. LanceDB es la base vectorial local reconstruible y ejecuta la búsqueda por coseno. No requiere Docker ni un servidor adicional. Groq clasifica consultas, redacta respuestas documentales con citas y genera el resumen del analista; no se llama a la API de OpenAI.
+Drive conserva los originales. El agente de ingesta extrae texto y metadatos y genera embeddings de documentos con Voyage; sus pausas no se transfieren a la cola del chat. Las consultas usan el mismo modelo y dimensión, con caché temporal de sus vectores. MySQL conserva catálogo, fragmentos y personal separados. LanceDB ejecuta la búsqueda vectorial. Groq selecciona pasajes que se validan literalmente y redacta la recomendación del resumen; las cifras del reporte se vinculan a etiquetas en código. El scheduler inicia reporte y Drive independientemente. No se llama a la API de OpenAI; se mantienen proveedores local y mock como alternativas explícitas.
+
+Las políticas locales 1.1 están preparadas para revisión/publicación. La evidencia real corresponde a los archivos de Drive durante la evaluación; no se asume que la copia local ya fue publicada.

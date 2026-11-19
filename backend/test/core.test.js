@@ -7,26 +7,136 @@ import {
 } from "../src/services/auth/password.service.js";
 import { classifyRules, restricted } from "../src/services/agents/intent.js";
 import { chunkText } from "../src/services/rag/chunking.service.js";
-import { prepareDocument, documentMetadata } from "../src/services/rag/ingestion.service.js";
+import {
+  prepareDocument,
+  documentMetadata,
+} from "../src/services/rag/ingestion.service.js";
 import {
   mockEmbedding,
+  mockTerms,
   cosineSimilarity,
 } from "../src/services/embeddings/embedding.service.js";
 import { numbersSupported } from "../src/services/reports/summary.service.js";
 import { today, shiftDate } from "../src/utils/dates.js";
 import { requireHR } from "../src/middleware/auth.middleware.js";
-import { rankDemo } from "../src/services/rag/retrieval.service.js";
+import {
+  rankDemo,
+  selectPolicyContext,
+} from "../src/services/rag/retrieval.service.js";
+import { selectRequests } from "../src/services/agents/data.agent.js";
+test("los plurales laborales conservan la misma raíz de búsqueda", () => {
+  assert.ok(mockTerms("incapacidades").includes("incapacidad"));
+  assert.ok(mockTerms("solicitudes").includes("solicitud"));
+});
+import { readFileSync } from "node:fs";
+test("el banco completo conserva rutas de políticas, datos, mixtas y RRHH", () => {
+  const questions = JSON.parse(
+    readFileSync(
+      new URL("../../evaluation/questions.json", import.meta.url),
+      "utf8",
+    ),
+  );
+  for (const item of questions)
+    assert.equal(classifyRules(item.question), item.intent, item.question);
+});
+test("solicitudes: aplica ID, tipo, fecha y pide desambiguar sin cambiar de usuario", () => {
+  const rows = [
+    {
+      id: 1,
+      tipo: "permiso",
+      fecha_inicio: "2026-11-20",
+      fecha_fin: "2026-11-20",
+    },
+    {
+      id: 2,
+      tipo: "vacaciones",
+      fecha_inicio: "2026-11-20",
+      fecha_fin: "2026-11-25",
+    },
+    {
+      id: 3,
+      tipo: "permiso",
+      fecha_inicio: "2026-11-23",
+      fecha_fin: "2026-11-23",
+    },
+  ];
+  assert.deepEqual(
+    selectRequests(rows, "mi solicitud de permiso del viernes").map(
+      (r) => r.id,
+    ),
+    [1],
+  );
+  assert.deepEqual(
+    selectRequests(rows, "solicitud #3").map((r) => r.id),
+    [3],
+  );
+  assert.deepEqual(
+    selectRequests(rows, "vacaciones el 2026-11-24").map((r) => r.id),
+    [2],
+  );
+  assert.equal(selectRequests(rows, "solicitud #999").length, 0);
+});
+test("recuperación conserva condiciones vecinas y excluye matrices no aprobadas", () => {
+  const rows = [
+    {
+      id: 1,
+      document_id: 1,
+      chunk_index: 0,
+      document_name: "Política de vacaciones",
+      section: "Derecho",
+      chunk_text:
+        "Se otorgan quince días de vacaciones por período anual completo.",
+      score: 0.8,
+    },
+    {
+      id: 2,
+      document_id: 1,
+      chunk_index: 1,
+      document_name: "Política de vacaciones",
+      section: "Acumulación",
+      chunk_text:
+        "La acumulación requiere condiciones legales y debe quedar documentada en el sistema.",
+      score: 0.1,
+    },
+    {
+      id: 3,
+      document_id: 2,
+      chunk_index: 0,
+      document_name: "Marco_Juridico_RRHH.xlsx",
+      section: "Investigación",
+      chunk_text:
+        "Esta referencia de investigación no sustituye las políticas aprobadas por la empresa.",
+      score: 0.99,
+    },
+  ];
+  assert.deepEqual(
+    selectPolicyContext("vacaciones", rows, rows).map((r) => r.id),
+    [1, 2],
+  );
+});
 test("el analista acepta decimales SQL y rechaza cifras ausentes", () => {
-  assert.equal(numbersSupported("Rotación 2,04% y 121 días.", { rotacion: "2.04", dias: "121" }), true);
+  assert.equal(
+    numbersSupported("Rotación 2,04% y 121 días.", {
+      rotacion: "2.04",
+      dias: "121",
+    }),
+    true,
+  );
   assert.equal(numbersSupported("Rotación 99%.", { rotacion: "2.04" }), false);
 });
 test("metadatos no confunden revisión de Drive con versión documental", () => {
-  assert.deepEqual(documentMetadata("Versión demo-1.0 · vigencia 2026-11-18"),
-    {version:"demo-1.0",effectiveDate:"2026-11-18"});
-  assert.deepEqual(documentMetadata("Versión: 2.1\nVigencia: 2026-11-18"),
-    {version:"2.1",effectiveDate:"2026-11-18"});
-  assert.deepEqual(documentMetadata("Política sin metadatos"),
-    {version:"no declarada",effectiveDate:null});
+  assert.deepEqual(documentMetadata("Versión demo-1.0 · vigencia 2026-11-18"), {
+    version: "demo-1.0",
+    effectiveDate: "2026-11-18",
+  });
+  assert.deepEqual(documentMetadata("Versión: 2.1\nVigencia: 2026-11-18"), {
+    version: "2.1",
+    effectiveDate: "2026-11-18",
+  });
+  assert.deepEqual(documentMetadata("Política sin metadatos"), {
+    version: "no declarada",
+    effectiveDate: null,
+  });
 });
 test("contraseñas: sal única, verificación y rechazo", () => {
   const hash = hashPassword("Una clave de prueba segura");

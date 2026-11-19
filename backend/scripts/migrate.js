@@ -55,6 +55,19 @@ try {
       ["003_drive_metadata"],
     );
   }
+  if (!versions.has("004_embedding_signature")) {
+    const [columns] = await connection.query(
+      "SHOW COLUMNS FROM policy_documents LIKE 'embedding_signature'",
+    );
+    if (!columns.length)
+      await connection.query(
+        "ALTER TABLE policy_documents ADD embedding_signature VARCHAR(255)",
+      );
+    await connection.execute(
+      "INSERT INTO schema_migrations(version) VALUES (?)",
+      ["004_embedding_signature"],
+    );
+  }
 } finally {
   connection.release();
   await pool.end();

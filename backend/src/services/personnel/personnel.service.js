@@ -12,7 +12,7 @@ export async function getProfile(userId) {
       [userId],
     ),
     query(
-      "SELECT id,tipo,fecha_inicio,fecha_fin,estado,creada_en FROM solicitudes WHERE colaborador_id=? ORDER BY creada_en DESC LIMIT 30",
+      "SELECT id,tipo,fecha_inicio,fecha_fin,estado,creada_en FROM solicitudes WHERE colaborador_id=? ORDER BY creada_en DESC",
       [userId],
     ),
     query(

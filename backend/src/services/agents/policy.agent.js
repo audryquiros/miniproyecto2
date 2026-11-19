@@ -4,9 +4,28 @@ import { generateGroundedAnswer } from "../rag/llm.service.js";
 export async function policyAgent(message) {
   const context = await retrieve(message);
 
-  const result = context.length
-    ? await generateGroundedAnswer(message, context)
-    : null;
+  let result;
+  try {
+    result = context.length
+      ? await generateGroundedAnswer(message, context)
+      : null;
+  } catch (error) {
+    if (!error.code?.startsWith("LLM_")) throw error;
+    console.error({
+      code: error.code,
+      providerStatus: error.providerStatus,
+      providerCode: error.providerCode,
+    });
+    return {
+      answer:
+        "El servicio de respuestas está temporalmente ocupado o no disponible. Intenta de nuevo en unos minutos o solicita ayuda a RRHH.",
+      citations: [],
+      resolved: false,
+      escalated: true,
+      fragmentIds: [],
+      unavailable: true,
+    };
+  }
   if (!result) {
     return {
       answer:
@@ -32,8 +51,8 @@ export async function policyAgent(message) {
   return {
     answer,
     citations,
-    resolved: true,
-    escalated: false,
+    resolved: !result.needsClarification,
+    escalated: result.needsClarification === true,
     fragmentIds: used.map((item) => item.id),
   };
 }

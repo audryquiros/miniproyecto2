@@ -1,4 +1,8 @@
 NUVEXA SOLUTIONS
+Versión: 1.1
+Vigencia: 2026-11-19
+Responsable: Equipo de Recursos Humanos de Nuvexa (empresa ficticia)
+Ámbito: proyecto académico; la aplicación a casos reales requiere revisión del régimen correspondiente.
 
 Procedimiento de incapacidades
 
@@ -19,6 +23,8 @@ Cuando corresponda, deberá aportar la incapacidad o documento emitido por la en
 4. Enfermedad común
 
 La gestión económica se realizará conforme al régimen aplicable de la CCSS y la legislación laboral vigente. Nuvexa no sustituirá al ente asegurador en el cálculo de subsidios legales.
+
+Ejemplo de cinco días: antes de calcular un importe se debe identificar si la boleta corresponde a enfermedad común o riesgo laboral, la entidad emisora, continuidad con otras incapacidades y la base de cálculo. La empresa no promete salario completo ni aplica el beneficio de duelo a una incapacidad. Si no constan los parámetros y las reglas vigentes del régimen, se deriva el cálculo a RRHH y al ente asegurador; no se inventa un porcentaje universal.
 
 5. Riesgo de trabajo
 

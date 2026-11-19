@@ -1,4 +1,8 @@
 NUVEXA SOLUTIONS
+Versión: 1.1
+Vigencia: 2026-11-19
+Responsable: Equipo de Recursos Humanos de Nuvexa (empresa ficticia)
+Ámbito: proyecto académico; la aplicación a casos reales requiere revisión del régimen correspondiente.
 
 Manual de onboarding y procedimiento de salida
 
@@ -18,11 +22,11 @@ La jefatura establecerá objetivos y realizará al menos dos revisiones de segui
 
 4. Periodo de prueba
 
-La relación laboral y cualquier período de prueba se regirán por el contrato y la legislación costarricense aplicable.
+Para relaciones por tiempo indefinido se distinguirá el umbral de tres meses relacionado con preaviso y cesantía del plazo de inducción interna. No se entenderá que los primeros 90 días eliminan derechos, salario, seguridad social ni protecciones especiales. RRHH revisará el contrato y cualquier excepción; el sistema no resolverá automáticamente la legalidad de un despido. Fuente: Código de Trabajo, artículos 28 y 29, y consultas laborales del MTSS.
 
 5. Renuncia
 
-La persona colaboradora comunicará su renuncia por escrito. El preaviso se determinará según la antigüedad y la legislación aplicable.
+La persona colaboradora comunicará su renuncia por escrito. En contratos por tiempo indefinido, el artículo 28 establece una semana desde tres hasta seis meses de servicio; quince días para más de seis meses y hasta un año; un mes después de un año. RRHH debe verificar la antigüedad y las condiciones del caso antes de aplicar el plazo. Fuente: https://www.mtss.go.cr/elministerio/estructura/direccion-asuntos-juridicos/criterios_juridicos/documetos/DAJ-AER-OFP-758-2023.pdf
 
 6. Despido
 

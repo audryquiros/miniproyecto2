@@ -1,25 +1,17 @@
-# Evidencia de validación local
+# Validación de entrega
 
-Fecha: 18 de noviembre de 2026. Rama feature-wayner. Base dedicada MySQL local: nuvexa.
+Fecha: 19 de noviembre de 2026. Rama feature-wayner.
 
-## Comprobaciones realizadas
+- npm test: 33 pruebas correctas, incluidas resolución parcial, ausencia de datos, asociación de cifras, independencia del scheduler, control de Voyage y caché de consultas.
+- npm run test:integration: 8 pruebas HTTP correctas con MySQL.
+- npm run verify:report: ocho componentes y treinta puntos de tendencia comprobados independientemente para el reporte del 19. Los reportes históricos no se sobrescribieron.
+- Resumen nuevo: ver resumen-validado.json. Groq redactó la recomendación; los valores se vincularon a sus etiquetas. El borrador se validó sin reemplazar el reporte histórico.
+- Instalación limpia: ver instalacion-limpia.json. npm ci de backend/frontend, base dedicada nueva, migración, seed, ingesta demo, reporte, pruebas HTTP y build. La base de prueba se eliminó al finalizar; la base operativa se conservó.
+- Drive operativo: catorce archivos, incluido PDF, Google Docs y XLSX. El usuario completó la reindexación con Voyage. La prueba aislada de cambios y bajas está preparada, no ejecutada por falta de carpeta editora.
+- Evaluación real de 2026-11-19T15:56:45.106Z: Voyage + Groq, 45 preguntas, 100 % de rutas y HTTP 200, p90 1920 ms. Pausa de 22 segundos entre consultas; esa pausa no se incluye en el tiempo de respuesta. No se extrapola a una ráfaga concurrente ni a una cuenta sin cuota.
+- Revisión del asistente: cobertura completa de 39/45 (86,7 %); parciales 5, 6, 7, 12, 13 y 20, explicadas en evaluation/entrega-20261119.json y Excel. La revisión humana sigue pendiente. Las políticas locales corrigen/amplían esos documentos, pero no se presentan como ya publicadas en Drive.
+- Informes: investigación de seis páginas y técnico de ocho, con extracción y revisión visual. La hoja Excel conserva fórmulas y deja editar la revisión. Video: cinco minutos, sin audio, con subtítulos y distinción expresa de dos respuestas reproducidas y consultas/pantallas en vivo.
 
-- npm run db:create: base disponible sin modificar otras bases.
-- npm run migrate: esquema completo y reejecución sin errores.
-- npm run seed: 250 colaboradores ficticios; tres meses aproximados de movimientos. La primera inserción fallida se revirtió por transacción y se corrigió el orden de aprobadores antes de cargar.
-- npm run ingest:local: diez políticas indexadas; documentos TXT originales conservados.
-- npm run report: reporte inicial publicado para 2026-11-18.
-- npm test: 12 pruebas de lógica, privacidad, metadatos, parser PDF/XLSX y validación de IDs de citas. Todas pasaron.
-- npm run test:integration: 8 pruebas HTTP contra MySQL. Todas pasaron. Incluyen sesión, rechazo de contraseña, cookies, CSRF, separación de roles, identidad no manipulable, logs, comparación con SQL, idempotencia y logout.
-- npm run evaluate: 45 preguntas ejecutadas por HTTP en modo mock; 45 intenciones correctas. La exactitud de contenido sigue sin aprobarse. Los tiempos exactos de la última ejecución están en evaluation/results.json y la hoja exportada.
-- npm run build en frontend: compilación de producción exitosa.
-- PDFs: investigación de 6 páginas e informe técnico de 8 páginas. Extracción y render de las páginas revisados; no equivalen a una aprobación del contenido académico o legal.
-- XLSX: exportación, fórmulas y vistas de evaluación/calendario comprobadas. Revisión humana de respuestas reservada en columnas editables.
+## Límites conservados
 
-## Límites de la evidencia
-
-No se validaron Drive, OpenAI ni Groq contra servicios externos, según la decisión del usuario de conservar el modo demo. No se afirma el 80% de exactitud de contenido ni el p90 real del LLM. El navegador de automatización no estuvo disponible; la interfaz requiere revisión visual en el equipo. No se grabó el video.
-
-## Dependencias
-
-La instalación produjo lockfiles. npm audit fix compatible no resolvió 4 avisos moderados del árbol de googleapis/uuid en backend y 4 altos del árbol de desarrollo de Vite/picomatch en frontend. No se aplicó --force ni una actualización mayor que pudiera romper la base existente. Deben reevaluarse antes de despliegue.
+Los 250 registros representan una empresa ficticia. La cuenta operativa de Drive es de lectura. La prueba a las 7:00 usa un reloj controlado, no una observación de la mañana siguiente. Los resultados no sustituyen revisión normativa del equipo. No se añadieron las mejoras del punto 7 excluidas por el usuario.

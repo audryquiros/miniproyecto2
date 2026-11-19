@@ -1,0 +1,7 @@
+{
+  "fecha": "2026-11-19",
+  "proveedor": "analista-groq",
+  "resumen": "Hay 25 personas ausentes y 60 solicitudes pendientes; 60 superan tres días de espera. Las incapacidades activas son 6, con 127 días acumulados en el mes. La rotación mensual es 2.04% y 104 personas superan veinte días de vacaciones acumulados. El chatbot recibió 274 consultas del día anterior, con 85.77% resueltas sin escalar y una latencia media de 104 ms. Se recomienda revisar las solicitudes pendientes con las jefaturas.",
+  "metodo": "cifras con etiquetas fijas y recomendación de Groq",
+  "publicado": false
+}

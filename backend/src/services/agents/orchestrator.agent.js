@@ -35,7 +35,12 @@ export async function orchestrator(message, user, conversationId) {
   );
   let intent = classifyRules(message),
     rewritten = message;
-  if ((process.env.LLM_PROVIDER || "groq") !== "mock") {
+  // Las herramientas conocidas se eligen con reglas estables; el LLM resuelve
+  // expresiones ambiguas y seguimientos, sin sustituir una ruta explícita.
+  if (
+    (process.env.LLM_PROVIDER || "groq") !== "mock" &&
+    intent === "FUERA_DE_ALCANCE"
+  ) {
     try {
       const prompt = await readFile(
         new URL("../../../prompts/orchestrator.txt", import.meta.url),
@@ -47,7 +52,9 @@ export async function orchestrator(message, user, conversationId) {
           JSON.stringify({
             historial: [...history].reverse(),
             consulta: message,
+            rol: user.rol,
           }),
+          { json: true, maxTokens: 250 },
         ),
       );
       if (
@@ -86,7 +93,12 @@ export async function orchestrator(message, user, conversationId) {
     };
   if (intent === "MIXTA") {
     const [data, policy] = await Promise.all([
-      dataAgent(rewritten, user),
+      dataAgent(
+        /vacacion/i.test(rewritten)
+          ? rewritten
+          : `Saldo de vacaciones: ${rewritten}`,
+        user,
+      ),
       policyAgent(rewritten),
     ]);
     return {
@@ -94,6 +106,7 @@ export async function orchestrator(message, user, conversationId) {
       intent,
       agent: "data,policy",
       ...policy,
+      resolved: data.resolved && policy.resolved,
       answer: data.answer + "\n\nPolítica aplicable:\n" + policy.answer,
     };
   }

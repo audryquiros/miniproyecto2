@@ -18,7 +18,7 @@ content = json.loads((root / "docs/entrega/contenido-informes.json").read_text(e
 styles = getSampleStyleSheet()
 styles.add(ParagraphStyle(name="NTitle", fontName="Helvetica-Bold", fontSize=19, leading=24, textColor=colors.HexColor("#18212f"), spaceAfter=12))
 styles.add(ParagraphStyle(name="NHeading", fontName="Helvetica-Bold", fontSize=14, leading=19, spaceAfter=16, textColor=colors.HexColor("#5144b5")))
-styles.add(ParagraphStyle(name="NBody", fontName="Helvetica", fontSize=10.5, leading=16, spaceAfter=12, alignment=TA_LEFT, splitLongWords=True))
+styles.add(ParagraphStyle(name="NBody", fontName="Helvetica", fontSize=11.5, leading=18, spaceAfter=14, alignment=TA_LEFT, splitLongWords=True))
 styles.add(ParagraphStyle(name="NMeta", fontName="Helvetica", fontSize=9, leading=13, textColor=colors.HexColor("#606b7d"), spaceAfter=18))
 
 def footer(canvas, doc):
@@ -68,7 +68,7 @@ for key, name, expected_pages in [("research", "Informe_Investigacion", 6), ("te
     print(name, len(reader.pages), "páginas verificadas")
 
 policy = (root / "docs/politicas/01_Politica_Vacaciones_Feriados.txt").read_text(encoding="utf-8")
-story = [Paragraph("Política de vacaciones y feriados", styles["NTitle"]), Paragraph("Copia académica de demostración · versión demo-1.0 · vigencia 2026-11-18 · responsable: equipo RRHH de Nuvexa (ficticio). Texto original conservado.", styles["NMeta"])]
+story = [Paragraph("Política de vacaciones y feriados", styles["NTitle"]), Paragraph("Versión académica 1.1 · vigencia 2026-11-19 · responsable: equipo RRHH de Nuvexa (ficticio). Pendiente de publicación por el equipo en Drive.", styles["NMeta"])]
 for part in policy.split("\n\n"):
     if part.strip(): story.append(Paragraph(escape(part.strip()).replace("\n", "<br/>"), styles["NBody"]))
 SimpleDocTemplate(str(output / "Politica_Vacaciones_Demo.pdf"), pagesize=A4, leftMargin=48, rightMargin=48, topMargin=48, bottomMargin=60).build(story, onFirstPage=footer, onLaterPages=footer)

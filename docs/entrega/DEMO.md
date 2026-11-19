@@ -16,4 +16,6 @@ Dedicar tres minutos a contexto/documentos, cuatro al chat y seguridad, cuatro a
 
 ## Grabación
 
-El video no se ha grabado en esta sesión. Usar el grabador del equipo, evitar mostrar .env y revisar audio, duración y legibilidad antes de entregar. El guion no sustituye el archivo de video.
+El respaldo está en `outputs/nuvexa/Demo_Nuvexa_5min.webm`, de aproximadamente cinco minutos, con subtítulos y sin audio. Se revisaron fotogramas del chat y del dashboard. El video identifica explícitamente que dos respuestas documentales se reproducen de registros reales, mientras que autenticación, perfil, datos propios y dashboard se consultan en vivo. No se presenta esa reproducción como una llamada nueva al proveedor. La evaluación completa de 45 preguntas sí utiliza Voyage y Groq reales y se entrega por separado.
+
+La grabación es un respaldo para el equipo, no sustituye la presentación de quince minutos. Antes de exponer, cada integrante debe ensayar su parte, revisar la versión de Drive y preparar MySQL. Nunca mostrar `.env` ni claves en pantalla.

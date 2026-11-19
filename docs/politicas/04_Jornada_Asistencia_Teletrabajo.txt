@@ -1,4 +1,8 @@
 NUVEXA SOLUTIONS
+Versión: 1.1
+Vigencia: 2026-11-19
+Responsable: Equipo de Recursos Humanos de Nuvexa (empresa ficticia)
+Ámbito: proyecto académico; la aplicación a casos reales requiere revisión del régimen correspondiente.
 
 Reglamento de jornada, asistencia y teletrabajo
 

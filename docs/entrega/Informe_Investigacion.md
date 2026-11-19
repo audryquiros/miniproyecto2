@@ -1,52 +1,50 @@
 # Nuvexa · Investigación de RRHH y base documental
 
-Costa Rica · Empresa ficticia · 250 colaboradores simulados · 18 de noviembre de 2026
+Costa Rica · Nuvexa ficticia · 250 colaboradores simulados · 19 de noviembre de 2026
 
 
 ## 1. Contexto, método y fuentes
 
-Nuvexa Solutions es la empresa ficticia utilizada por el equipo para construir un portal interno de consulta de Recursos Humanos en Costa Rica. El sistema tiene dos necesidades distintas: explicar políticas con evidencia documental y consultar cifras exactas de una base de personal. La implementación contiene 250 personas ficticias; ningún registro representa a un trabajador real.
+Nuvexa Solutions representa una empresa ficticia de Costa Rica con 250 colaboradores simulados. La investigación distingue reglas generales, beneficios internos y registros individuales. Un saldo de vacaciones no se deduce de una política: procede de MySQL; una norma no se inventa a partir de registros de personal.
 
-La investigación parte de los diez documentos TXT existentes, redactados en la primera parte del proyecto. Se conservaron sus contenidos. Se contrastaron los requisitos del enunciado con su cobertura, se identificaron preguntas sin cifras suficientes y se consultaron referencias oficiales del MTSS y el sistema jurídico nacional. Esta revisión documenta hallazgos y vacíos; no constituye una aprobación legal de todas las políticas.
+Se revisaron los diez dominios del enunciado y los documentos aportados por el equipo. Se preservan referencias primarias del MTSS y SINALEVI, consultadas el 19 de noviembre de 2026. Las ampliaciones locales documentan sus fuentes. La revisión académica no acredita por sí sola la aplicación de cada regla a cualquier régimen laboral.
 
-Las fuentes primarias revisadas incluyen el Código de Trabajo publicado por el MTSS, la página de asuntos laborales del ministerio, el artículo 95 en el sistema de normativa de la Procuraduría y criterios ministeriales sobre incapacidades. Debe verificarse la vigencia de cada disposición antes de convertir una propuesta académica en una política operativa.
+Fuentes centrales: Código de Trabajo del MTSS (https://www.mtss.go.cr/elministerio/marco-legal/documentos/codigo_trabajo_cr.pdf), preguntas laborales del ministerio (https://www.mtss.go.cr/temas-laborales/) y artículo 95 vigente de SINALEVI (https://www.pgrweb.go.cr/DOCS/NORMAS/1/VIGENTE/L/1940-1949/1940-1944/1943/1F6D/180E63.HTML). El contexto de empresa y los datos son enteramente ficticios.
 
-Fuentes: https://www.mtss.go.cr/temas-laborales/ ; https://www.mtss.go.cr/elministerio/marco-legal/documentos/codigo_trabajo_cr.pdf ; https://www.pgrweb.go.cr/DOCS/NORMAS/1/VIGENTE/L/1940-1949/1940-1944/1943/1F6D/180E63.HTML
+La publicación requiere conciliar la copia editable del repositorio con los formatos disponibles en Drive. El responsable del equipo debe comprobar que las secciones, la versión, las fechas y las fuentes permanezcan legibles tras la conversión. La ingesta puede extraer un archivo correctamente y aun así recuperar una política incompleta; por ello se revisan por separado extracción, pertinencia, cobertura y vigencia del contenido.
 
 
 ## 2. Vacaciones, feriados, permisos y licencias
 
-El documento 01 fija para la empresa quince días hábiles por período anual completo y diez días naturales de anticipación para solicitarlos. La aprobación corresponde a la jefatura y se prevé intervención de RRHH ante conflictos. Estos son datos de la política ficticia aportada por el equipo; el chatbot debe citarlos sin confundirlos con un cálculo individual de saldo.
+La política interna conserva quince días hábiles por período anual completo y diez días naturales para solicitar vacaciones. Se distingue el beneficio corporativo del mínimo legal. Acumulación y fraccionamiento requieren las condiciones y el registro documentados; el agente no infiere prohibiciones de una sección aislada.
 
-La misma política condiciona la acumulación y el fraccionamiento a la normativa aplicable. Remite al calendario oficial de feriados, pero no incorpora una lista verificable de fechas restantes. El agente debe reconocer esa limitación cuando el usuario pida un calendario que no está en el contexto recuperado. No debe elaborar una lista de memoria.
+El calendario 2026 se contrastó con la carta MTSS-DAJ-AER-1076-2025. La versión local incorpora las fechas del año y exige actualizar el documento para otros años. Fuente: https://www.mtss.go.cr/temas-laborales/feriados/feriados_calendario_2026.pdf. La modalidad de pago influye en la remuneración de feriados y no se convierte en una regla universal de planilla.
 
-El documento 02 diferencia permisos generales, maternidad, paternidad, duelo, matrimonio, estudio y ausencia sin goce. Contiene duraciones internas para duelo y matrimonio, además del procedimiento de solicitud. La duración exacta de paternidad no está desarrollada en ese texto, por lo que la respuesta completa del banco de pruebas requiere ampliar la evidencia.
+La ampliación local de paternidad especifica dos días por semana durante cuatro semanas en el supuesto del artículo 95. También incorpora la nota constitucional sobre comaternidad. Maternidad, permisos internos, respaldos y excepciones se diferencian. La versión operativa del RAG seguirá siendo la de Drive hasta que el equipo publique las actualizaciones.
 
-El artículo 95 consultado regula una licencia de paternidad de dos días por semana durante cuatro semanas desde el nacimiento. La publicación jurídica incluye una nota constitucional sobre comaternidad: una ampliación documental debe revisar tanto el texto como esa nota y el régimen de empleo aplicable. No se incorporaron reglas parciales automáticamente al documento original.
+La publicación requiere conciliar la copia editable del repositorio con los formatos disponibles en Drive. El responsable del equipo debe comprobar que las secciones, la versión, las fechas y las fuentes permanezcan legibles tras la conversión. La ingesta puede extraer un archivo correctamente y aun así recuperar una política incompleta; por ello se revisan por separado extracción, pertinencia, cobertura y vigencia del contenido.
 
 
 ## 3. Incapacidades, jornada y remuneración
 
-El documento 03 establece comunicar la incapacidad a jefatura y RRHH cuanto antes, aportar el comprobante por un canal seguro y limitar el acceso a datos médicos. Separa enfermedad común de riesgo de trabajo y dispone seguimiento de la reincorporación. No aporta una tabla completa de porcentajes, bases de cálculo ni excepciones de subsidios.
+El procedimiento de incapacidades separa enfermedad común de riesgo laboral. Antes de calcular un importe exige entidad emisora, continuidad de boletas y base de cálculo. Un caso de cinco días no autoriza aplicar salario completo ni un permiso de duelo. Cuando faltan datos o reglas de un régimen, el cálculo debe remitirse a RRHH y al ente asegurador.
 
-El criterio ministerial consultado sobre los primeros tres días de incapacidad describe una obligación patronal equivalente a la mitad del salario en el supuesto examinado. Esa referencia aislada no basta para calcular todo caso: hay diferencias de régimen, continuidad y entidad aseguradora. El portal académico conserva la regla de no inventar un monto cuando faltan los datos y la evidencia necesarios.
+Jornada y asistencia definen control de marcas, autorización de horas extraordinarias y teletrabajo para puestos elegibles. La remuneración de horas extra debe seguir el régimen aplicable. La política de pagos distingue calendario de planilla, comprobante, deducciones y aguinaldo. No se usan fechas de una política como fecha personal sin consultar el calendario estructurado.
 
-El documento 04 define una jornada administrativa de referencia y control de asistencia. Las horas extraordinarias requieren autorización, salvo emergencias justificadas. El teletrabajo es voluntario y permite hasta tres días semanales para puestos elegibles con acuerdo y aprobación. Los límites, descansos y excepciones legales requieren validación específica del puesto.
+El calendario de datos ficticios ajusta fines de semana y declara sus simplificaciones. No representa una liquidación real ni calcula subsidios médicos. Las consultas sobre cifras personales usan exclusivamente la identidad autenticada. Esto evita exponer información de terceros o convertir una explicación general en una cifra individual inventada.
 
-El documento 05 incluye pago quincenal, comprobante, deducciones autorizadas y aguinaldo. El calendario de demostración se genera aparte como datos estructurados y ajusta fines de semana; no incorpora un calendario jurídico de feriados. Esa simplificación se declara para evitar que el calendario simulado se interprete como una planilla real.
-
-Fuente específica sobre incapacidad: https://www.mtss.go.cr/elministerio/estructura/direccion-asuntos-juridicos/pronunciamientos/daj-ae-155-06%20%20pago%20primeros%20tres%20dias.pdf
+La publicación requiere conciliar la copia editable del repositorio con los formatos disponibles en Drive. El responsable del equipo debe comprobar que las secciones, la versión, las fechas y las fuentes permanezcan legibles tras la conversión. La ingesta puede extraer un archivo correctamente y aun así recuperar una política incompleta; por ello se revisan por separado extracción, pertinencia, cobertura y vigencia del contenido.
 
 
 ## 4. Beneficios, ingreso, salida y desempeño
 
-El catálogo 06 contempla seguro colectivo sujeto a póliza y elegibilidad, capacitación con presupuesto interno, programas voluntarios de ahorro y actividades de bienestar. El asistente debe distinguir una posibilidad sujeta a aprobación de un derecho automáticamente concedido. La cobertura médica concreta exige disponer de la póliza; no puede deducirse de la palabra seguro.
+Los beneficios incluyen seguro sujeto a póliza y elegibilidad, capacitación sujeta a presupuesto y aprobación, y programas voluntarios. El chatbot no debe convertir una condición en una garantía. La política de desempeño separa criterios y periodicidad del registro personal de próxima evaluación.
 
-El manual 07 reúne onboarding, primer día, seguimiento inicial, período de prueba, renuncia, terminación, prestaciones, devolución de activos y entrevista de salida. Documenta conceptos de liquidación, pero no una calculadora. La consulta sobre el número exacto de días de preaviso necesita antigüedad, régimen y una fuente normativa suficientemente detallada.
+Ingreso y salida abarcan documentación, inducción, activos, seguimiento y liquidación. La versión local distingue el umbral de tres meses de preaviso y cesantía de la inducción de 90 días. No afirma que desaparezcan derechos durante ese período. Los casos especiales requieren revisión contractual y del régimen.
 
-La política 08 aborda evaluación y desarrollo. Para responder cuándo es la próxima evaluación de una persona, el agente no debe extraer una fecha genérica del documento: consulta el campo proxima_evaluacion de la persona autenticada. Esta separación evita presentar como cita de política un dato personal que proviene de SQL.
+Para contratos por tiempo indefinido, la ampliación de preaviso recoge los tramos del artículo 28: una semana, quince días o un mes según la antigüedad. Fuente de contraste: https://www.mtss.go.cr/elministerio/estructura/direccion-asuntos-juridicos/criterios_juridicos/documetos/DAJ-AER-OFP-758-2023.pdf. La política enumera conceptos de liquidación y no promete montos sin parámetros.
 
-Las necesidades de salida y desempeño también afectan el diseño de datos. Los movimientos de ingreso, salida y ascenso alimentan la rotación; el estado del empleado controla si puede iniciar sesión. La base de demostración conserva movimientos históricos y excluye ausencias anteriores al ingreso o posteriores a una salida registrada. La tasa de rotación declara su numerador, denominador y período.
+La publicación requiere conciliar la copia editable del repositorio con los formatos disponibles en Drive. El responsable del equipo debe comprobar que las secciones, la versión, las fechas y las fuentes permanezcan legibles tras la conversión. La ingesta puede extraer un archivo correctamente y aun así recuperar una política incompleta; por ello se revisan por separado extracción, pertinencia, cobertura y vigencia del contenido.
 
 
 ## 5. Conducta, convivencia y privacidad
@@ -59,13 +57,15 @@ Los dos casos restringidos del enunciado —vacaciones de un compañero y salari
 
 Los registros de chat contienen preguntas y respuestas para trazabilidad. Aunque todos los datos son simulados, su acceso se limita al sistema y al reporte autorizado. Los resultados individuales de evaluación se ignoran por Git. Las credenciales se mantienen en el archivo local .env, las contraseñas se almacenan con scrypt y los tokens de sesión se guardan como hashes. Para un despliegue real se debe definir además la retención, eliminación y gobernanza de estos registros.
 
+La publicación requiere conciliar la copia editable del repositorio con los formatos disponibles en Drive. El responsable del equipo debe comprobar que las secciones, la versión, las fechas y las fuentes permanezcan legibles tras la conversión. La ingesta puede extraer un archivo correctamente y aun así recuperar una política incompleta; por ello se revisan por separado extracción, pertinencia, cobertura y vigencia del contenido.
+
 
 ## 6. Calidad documental y plan de cierre
 
-Cada política que se publique debe tener título, versión, vigencia y responsable. La copia local original no se modifica para aparentar que ya contiene todos estos campos. Los entregables exportados añaden una portada o encabezado de demostración, y el índice conserva los metadatos disponibles. El equipo debe aprobar una versión documental antes de cargarla como fuente operativa.
+Las diez políticas locales incluyen título, versión 1.1, vigencia, responsable y fuentes. Un manifiesto permite identificar el contenido por SHA-256. Los formatos alternativos del mismo documento no se cuentan como políticas distintas. La matriz jurídica sirve de investigación y no sustituye una política operativa aprobada.
 
-La cobertura temática alcanza los diez dominios solicitados. Los principales vacíos de respuesta son el calendario concreto de feriados, detalle de paternidad, cálculo de subsidios y condiciones completas de prueba y preaviso. Reconocer un vacío es un comportamiento seguro, pero no demuestra que el requisito académico de responder correctamente la mayoría del banco esté cumplido.
+La ingesta real de Drive se verificó y Voyage completó la generación de embeddings tras incorporar control de solicitudes. La versión de los documentos publicada en Drive y la del repositorio deben reconciliarse antes de la entrega. El equipo conserva la decisión de aprobación académica y publicación.
 
-El plan de cierre es revisar las referencias vigentes, completar únicamente las secciones faltantes con autorización del equipo, publicar los formatos requeridos y sincronizarlos en Drive. Luego se ejecutan las cuarenta y cinco preguntas con el LLM real, se contrasta cada afirmación con la sección citada y se revisan las consultas mixtas y las restricciones de acceso.
+El cierre documental debe contrastar la evaluación final con las fuentes efectivamente recuperadas. Una respuesta segura puede reconocer un vacío, pero ese comportamiento no demuestra cobertura completa. La entrega indica qué se probó en vivo, qué se simuló, qué debe publicar Persona 1 y qué precisa una carpeta aislada con permiso editor.
 
-Por decisión del usuario, esta sesión dejó las integraciones externas pendientes y habilitó demostración local. El informe permite continuar el trabajo sin rehacer los documentos de la compañera y sin confundir una simulación técnica con una validación normativa. Debe acompañarse con las evidencias finales de Drive, revisión humana, video y presentación del equipo.
+La publicación requiere conciliar la copia editable del repositorio con los formatos disponibles en Drive. El responsable del equipo debe comprobar que las secciones, la versión, las fechas y las fuentes permanezcan legibles tras la conversión. La ingesta puede extraer un archivo correctamente y aun así recuperar una política incompleta; por ello se revisan por separado extracción, pertinencia, cobertura y vigencia del contenido.

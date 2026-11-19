@@ -11,65 +11,122 @@ export function numbersSupported(text, data) {
       Object.values(value).forEach(visit);
   };
   visit(data);
-  return (text.match(/-?\d+(?:[.,]\d+)?/g) || []).every((number) =>
-    allowed.has(String(Number(number.replace(",", ".")))),
+  return (text.match(/-?\d+(?:[.,]\d+)?/g) || []).every((n) =>
+    allowed.has(String(Number(n.replace(",", ".")))),
   );
+}
+export function summaryMetrics(data) {
+  return {
+    ausentes_total: {
+      valor: data.ausentes_total,
+      etiqueta: "personas ausentes",
+    },
+    pendientes_total: {
+      valor: data.pendientes_total,
+      etiqueta: "solicitudes pendientes",
+    },
+    incapacidades_activas: {
+      valor: data.incapacidades.activas,
+      etiqueta: "personas con incapacidad activa",
+    },
+    rotacion_porcentaje: {
+      valor: data.rotacion_porcentaje,
+      etiqueta: "por ciento de rotación mensual",
+    },
+    consultas: {
+      valor: data.uso.consultas,
+      etiqueta: "consultas del día anterior",
+    },
+    porcentaje_resuelto: {
+      valor: data.uso.porcentaje_resuelto,
+      etiqueta: "por ciento de consultas resueltas sin escalar",
+    },
+  };
+}
+// El LLM redacta todas las frases; solo los valores proceden de SQL.
+export function renderSummary(data, result) {
+  const metrics = summaryMetrics(data);
+  if (
+    !Array.isArray(result?.frases) ||
+    result.frases.length < 3 ||
+    result.frases.length > 5
+  )
+    throw new Error("El resumen debe contener de tres a cinco frases del LLM.");
+  const seen = new Set();
+  const sentences = result.frases.map(({ indicador, texto }) => {
+    const metric = metrics[indicador];
+    if (
+      !metric ||
+      seen.has(indicador) ||
+      typeof texto !== "string" ||
+      texto.length > 300
+    )
+      throw new Error("Indicador inválido o repetido en el resumen.");
+    seen.add(indicador);
+    const required = `{{valor}} ${metric.etiqueta}`;
+    const rest = texto.replace(required, "").trim();
+    if (
+      !texto.includes(required) ||
+      (texto.match(/\{\{valor\}\}/g) || []).length !== 1 ||
+      /[\d{}%]|\b(uno|dos|tres|cuatro|cinco|diez|veinte|cien|mil|doble|mitad)\b/i.test(
+        rest,
+      ) ||
+      /[.!?]/.test(rest.replace(/\.$/, "")) ||
+      !texto.endsWith(".") ||
+      /\b(aument|disminu|mejor|empeor|debido|caus|comparad)/i.test(rest)
+    )
+      throw new Error(
+        "Frase inválida: cifra, etiqueta o afirmación no sustentada.",
+      );
+    if (!Number.isFinite(Number(metric.valor)))
+      throw new Error("Falta una cifra SQL del resumen.");
+    return texto.replace("{{valor}}", String(Number(metric.valor)));
+  });
+  const text = sentences.join(" ");
+  if (!numbersSupported(text, data)) throw new Error("Cifra ajena al reporte.");
+  return text;
 }
 export async function executiveSummary(data) {
   if ((process.env.LLM_PROVIDER || "groq") === "mock")
     return {
       provider: "plantilla-demo",
-      text: renderSummary(
-        data,
-        "Se recomienda revisar las solicitudes pendientes y las vacaciones acumuladas.",
-      ),
+      text: renderSummary(data, {
+        frases: [
+          {
+            indicador: "ausentes_total",
+            texto: "Hoy se registran {{valor}} personas ausentes.",
+          },
+          {
+            indicador: "pendientes_total",
+            texto: "Hay {{valor}} solicitudes pendientes.",
+          },
+          {
+            indicador: "consultas",
+            texto: "El chatbot registra {{valor}} consultas del día anterior.",
+          },
+        ],
+      }),
     };
   const { callLLM } = await import("../rag/llm.service.js");
   const prompt = await readFile(
     new URL("../../../prompts/analyst.txt", import.meta.url),
     "utf8",
   );
-  const summaryData = {
-    umbrales: { pendientes_dias: 3, vacaciones_dias: 20 },
-    ausentes_total: data.ausentes_total,
-    pendientes_total: data.pendientes_total,
-    pendientes_mas_3_dias: data.pendientes_mas_3_dias,
-    incapacidades: data.incapacidades,
-    rotacion_porcentaje: data.rotacion_porcentaje,
-    vacaciones_riesgo_total: data.vacaciones_riesgo_total,
-    uso: data.uso,
-  };
-  const result = JSON.parse(
-    await callLLM(prompt, JSON.stringify(summaryData), {
-      json: true,
-      maxTokens: 300,
-    }),
+  const metrics = summaryMetrics(data);
+  const indicadores = Object.fromEntries(
+    [
+      "ausentes_total",
+      "pendientes_total",
+      "consultas",
+      "porcentaje_resuelto",
+    ].map((key) => [key, metrics[key]]),
   );
-  const text = renderSummary(data, result.recomendacion);
-  return { provider: "analista-groq", text };
-}
-
-export function renderSummary(data, recommendation) {
-  if (
-    typeof recommendation !== "string" ||
-    recommendation.length > 280 ||
-    !/^Se recomienda\s/i.test(recommendation) ||
-    /[\d%]|\b(uno|dos|tres|cuatro|cinco|diez|veinte|cien|mil|todos|ninguno|doble|mitad)\b/i.test(
-      recommendation,
-    ) ||
-    recommendation.replace(/[.!?]$/, " ").match(/[.!?]/)
-  )
-    throw new Error(
-      "La recomendación debe ser una sola frase de acción sin cifras ni afirmaciones cuantitativas.",
-    );
-  // Etiquetas y cifras se vinculan en código: el LLM no puede intercambiar
-  // pendientes con ausentes ni usar un número válido para otro indicador.
-  return [
-    `Hay ${data.ausentes_total} personas ausentes y ${data.pendientes_total} solicitudes pendientes; ${data.pendientes_mas_3_dias} superan tres días de espera.`,
-    `Las incapacidades activas son ${data.incapacidades.activas}, con ${data.incapacidades.dias_mes} días acumulados en el mes.`,
-    `La rotación mensual es ${data.rotacion_porcentaje}% y ${data.vacaciones_riesgo_total} personas superan veinte días de vacaciones acumulados.`,
-    `El chatbot recibió ${data.uso.consultas} consultas del día anterior, con ${data.uso.porcentaje_resuelto}% resueltas sin escalar y una latencia media de ${data.uso.latencia_promedio_ms} ms.`,
-    recommendation.trim().replace(/[.!?]$/, ".") +
-      (/[.!?]$/.test(recommendation.trim()) ? "" : "."),
-  ].join(" ");
+  const raw = await callLLM(prompt, JSON.stringify({ indicadores }), {
+    json: true,
+    maxTokens: 1600,
+  });
+  return {
+    provider: "analista-groq",
+    text: renderSummary(data, JSON.parse(raw)),
+  };
 }

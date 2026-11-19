@@ -1,6 +1,7 @@
 """Genera los informes y una copia PDF de una política sin alterar sus TXT originales."""
 from pathlib import Path
 import json
+import sys
 from html import escape
 from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer, PageBreak
 from reportlab.lib.styles import getSampleStyleSheet, ParagraphStyle
@@ -32,7 +33,10 @@ def footer(canvas, doc):
     canvas.restoreState()
 
 for key, name, expected_pages in [("research", "Informe_Investigacion", 6), ("technical", "Informe_Tecnico", 8)]:
+    if "--technical-only" in sys.argv and key != "technical":
+        continue
     report = content[key]
+    if key == "technical": expected_pages = len(report["pages"])
     story = []
     md = ["# " + report["title"], report["subtitle"]]
     for number, page in enumerate(report["pages"]):
@@ -61,12 +65,14 @@ for key, name, expected_pages in [("research", "Informe_Investigacion", 6), ("te
         ImageDraw.Draw(tile).text((12, 455), f"{name} - página {i+1}", fill="black")
         tiles.append(tile)
     columns = 3 if len(tiles) == 6 else 4
-    contact = Image.new("RGB", (330*columns, 475*2), "white")
+    contact = Image.new("RGB", (330*columns, 475*((len(tiles)+columns-1)//columns)), "white")
     for i, tile in enumerate(tiles):
         contact.paste(tile, ((i % columns)*330, (i//columns)*475))
     contact.save(output / (name + "_revision.png"))
     print(name, len(reader.pages), "páginas verificadas")
 
+if "--technical-only" in sys.argv:
+    sys.exit(0)
 policy = (root / "docs/politicas/01_Politica_Vacaciones_Feriados.txt").read_text(encoding="utf-8")
 story = [Paragraph("Política de vacaciones y feriados", styles["NTitle"]), Paragraph("Versión académica 1.1 · vigencia 2026-11-19 · responsable: equipo RRHH de Nuvexa (ficticio). Pendiente de publicación por el equipo en Drive.", styles["NMeta"])]
 for part in policy.split("\n\n"):

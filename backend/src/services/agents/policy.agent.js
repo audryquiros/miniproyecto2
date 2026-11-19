@@ -1,5 +1,6 @@
 import { retrieve } from "../rag/retrieval.service.js";
 import { generateGroundedAnswer } from "../rag/llm.service.js";
+import { assessResolution } from "./resolution.service.js";
 
 export async function policyAgent(message) {
   const context = await retrieve(message);
@@ -38,6 +39,7 @@ export async function policyAgent(message) {
   }
 
   const answer = result.answer;
+  const resolved = await assessResolution(message, result);
   const used = result.sourceIds.map((id) => context[id - 1]);
 
   const citations = used.map((item, index) => ({
@@ -51,8 +53,8 @@ export async function policyAgent(message) {
   return {
     answer,
     citations,
-    resolved: !result.needsClarification,
-    escalated: result.needsClarification === true,
+    resolved,
+    escalated: !resolved,
     fragmentIds: used.map((item) => item.id),
   };
 }

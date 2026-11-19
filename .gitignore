@@ -1,4 +1,6 @@
 node_modules/
+## Lanzador temporal bloqueado por Windows; la tarea válida ejecuta Node directamente.
+backend/scripts/register-report-task.ps1
 .env
 *.log
 .DS_Store
